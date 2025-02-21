@@ -291,7 +291,7 @@ Transform:
   m_GameObject: {fileID: 184582687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.744, z: 2.825}
+  m_LocalPosition: {x: 0, y: 0.744, z: 4.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bar_stool (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9118699541601823164, guid: 590559b27d7b87f46892107a5292fe9d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -869,6 +873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4093695326130260251, guid: b2854de471e147a43a550204fc733d08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -961,6 +969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Window_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2847167344763075972, guid: b4e817968610c7f42a27a02f83136821, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3227105324674688830, guid: b4e817968610c7f42a27a02f83136821, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.8685193
@@ -1017,6 +1029,10 @@ PrefabInstance:
     - target: {fileID: 8339645343779846700, guid: f9178f4f3590f9f4ead21f9ab16b075e, type: 3}
       propertyPath: m_Name
       value: Long_cabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339645343779846700, guid: f9178f4f3590f9f4ead21f9ab16b075e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8716593854654750870, guid: f9178f4f3590f9f4ead21f9ab16b075e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1154,6 +1170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelves_on_table
       objectReference: {fileID: 0}
+    - target: {fileID: 3590206767779063157, guid: f5cba06ba2b8a7f4699db6c6028547e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4222453009719558095, guid: f5cba06ba2b8a7f4699db6c6028547e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.78079
@@ -1254,6 +1274,10 @@ PrefabInstance:
     - target: {fileID: 1745725824631932803, guid: fba572c702cad574e9c51533406b19f3, type: 3}
       propertyPath: m_Name
       value: Coffee_maker_set
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745725824631932803, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1578,6 +1602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_9
       objectReference: {fileID: 0}
+    - target: {fileID: 8467738883852193171, guid: e527739048131d444b20341c9fc38e03, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9135731107540866857, guid: e527739048131d444b20341c9fc38e03, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7192259
@@ -1679,6 +1707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cabinet
       objectReference: {fileID: 0}
+    - target: {fileID: 1058270393828272302, guid: 731664607a198fb46a56b2fbcc00c71c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1736,6 +1768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelves (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2934713487473926925, guid: 39e216606c9bf434994810f998d8b0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1792,6 +1828,10 @@ PrefabInstance:
     - target: {fileID: 9118699541601823164, guid: 590559b27d7b87f46892107a5292fe9d, type: 3}
       propertyPath: m_Name
       value: Bar_stool
+      objectReference: {fileID: 0}
+    - target: {fileID: 9118699541601823164, guid: 590559b27d7b87f46892107a5292fe9d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1953,6 +1993,10 @@ PrefabInstance:
     - target: {fileID: 4093695326130260251, guid: b2854de471e147a43a550204fc733d08, type: 3}
       propertyPath: m_Name
       value: Wall_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093695326130260251, guid: b2854de471e147a43a550204fc733d08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2131,6 +2175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelves
       objectReference: {fileID: 0}
+    - target: {fileID: 2934713487473926925, guid: 39e216606c9bf434994810f998d8b0a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2161,7 +2209,7 @@ Transform:
   m_GameObject: {fileID: 1734729266}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.204, y: 0.064, z: -1.264}
+  m_LocalPosition: {x: -0.204, y: -0.118, z: -1.264}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2185,7 +2233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1683012461832497969, guid: b1ce47df0bef5544f90de0937652a48f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.657
+      value: 0.072
       objectReference: {fileID: 0}
     - target: {fileID: 1683012461832497969, guid: b1ce47df0bef5544f90de0937652a48f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2218,6 +2266,10 @@ PrefabInstance:
     - target: {fileID: 2022277063622570379, guid: b1ce47df0bef5544f90de0937652a48f, type: 3}
       propertyPath: m_Name
       value: Wall_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022277063622570379, guid: b1ce47df0bef5544f90de0937652a48f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2471,6 +2523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coffee_fliter_device_set
       objectReference: {fileID: 0}
+    - target: {fileID: 3154686429937565342, guid: adc689ccf65bfe54cb84ddb1deea03e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2603,6 +2659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bar_stool (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9118699541601823164, guid: 590559b27d7b87f46892107a5292fe9d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2694,6 +2754,10 @@ PrefabInstance:
     - target: {fileID: 7489505511824553027, guid: ff485c572f536494181dccf3fb727625, type: 3}
       propertyPath: m_Name
       value: Coffee_grinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489505511824553027, guid: ff485c572f536494181dccf3fb727625, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7835068424833314553, guid: ff485c572f536494181dccf3fb727625, type: 3}
       propertyPath: m_LocalPosition.x
