@@ -22,6 +22,20 @@ public class DrinkManager : MonoBehaviour
     // Private:
     private Renderer _objRenderer;
 
+    private void OnEnable()
+    {
+        SpawnManager.americanoClickSpawner += SpawnAmericano;
+        SpawnManager.espressoClickSpawner += SpawnEspresso;
+        SpawnManager.steamerClickSpawner += SpawnSteamer;
+    }
+
+    private void OnDisable()
+    {
+        SpawnManager.americanoClickSpawner -= SpawnAmericano;
+        SpawnManager.espressoClickSpawner -= SpawnEspresso;
+        SpawnManager.steamerClickSpawner -= SpawnSteamer;
+    }
+
     void Start()
     {
         if (coffeeMachine == null)
@@ -120,11 +134,11 @@ public class DrinkManager : MonoBehaviour
         }
     }
 
-    public void OnAmericanoClicked() { SpawnDrink("americano"); }
+    public void SpawnAmericano() { SpawnDrink("americano"); }
     
-    public void OnEspressoClicked() { SpawnDrink("espresso"); }
+    public void SpawnEspresso() { SpawnDrink("espresso"); }
     
-    public void OnSteamerClicked() { SpawnDrink("steamer"); }
+    public void SpawnSteamer() { SpawnDrink("steamer"); }
     
 
     // private void HoverChecker();
