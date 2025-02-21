@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 52455574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.38, y: 0, z: 0}
   m_LocalScale: {x: 4.5056, y: 0.36282, z: 5.0531}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -985,11 +985,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4222453009719558095, guid: f5cba06ba2b8a7f4699db6c6028547e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.846
+      value: 0.844
       objectReference: {fileID: 0}
     - target: {fileID: 4222453009719558095, guid: f5cba06ba2b8a7f4699db6c6028547e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.602
+      value: -0.607
       objectReference: {fileID: 0}
     - target: {fileID: 4222453009719558095, guid: f5cba06ba2b8a7f4699db6c6028547e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1024,6 +1024,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5cba06ba2b8a7f4699db6c6028547e3, type: 3}
+--- !u!1001 &855527059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.86484313
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.85357744
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5728868
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401112958655388985, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745725824631932803, guid: fba572c702cad574e9c51533406b19f3, type: 3}
+      propertyPath: m_Name
+      value: Coffee_maker_set
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fba572c702cad574e9c51533406b19f3, type: 3}
 --- !u!1 &951812947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1627,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2590100792423627191, guid: 39e216606c9bf434994810f998d8b0a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.842
+      value: 1.857
       objectReference: {fileID: 0}
     - target: {fileID: 2590100792423627191, guid: 39e216606c9bf434994810f998d8b0a1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2081,3 +2138,4 @@ SceneRoots:
   - {fileID: 1315296560}
   - {fileID: 747943305}
   - {fileID: 688943684}
+  - {fileID: 855527059}
