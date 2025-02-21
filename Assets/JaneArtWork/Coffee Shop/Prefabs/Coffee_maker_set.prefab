@@ -26,6 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745725824631932803}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,7 +37,6 @@ Transform:
   - {fileID: 6880246889092091257}
   - {fileID: 6618222621310805306}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2656590906657264284
 MeshFilter:
@@ -63,13 +63,16 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aeeeb7cd2d059194183a8e583d5601ea, type: 2}
-  - {fileID: 2100000, guid: 2e9f6d065c33bf147808dc3b4ed2fea3, type: 2}
+  - {fileID: 2100000, guid: f103ebbb20e5225439cc8fa7fe93cab4, type: 2}
+  - {fileID: 2100000, guid: 659abd90305551745a4c9d0e2dd0b8ed, type: 2}
   - {fileID: 2100000, guid: 2bbd679aa668cbd4ca7f3a8510f7b6a2, type: 2}
-  - {fileID: 2100000, guid: dcecebadcbf70b7498a316cbc448ae40, type: 2}
+  - {fileID: 2100000, guid: 8dc0c724237b8344db5c0f1a40b0a6ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,9 +102,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745725824631932803}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4081569171312217755, guid: 63b1cf398c0c8074780dea8817bd0168, type: 3}
@@ -110,6 +121,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1401112958655388985}
     m_Modifications:
     - target: {fileID: 8424216443330525544, guid: 05087ff0a5bfb204b845969ed6545177, type: 3}
@@ -161,6 +173,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05087ff0a5bfb204b845969ed6545177, type: 3}
 --- !u!4 &6618222621310805306 stripped
 Transform:
@@ -172,6 +187,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1401112958655388985}
     m_Modifications:
     - target: {fileID: 8613402802329334448, guid: 7b184cc91c90db446ba6e5c33cd6dbbc, type: 3}
@@ -223,6 +239,9 @@ PrefabInstance:
       value: Coaster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b184cc91c90db446ba6e5c33cd6dbbc, type: 3}
 --- !u!4 &5395397288936332461 stripped
 Transform:
@@ -234,6 +253,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1401112958655388985}
     m_Modifications:
     - target: {fileID: 3973082479332554217, guid: 728abf6511b3a194b9fd07f08ab5e50f, type: 3}
@@ -285,6 +305,9 @@ PrefabInstance:
       value: Small_glass_jar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728abf6511b3a194b9fd07f08ab5e50f, type: 3}
 --- !u!4 &6880246889092091257 stripped
 Transform:
@@ -296,6 +319,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1401112958655388985}
     m_Modifications:
     - target: {fileID: 8613402802329334448, guid: 7b184cc91c90db446ba6e5c33cd6dbbc, type: 3}
@@ -347,6 +371,9 @@ PrefabInstance:
       value: Coaster (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b184cc91c90db446ba6e5c33cd6dbbc, type: 3}
 --- !u!4 &273129258552235461 stripped
 Transform:
