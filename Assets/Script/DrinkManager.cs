@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
@@ -17,36 +19,64 @@ public class DrinkManager : MonoBehaviour
     public List<DrinkData> drinkList;
     public Transform spawnPoint;
     
+    [Header("Making Coffee")]
+    public Slider coffeeLoadingBar;
+    public float coffeeMakingTime = 3.0f;
+    
+    
     
     
     // Private:
     private Renderer _objRenderer;
+    private Dictionary<string, DrinkData> _drinkDictionary;
+    private bool _isMakingCoffee = false;
+    private string _selectedDrink;
+    
+    // private void OnEnable();
+    // private void OnDisable();
+    // private void SetupRayCast();
+    // private void OnMouseEnter();
+    // private void OnMouseExit();
+    // private static bool IsClickingOnUI();
+    // private void SpawnDrink(string DrinkName);
+    // private void SpawnAmericano();
+    // private void SpawnEspresso();
+    // private void SpawnSteamer();
+    
+
+    private void OnEnable()
+    {
+        SpawnManager.americanoClickSpawner += SpawnAmericano;
+        SpawnManager.espressoClickSpawner += SpawnEspresso;
+        SpawnManager.steamerClickSpawner += SpawnSteamer;
+    }
+
+    private void OnDisable()
+    {
+        SpawnManager.americanoClickSpawner -= SpawnAmericano;
+        SpawnManager.espressoClickSpawner -= SpawnEspresso;
+        SpawnManager.steamerClickSpawner -= SpawnSteamer;
+    }
 
     void Start()
     {
-        if (coffeeMachine == null)
+        _drinkDictionary = new Dictionary<string, DrinkData>();
+        foreach (var drink in drinkList)
         {
-            return;
+            _drinkDictionary[drink.drinkName] = drink;
         }
+        
+        if (coffeeMachine == null) { return; }
 
         _objRenderer = coffeeMachine.GetComponent<Renderer>();
 
-        if (_objRenderer == null)
-        {
-            return;
-        }
+        if (_objRenderer == null) { return; }
 
         _objRenderer.material = defaultMat;
 
-        if (hoverEvent != null)
-        {
-            hoverEvent.SetActive(false);
-        }
+        if (hoverEvent != null) { hoverEvent.SetActive(false); }
         
-        if (menuSelect != null)
-        {
-            menuSelect.SetActive(false);
-        }
+        if (menuSelect != null) { menuSelect.SetActive(false); }
     }
 
     void Update()
@@ -102,42 +132,75 @@ public class DrinkManager : MonoBehaviour
         }
     }
     
-    private bool IsClickingOnUI()
+    private static bool IsClickingOnUI()
     {
         return EventSystem.current.IsPointerOverGameObject();
     }
     
-    public void SpawnDrink(string drinkName)
+    private void SpawnDrink(string drinkName)
     {
-        DrinkData drink = drinkList.Find(d => d.drinkName == drinkName);
-        if (drink != null)
+        if (_drinkDictionary.TryGetValue(drinkName, out DrinkData drinkData))
         {
-            Instantiate(drink.drinkPrefab, spawnPoint.position, Quaternion.identity);
+            GameObject spawnedDrink = Instantiate(drinkData.drinkPrefab, spawnPoint.position, Quaternion.identity);
+            
+            // Attach DraggableObject script dynamically
+            if (!spawnedDrink.GetComponent<Dragable>())
+            {
+                spawnedDrink.AddComponent<Dragable>();
+            }
         }
         else
         {
+            Debug.LogError($"Drink '{drinkName}' not found in dictionary!");
             return;
         }
     }
 
-    public void OnAmericanoClicked() { SpawnDrink("americano"); }
-    
-    public void OnEspressoClicked() { SpawnDrink("espresso"); }
-    
-    public void OnSteamerClicked() { SpawnDrink("steamer"); }
-    
+    private void SpawnAmericano()
+    {
+        StartMakingCoffee("americano");
+    }
 
-    // private void HoverChecker();
-    // private void OnMouseEnter();
-    // private void OnMouseExit();
-    // public void MakeCoffee();
+    private void SpawnEspresso()
+    {
+        StartMakingCoffee("espresso");
+    }
+
+    private void SpawnSteamer()
+    {
+        StartMakingCoffee("steamer");
+    }
+    
+    public void StartMakingCoffee(string drinkName)
+    {
+        if (!_isMakingCoffee)
+        {
+            _selectedDrink = drinkName;
+            StartCoroutine(FillCoffeeBar());
+        }
+    }
+
+    private IEnumerator FillCoffeeBar()
+    {
+        _isMakingCoffee = true;
+        coffeeLoadingBar.gameObject.SetActive(true);
+        coffeeLoadingBar.value = 0;
+
+        float elapsedTime = 0;
+        while (elapsedTime < coffeeMakingTime)
+        {
+            elapsedTime += Time.deltaTime;
+            coffeeLoadingBar.value = elapsedTime / coffeeMakingTime;
+            yield return null;
+        }
+
+        coffeeLoadingBar.value = 1;
+        coffeeLoadingBar.gameObject.SetActive(false);
+        _isMakingCoffee = false;
+    }
     
     
     // Hover mouse to the coffee cup/machine
-
-
-
-
     // Pop up bubble with different kind of coffee
     // Click to make the coffee
     // Initiated selected coffee
