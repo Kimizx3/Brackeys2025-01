@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="36be032e-76dd-4e00-9a9a-33795eced3fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Coffee.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Coffee.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DrinkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DrinkManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +98,7 @@
       <updated>1740095257105</updated>
       <workItem from="1740095261155" duration="9616000" />
       <workItem from="1740110481432" duration="5997000" />
+      <workItem from="1740190849955" duration="1236000" />
     </task>
     <servers />
   </component>

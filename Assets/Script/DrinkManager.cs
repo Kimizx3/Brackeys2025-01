@@ -197,6 +197,8 @@ public class DrinkManager : MonoBehaviour
         coffeeLoadingBar.value = 1;
         coffeeLoadingBar.gameObject.SetActive(false);
         _isMakingCoffee = false;
+        
+        SpawnDrink(_selectedDrink);
     }
     
     
