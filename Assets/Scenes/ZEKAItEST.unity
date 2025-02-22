@@ -8815,6 +8815,14 @@ PlayableDirector:
     value: {fileID: 1996353161}
   - key: {fileID: 1243155894071701477, guid: 658ee168d7db79e4ab83a1965971367c, type: 2}
     value: {fileID: 1996353161}
+  - key: {fileID: -4627920962824212671, guid: 98c8a3c0dfbbb244cb27f3de63b7b682, type: 2}
+    value: {fileID: 750345547}
+  - key: {fileID: 2420791191690822810, guid: 98c8a3c0dfbbb244cb27f3de63b7b682, type: 2}
+    value: {fileID: 2015833758}
+  - key: {fileID: -4727448432121915872, guid: 98c8a3c0dfbbb244cb27f3de63b7b682, type: 2}
+    value: {fileID: 1258712507}
+  - key: {fileID: 4346313675207217737, guid: 98c8a3c0dfbbb244cb27f3de63b7b682, type: 2}
+    value: {fileID: 1996353161}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1999979982
