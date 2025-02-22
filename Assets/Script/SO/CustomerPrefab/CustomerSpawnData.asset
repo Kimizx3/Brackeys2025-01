@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddd23572053e404abb315dd6e3a9ccf, type: 3}
   m_Name: CustomerSpawnData
   m_EditorClassIdentifier: 
-  customers: []
+  customers:
+  - {fileID: 11400000, guid: e1f93463bad717b4daebcdf9a60ee9cf, type: 2}
+  - {fileID: 11400000, guid: 788f17500ff51974d815a3fa93a4bb07, type: 2}
