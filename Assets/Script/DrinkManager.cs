@@ -42,6 +42,8 @@ public class DrinkManager : MonoBehaviour
     // private void SpawnAmericano();
     // private void SpawnEspresso();
     // private void SpawnSteamer();
+    // private void StartMakingDrinks();
+    // private void FillCoffeeBar();
     
 
     private void OnEnable()
@@ -200,11 +202,4 @@ public class DrinkManager : MonoBehaviour
         
         SpawnDrink(_selectedDrink);
     }
-    
-    
-    // Hover mouse to the coffee cup/machine
-    // Pop up bubble with different kind of coffee
-    // Click to make the coffee
-    // Initiated selected coffee
-    // Pick up the coffee serve to customer
 }
