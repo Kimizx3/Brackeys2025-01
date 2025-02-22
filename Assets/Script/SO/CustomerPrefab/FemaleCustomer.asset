@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5fd6cec84874d47a80acaa3b4069c7, type: 3}
   m_Name: FemaleCustomer
   m_EditorClassIdentifier: 
-  customer2D: {fileID: 0}
+  customerPrefab: {fileID: 8099900528033079200, guid: 6e8463401e21d434bbb562ce3b06f254, type: 3}
   orderedDrink: {fileID: 0}

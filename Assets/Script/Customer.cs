@@ -3,7 +3,7 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     public Transform customerHead; // Assign customer's head transform in Inspector
-    public Vector3 offset = new Vector3(0, 100, 0); // UI offset from the head
+    public Vector3 offset = new Vector3(0, 0, 0); // UI offset from the head
     private RectTransform uiElement;
     private Camera mainCamera;
     private DrinkData myOrder;
