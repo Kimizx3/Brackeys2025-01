@@ -32,11 +32,10 @@ public class SpawnCustomer : MonoBehaviour
             GameObject customerObj = Instantiate(spawnData.customerData.customerPrefab, spawnData.spawnPoint.position, Quaternion.identity);
 
             // Get the customer's head transform dynamically
-            Transform customerHead = customerObj.transform.Find("Head"); // 🔥 IMPORTANT: Ensure "Head" exists in the prefab!
+            Transform customerHead = customerObj.transform.Find("Head"); 
 
             if (customerHead == null)
             {
-                Debug.LogError($"Customer prefab {customerObj.name} is missing a 'Head' transform! Check your prefab.");
                 continue;
             }
 
