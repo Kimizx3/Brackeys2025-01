@@ -153,7 +153,6 @@ public class DrinkManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"Drink '{drinkName}' not found in dictionary!");
             return;
         }
     }
