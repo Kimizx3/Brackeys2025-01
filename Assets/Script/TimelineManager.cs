@@ -1,52 +1,98 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class TimelineManager : MonoBehaviour
 {
-    public List<PlayableDirector> timelines;
-    private PlayableDirector _currentTimeline;
+    public PlayableDirector[] timelines;
+    public GameObject[] disableList;
+    public GameObject cosmicPanel;
+    public string nextSceneName;
+    private int _currentTimeline = 0;
 
-
-    private void Update()
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        int i = disableList.Length - 1;
+        while (i >= 0)
         {
-            PlayTimeLine(0);
+            disableList[i].SetActive(false);
+            i--;
         }
     }
 
+    private void Start()
+    {
+        if (timelines.Length > 0)
+        {
+            EnableSetter(0);
+            PlayTimeLine(0);
+            _currentTimeline++;
+        }
+    }
+
+    
+    
 
     public void PlayTimeLine(int index)
     {
-        if (index < 0 || index >= timelines.Count)
+        if (index < 0 || index >= timelines.Length) return;
+        
+        
+        if (timelines[_currentTimeline].state == PlayState.Playing)
         {
-            return;
+            timelines[_currentTimeline].Stop();
+        }
+        _currentTimeline = index;
+        timelines[_currentTimeline].Play();
+        timelines[_currentTimeline].stopped += OnTimelineFinished;
+    }
+    
+    void OnTimelineFinished(PlayableDirector director)
+    {
+        if (_currentTimeline == 1)
+        {
+            DisableSetter(0);
+            EnableSetter(1);
+            PlayTimeLine(1);
+            _currentTimeline++;
         }
 
-        if (_currentTimeline != null && _currentTimeline.state == PlayState.Playing)
-        {
-            _currentTimeline.Stop();
-        }
+        WaitCoroutine();
+        cosmicPanel.SetActive(false);
 
-        _currentTimeline = timelines[index];
-        _currentTimeline.Play();
+        // if (_currentTimeline == 2)
+        // {
+        //     LoadNextScene();
+        // }
     }
 
-    public void PauseTimeline()
+    public void LoadNextScene()
     {
-        if (_currentTimeline != null && _currentTimeline.state == PlayState.Playing)
+        if (!string.IsNullOrEmpty(nextSceneName))
         {
-            _currentTimeline.Pause();
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 
-    public void StopTimeline()
+    IEnumerator WaitCoroutine()
     {
-        if (_currentTimeline != null)
-        {
-            _currentTimeline.Stop();
-        }
+        yield return new WaitForSeconds(3f);
+    }
+
+    public void PlayTimelineFromButton(int index)
+    {
+        PlayTimeLine(index);
+    }
+    
+    private void DisableSetter(int setter)
+    {
+        disableList[setter].SetActive(false);
+    }
+    
+    private void EnableSetter(int setter)
+    {
+        disableList[setter].SetActive(true);
     }
 }
