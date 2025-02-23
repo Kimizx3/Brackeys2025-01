@@ -8722,7 +8722,7 @@ MonoBehaviour:
   - {fileID: 452409505}
   - {fileID: 122813289}
   cosmicPanel: {fileID: 1558062676}
-  nextSceneName: Scene2
+  nextSceneName: Test
 --- !u!1 &2011482587
 GameObject:
   m_ObjectHideFlags: 0

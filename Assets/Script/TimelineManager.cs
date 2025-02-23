@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -11,6 +12,7 @@ public class TimelineManager : MonoBehaviour
     public GameObject cosmicPanel;
     public string nextSceneName;
     private int _currentTimeline = 0;
+    private bool waitForInput = false;
 
     private void Awake()
     {
@@ -28,44 +30,46 @@ public class TimelineManager : MonoBehaviour
         {
             EnableSetter(0);
             PlayTimeLine(0);
-            _currentTimeline++;
+            ++_currentTimeline;
         }
     }
 
-    
-    
+    private void Update()
+    {
+        if (waitForInput && Input.GetKeyDown(KeyCode.Return))
+        {
+            waitForInput = false;
+            PlayTimeLine(1);
+        }
+    }
+
 
     public void PlayTimeLine(int index)
     {
         if (index < 0 || index >= timelines.Length) return;
-        
-        
-        if (timelines[_currentTimeline].state == PlayState.Playing)
-        {
-            timelines[_currentTimeline].Stop();
-        }
-        _currentTimeline = index;
-        timelines[_currentTimeline].Play();
-        timelines[_currentTimeline].stopped += OnTimelineFinished;
-    }
     
+        if (timelines[index].state == PlayState.Playing)
+        {
+            timelines[index].Stop();
+        }
+
+        _currentTimeline = index;
+        timelines[index].gameObject.SetActive(true);
+        timelines[index].Play();
+        timelines[index].stopped += OnTimelineFinished;
+    }
+    //
     void OnTimelineFinished(PlayableDirector director)
     {
-        if (_currentTimeline == 1)
+        if (_currentTimeline == 0)
         {
-            DisableSetter(0);
-            EnableSetter(1);
-            PlayTimeLine(1);
-            _currentTimeline++;
+            waitForInput = true;
         }
-
-        WaitCoroutine();
-        cosmicPanel.SetActive(false);
-
-        // if (_currentTimeline == 2)
-        // {
-        //     LoadNextScene();
-        // }
+        else if (_currentTimeline == 1)
+        {
+           StartCoroutine(WaitCoroutine());
+           LoadNextScene();
+        }
     }
 
     public void LoadNextScene()
@@ -78,6 +82,11 @@ public class TimelineManager : MonoBehaviour
 
     IEnumerator WaitCoroutine()
     {
+        if (cosmicPanel != null)
+        {
+            cosmicPanel.SetActive(false);
+        }
+        
         yield return new WaitForSeconds(3f);
     }
 
