@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Espresso
   m_EditorClassIdentifier: 
   drinkName: espresso
-  drinkPrefab: {fileID: 4459599086750789490, guid: a44f296b22a370e449fe735f07433cce, type: 3}
+  drinkPrefab: {fileID: 4949090645488648774, guid: 10aa61694077a484eaa88aa64ff5de1f, type: 3}

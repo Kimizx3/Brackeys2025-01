@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MaleCustomer
   m_EditorClassIdentifier: 
   customerPrefab: {fileID: 2571922030568594873, guid: 0c0d263b45862924eaaa31a16f710813, type: 3}
-  orderedDrink: {fileID: 0}
+  orderedDrink: {fileID: 11400000, guid: 442c90a1051724a4b9d00335fdab698f, type: 2}
+  drinkUI: {fileID: 8800908561949465308, guid: 0c1b53f57b992c448a8a7c0db39eda85, type: 3}

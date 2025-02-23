@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Americano
   m_EditorClassIdentifier: 
   drinkName: americano
-  drinkPrefab: {fileID: 372753405024274048, guid: e96aceb338c4f7a4e9607d8075ca8523, type: 3}
+  drinkPrefab: {fileID: 4949090645488648774, guid: 37de06f82026cda4db5dedba9be177ee, type: 3}

@@ -30,7 +30,7 @@ public class DrinkManager : MonoBehaviour
     private Renderer _objRenderer;
     private Dictionary<string, DrinkData> _drinkDictionary;
     private bool _isMakingCoffee = false;
-    private string _selectedDrink;
+    private DrinkData _selectedDrink;
     
     // private void OnEnable();
     // private void OnDisable();
@@ -139,42 +139,46 @@ public class DrinkManager : MonoBehaviour
         return EventSystem.current.IsPointerOverGameObject();
     }
     
-    private void SpawnDrink(string drinkName)
+    private void SpawnDrink(DrinkData drinkName)
     {
-        if (_drinkDictionary.TryGetValue(drinkName, out DrinkData drinkData))
+        GameObject spawnedDrink = Instantiate(drinkName.drinkPrefab, spawnPoint.position, Quaternion.Euler(0, 180, 0));
+        CoffeeItem coffeeItem = spawnedDrink.GetComponent<CoffeeItem>();
+        coffeeItem.drinkData = drinkName;
+
+        if (!spawnedDrink.GetComponent<Dragable>())
         {
-            GameObject spawnedDrink = Instantiate(drinkData.drinkPrefab, spawnPoint.position, Quaternion.identity);
-            
-            // Attach DraggableObject script dynamically
-            if (!spawnedDrink.GetComponent<Dragable>())
-            {
-                spawnedDrink.AddComponent<Dragable>();
-            }
-        }
-        else
-        {
-            return;
+            spawnedDrink.AddComponent<Dragable>();
         }
     }
 
     private void SpawnAmericano()
     {
-        StartMakingCoffee("americano");
+        if (_drinkDictionary.TryGetValue("americano", out DrinkData drinkData))
+        {
+            StartMakingCoffee(drinkData);
+        }
+        
     }
 
     private void SpawnEspresso()
     {
-        StartMakingCoffee("espresso");
+        if (_drinkDictionary.TryGetValue("espresso", out DrinkData drinkData))
+        {
+            StartMakingCoffee(drinkData);
+        }
     }
 
     private void SpawnSteamer()
     {
-        StartMakingCoffee("steamer");
+        if (_drinkDictionary.TryGetValue("steamer", out DrinkData drinkData))
+        {
+            StartMakingCoffee(drinkData);
+        }
     }
     
-    public void StartMakingCoffee(string drinkName)
+    public void StartMakingCoffee(DrinkData drinkName)
     {
-        if (!_isMakingCoffee)
+        if (!_isMakingCoffee && drinkName != null)
         {
             _selectedDrink = drinkName;
             StartCoroutine(FillCoffeeBar());
@@ -198,7 +202,10 @@ public class DrinkManager : MonoBehaviour
         coffeeLoadingBar.value = 1;
         coffeeLoadingBar.gameObject.SetActive(false);
         _isMakingCoffee = false;
-        
-        SpawnDrink(_selectedDrink);
+
+        if (_selectedDrink != null)
+        {
+            SpawnDrink(_selectedDrink);
+        }
     }
 }

@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3893851184289053007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3285862437944947702}
+  - component: {fileID: 1845221537949260619}
+  - component: {fileID: 4429203304723311339}
+  - component: {fileID: 1550111175142105054}
+  m_Layer: 0
+  m_Name: TimelineS8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3285862437944947702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893851184289053007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1845221537949260619
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893851184289053007}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 88cfbb08ab9dd23448614b7778bc51a6, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: -4941127221371074225, guid: a4415806b7ffbc145bc612dd470ca425, type: 2}
+    value: {fileID: 4429203304723311339}
+  - key: {fileID: 1243155894071701477, guid: 658ee168d7db79e4ab83a1965971367c, type: 2}
+    value: {fileID: 4429203304723311339}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 4346313675207217737, guid: 98c8a3c0dfbbb244cb27f3de63b7b682, type: 2}
+    value: {fileID: 4429203304723311339}
+  - key: {fileID: 4346313675207217737, guid: 7549d24e73d7e9642b7c39e12658c26f, type: 2}
+    value: {fileID: 4429203304723311339}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 4346313675207217737, guid: 63706057ed8920f47a6ed7876f9896bd, type: 2}
+    value: {fileID: 4429203304723311339}
+  - key: {fileID: 2315767759600256725, guid: 63706057ed8920f47a6ed7876f9896bd, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6125119392176952088, guid: 63706057ed8920f47a6ed7876f9896bd, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4346313675207217737, guid: 88cfbb08ab9dd23448614b7778bc51a6, type: 2}
+    value: {fileID: 4429203304723311339}
+  - key: {fileID: -4823953109521146018, guid: 88cfbb08ab9dd23448614b7778bc51a6, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 835998859762757099, guid: 88cfbb08ab9dd23448614b7778bc51a6, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2007954366806298351, guid: 88cfbb08ab9dd23448614b7778bc51a6, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8055566767853237895, guid: 88cfbb08ab9dd23448614b7778bc51a6, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &4429203304723311339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893851184289053007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: b9155bf6352018c43a173746a9458e3f, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1550111175142105054}
+          m_TargetAssemblyTypeName: TimelineBehavior, Assembly-CSharp
+          m_MethodName: pauseTimeline
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1550111175142105054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893851184289053007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32136749a72259142a5ee0c22b7d6942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  director: {fileID: 1845221537949260619}
+  paused: 0

@@ -4,5 +4,6 @@ using UnityEngine;
 public class CustomerData : ScriptableObject
 {
     public GameObject customerPrefab;
-    [HideInInspector] public DrinkData orderedDrink;
+    public DrinkData orderedDrink;
+    public GameObject drinkUI;
 }
