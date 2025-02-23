@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1101456322501238793}
   - component: {fileID: 3402556726569318427}
+  - component: {fileID: 4968279838446770231}
+  - component: {fileID: 3970910942812151064}
   m_Layer: 0
   m_Name: MaleCust
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,6 +90,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4968279838446770231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571922030568594873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3e9853c6e4b1d4d8fc685bd8f38b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customerHead: {fileID: 1101456322501238793}
+  offset: {x: 0, y: 0, z: 0}
+  orderedDrink: {fileID: 11400000, guid: 442c90a1051724a4b9d00335fdab698f, type: 2}
+--- !u!65 &3970910942812151064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571922030568594873}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.2991223, y: 1.5219855, z: 27.341202}
+  m_Center: {x: -0.7493441, y: 13.37407, z: 13.570599}
 --- !u!1 &5683076402104127132
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 5683076402104127132}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 12.46, z: 0}
+  m_LocalPosition: {x: -6, y: 11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
