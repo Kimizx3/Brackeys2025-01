@@ -1,8 +1,8 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class TimelineManager : MonoBehaviour
 {
@@ -28,7 +28,7 @@ public class TimelineManager : MonoBehaviour
         {
             EnableSetter(0);
             PlayTimeLine(0);
-            DisableSetter(0);
+            _currentTimeline++;
         }
     }
 
@@ -51,18 +51,21 @@ public class TimelineManager : MonoBehaviour
     
     void OnTimelineFinished(PlayableDirector director)
     {
-        if (_currentTimeline == 0)
+        if (_currentTimeline == 1)
         {
+            DisableSetter(0);
             EnableSetter(1);
             PlayTimeLine(1);
-            DisableSetter(1);
-            cosmicPanel.SetActive(false);
+            _currentTimeline++;
         }
 
-        if (_currentTimeline == 2)
-        {
-            LoadNextScene();
-        }
+        WaitCoroutine();
+        cosmicPanel.SetActive(false);
+
+        // if (_currentTimeline == 2)
+        // {
+        //     LoadNextScene();
+        // }
     }
 
     public void LoadNextScene()
@@ -71,6 +74,11 @@ public class TimelineManager : MonoBehaviour
         {
             SceneManager.LoadScene(nextSceneName);
         }
+    }
+
+    IEnumerator WaitCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
     }
 
     public void PlayTimelineFromButton(int index)

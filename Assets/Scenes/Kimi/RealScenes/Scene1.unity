@@ -193,7 +193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &80233851
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6822,7 +6822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1685754756
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8721,7 +8721,7 @@ MonoBehaviour:
   - {fileID: 2141979846}
   - {fileID: 452409505}
   - {fileID: 122813289}
-  cosmicPanel: {fileID: 0}
+  cosmicPanel: {fileID: 1558062676}
   nextSceneName: Scene2
 --- !u!1 &2011482587
 GameObject:
@@ -9299,7 +9299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2141979847
 RectTransform:
   m_ObjectHideFlags: 0
