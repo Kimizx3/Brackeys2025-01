@@ -4,104 +4,54 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using NUnit.Framework.Constraints;
 
 public class TimelineManager : MonoBehaviour
 {
-    public PlayableDirector[] timelines;
-    public GameObject[] disableList;
-    public GameObject cosmicPanel;
-    public string nextSceneName;
-    private int _currentTimeline = 0;
-    private bool waitForInput = false;
-
-    private void Awake()
-    {
-        int i = disableList.Length - 1;
-        while (i >= 0)
-        {
-            disableList[i].SetActive(false);
-            i--;
-        }
-    }
+    public List<PlayableDirector> timelines = new List<PlayableDirector>();
+    public List<GameObject> canvases = new List<GameObject>();
+    private int _currentIndex = 0;
 
     private void Start()
     {
-        if (timelines.Length > 0)
+        if (timelines.Count == 0 || canvases.Count == 0 || timelines.Count != canvases.Count)
         {
-            EnableSetter(0);
-            PlayTimeLine(0);
-            ++_currentTimeline;
+            return;
         }
+
+        for (int i = 1; i < canvases.Count; i++)
+        {
+            canvases[i].SetActive(false);
+        }
+        PlayCurrentTimeline();
     }
 
-    private void Update()
+    private void PlayCurrentTimeline()
     {
-        if (waitForInput && Input.GetKeyDown(KeyCode.Return))
+        foreach (PlayableDirector timeline in timelines)
         {
-            waitForInput = false;
-            PlayTimeLine(1);
-        }
-    }
-
-
-    public void PlayTimeLine(int index)
-    {
-        if (index < 0 || index >= timelines.Length) return;
-    
-        if (timelines[index].state == PlayState.Playing)
-        {
-            timelines[index].Stop();
-        }
-
-        _currentTimeline = index;
-        timelines[index].gameObject.SetActive(true);
-        timelines[index].Play();
-        timelines[index].stopped += OnTimelineFinished;
-    }
-    //
-    void OnTimelineFinished(PlayableDirector director)
-    {
-        if (_currentTimeline == 0)
-        {
-            waitForInput = true;
-        }
-        else if (_currentTimeline == 1)
-        {
-           StartCoroutine(WaitCoroutine());
-           LoadNextScene();
-        }
-    }
-
-    public void LoadNextScene()
-    {
-        if (!string.IsNullOrEmpty(nextSceneName))
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
-    }
-
-    IEnumerator WaitCoroutine()
-    {
-        if (cosmicPanel != null)
-        {
-            cosmicPanel.SetActive(false);
+            timeline.Stop();
         }
         
-        yield return new WaitForSeconds(3f);
+        if (_currentIndex >= timelines.Count)
+        {
+            return;
+        }
+
+        timelines[_currentIndex].stopped += OnCurrentTimelineStopped;
+        timelines[_currentIndex].Play();
     }
 
-    public void PlayTimelineFromButton(int index)
+    private void OnCurrentTimelineStopped(PlayableDirector director)
     {
-        PlayTimeLine(index);
-    }
-    
-    private void DisableSetter(int setter)
-    {
-        disableList[setter].SetActive(false);
-    }
-    
-    private void EnableSetter(int setter)
-    {
-        disableList[setter].SetActive(true);
+        director.stopped -= OnCurrentTimelineStopped;
+        canvases[_currentIndex].SetActive(false);
+        _currentIndex++;
+
+        if (_currentIndex < canvases.Count)
+        {
+            canvases[_currentIndex].SetActive(true);
+            PlayCurrentTimeline();
+        }
     }
 }
