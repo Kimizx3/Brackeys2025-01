@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36be032e-76dd-4e00-9a9a-33795eced3fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimelineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimelineManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimelineTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimelineTrigger.cs" afterDir="false" />
-    </list>
+    <list default="true" id="36be032e-76dd-4e00-9a9a-33795eced3fa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +113,7 @@
       <workItem from="1740245853320" duration="31461000" />
       <workItem from="1740291043865" duration="7346000" />
       <workItem from="1740303551517" duration="2725000" />
-      <workItem from="1740422403246" duration="2778000" />
+      <workItem from="1740422403246" duration="3372000" />
     </task>
     <servers />
   </component>
