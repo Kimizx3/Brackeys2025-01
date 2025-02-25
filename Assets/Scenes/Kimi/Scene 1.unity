@@ -2810,6 +2810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 440816424}
   paused: 0
+  sfxObjects: []
 --- !u!114 &440816423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3766,6 +3767,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 915873199}
+  - {fileID: 1650686162}
   - {fileID: 867390926}
   m_Father: {fileID: 125594844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12737,6 +12739,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639413234}
   m_CullTransparentMesh: 1
+--- !u!1 &1650686161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1650686162}
+  - component: {fileID: 1650686164}
+  - component: {fileID: 1650686163}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1650686162
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650686161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 552488215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -288.16, y: 12.158}
+  m_SizeDelta: {x: 46.3184, y: 35.6845}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1650686163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650686161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b95845394d9886d44b556e2e782ababc, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'YOU:'
+--- !u!222 &1650686164
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650686161}
+  m_CullTransparentMesh: 1
 --- !u!1 &1653227620
 GameObject:
   m_ObjectHideFlags: 0
@@ -15493,6 +15574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 1868062197}
   paused: 0
+  sfxObjects: []
 --- !u!114 &1868062196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16913,6 +16995,7 @@ MonoBehaviour:
   canvases:
   - {fileID: 1558062676}
   - {fileID: 1919426866}
+  playOnAwake: 1
 --- !u!1 &2001081907
 GameObject:
   m_ObjectHideFlags: 0
@@ -18075,6 +18158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4140880346984816436}
   paused: 0
+  sfxObjects: []
 --- !u!114 &2146009796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21925,6 +22009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7260514395121163352}
   paused: 0
+  sfxObjects: []
 --- !u!114 &415564029300306003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22852,6 +22937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 737495121427912190}
   paused: 0
+  sfxObjects: []
 --- !u!4 &845096948722886325
 Transform:
   m_ObjectHideFlags: 0
@@ -23150,6 +23236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 5639278315472149075}
   paused: 0
+  sfxObjects: []
 --- !u!4 &1035937958205923974
 Transform:
   m_ObjectHideFlags: 0
@@ -23285,6 +23372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7149139409209394491}
   paused: 0
+  sfxObjects: []
 --- !u!23 &1094018002676930828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23787,6 +23875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6125203465521898865}
   paused: 0
+  sfxObjects: []
 --- !u!4 &1315388054117040774
 Transform:
   m_ObjectHideFlags: 0
@@ -26691,6 +26780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7973242088158289109}
   paused: 0
+  sfxObjects: []
 --- !u!23 &2725479108366013442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27590,6 +27680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 8830430587577143956}
   paused: 0
+  sfxObjects: []
 --- !u!1 &3289745460733721646
 GameObject:
   m_ObjectHideFlags: 0
@@ -27841,6 +27932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6820455710626121311}
   paused: 0
+  sfxObjects: []
 --- !u!1 &3418522958709087386
 GameObject:
   m_ObjectHideFlags: 0
@@ -28716,6 +28808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6176835021052227290}
   paused: 0
+  sfxObjects: []
 --- !u!23 &3861218449217404667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29286,6 +29379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6939566761220897464}
   paused: 0
+  sfxObjects: []
 --- !u!4 &4218769263471290852
 Transform:
   m_ObjectHideFlags: 0
@@ -31376,6 +31470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 8015029607647831795}
   paused: 0
+  sfxObjects: []
 --- !u!64 &5367969489151182857
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34914,6 +35009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7581405831356265053}
   paused: 0
+  sfxObjects: []
 --- !u!23 &7204912050088861530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35271,6 +35367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4140880346984816436}
   paused: 0
+  sfxObjects: []
 --- !u!23 &7317466055192436668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38078,6 +38175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7809916872065047626}
   paused: 0
+  sfxObjects: []
 --- !u!320 &8620737765725155583
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -38783,6 +38881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 8620737765725155583}
   paused: 0
+  sfxObjects: []
 --- !u!1 &8921730215381013422
 GameObject:
   m_ObjectHideFlags: 0
