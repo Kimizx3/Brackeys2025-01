@@ -13,6 +13,8 @@ public class TimelineManager : MonoBehaviour
     public List<GameObject> canvases = new List<GameObject>();
     private int _currentIndex = 0;
     public bool playOnAwake = true;
+    public bool finishPlayedSceneTransition = true;
+    public GameObject UIpanel;
 
     private void Start()
     {
@@ -65,7 +67,7 @@ public class TimelineManager : MonoBehaviour
     {
         director.stopped -= OnCurrentTimelineStopped;
 
-        
+
         canvases[_currentIndex].SetActive(false);
         _currentIndex++;
 
@@ -76,7 +78,15 @@ public class TimelineManager : MonoBehaviour
         }
         else
         {
-            LoadToNextScene();
+            if(UIpanel != null)
+            {
+                UIpanel.SetActive(true);
+            }
+
+            if(finishPlayedSceneTransition)
+            {
+                LoadToNextScene();
+            }
         }
     }
 
