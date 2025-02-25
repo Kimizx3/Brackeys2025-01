@@ -18,6 +18,10 @@ public class TimelineManager : MonoBehaviour
         {
             return;
         }
+        foreach (PlayableDirector timeline in timelines)
+        {
+            timeline.Stop();
+        }
 
         for (int i = 1; i < canvases.Count; i++)
         {
@@ -52,6 +56,21 @@ public class TimelineManager : MonoBehaviour
         {
             canvases[_currentIndex].SetActive(true);
             PlayCurrentTimeline();
+        }
+        else
+        {
+            LoadToNextScene();
+        }
+    }
+
+    public void LoadToNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }
