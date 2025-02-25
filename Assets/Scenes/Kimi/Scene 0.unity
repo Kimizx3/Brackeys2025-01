@@ -1320,6 +1320,7 @@ MonoBehaviour:
   paused: 0
   sfxObjects:
   - {fileID: 236990340}
+  - {fileID: 1693264998}
 --- !u!114 &440816423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,8 +1416,6 @@ PlayableDirector:
   - key: {fileID: -6460797975937262782, guid: b47cb39dc58810d48bd4b3e81041e7b3, type: 2}
     value: {fileID: 0}
   - key: {fileID: -1895489862856728246, guid: b47cb39dc58810d48bd4b3e81041e7b3, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -8166120037450464624, guid: b47cb39dc58810d48bd4b3e81041e7b3, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -5156,7 +5155,7 @@ GameObject:
   - component: {fileID: 1693264999}
   - component: {fileID: 1693265000}
   m_Layer: 0
-  m_Name: sfx_phonering
+  m_Name: sfx_nbgm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5187,10 +5186,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 487794b5a66f96a428cd83c7e66cb57a, type: 3}
-  m_Resource: {fileID: 8300000, guid: 487794b5a66f96a428cd83c7e66cb57a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5c3b1e3ea32a5ae4da76d2f0169fc6d6, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5c3b1e3ea32a5ae4da76d2f0169fc6d6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.109
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6355,6 +6354,8 @@ MonoBehaviour:
   canvases:
   - {fileID: 1654890541}
   playOnAwake: 1
+  finishPlayedSceneTransition: 1
+  UIpanel: {fileID: 0}
 --- !u!1 &2011482587
 GameObject:
   m_ObjectHideFlags: 0
