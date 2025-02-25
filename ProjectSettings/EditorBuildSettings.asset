@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kimi/Test 1.unity
     guid: de13c575c5d5a7444a1efbf9eb25335a
-  - enabled: 1
-    path: Assets/Scenes/Kimi/Test 2.unity
-    guid: ab65aed9e7924614badc41a18a7d0e56
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
