@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5fd6cec84874d47a80acaa3b4069c7, type: 3}
+  m_Name: FemaleCustomer1
+  m_EditorClassIdentifier: 
+  customerPrefab: {fileID: 8099900528033079200, guid: adef7c4d06be1194587d62641364d47e, type: 3}
+  orderedDrink: {fileID: 11400000, guid: e4c1b4f68065f7649a1ae80b4666cd18, type: 2}
+  drinkUI: {fileID: 8800908561949465308, guid: 893df298a62c17645bf509fe7e980cb9, type: 3}
