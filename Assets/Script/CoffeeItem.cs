@@ -21,7 +21,9 @@ public class CoffeeItem : MonoBehaviour
             // ✅ Compare coffee's name with customer's order
             if (drinkData.drinkName == customer.orderedDrink.drinkName)
             {
-                Destroy(gameObject); // ✅ Destroy coffee if correct
+                Destroy(gameObject);
+                // disable customer head UI
+                
                 customer.MarkOrderCompleted(); // ✅ Mark the order as completed
             }
         }
