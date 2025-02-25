@@ -15,6 +15,9 @@ public class Customer : MonoBehaviour
     private GameObject orderUI; // The UI element above the customer
     private bool _hasReceivedCoffee = false;
     
+    // dictionary <key, value>
+    // <"espresso", 0>
+    // <"espresso", 1>
     
     void Start()
     {
@@ -63,8 +66,14 @@ public class Customer : MonoBehaviour
             if (orderUI != null)
             {
                 orderUI.SetActive(false);
+                // track each order completion
             }
             // ✅ Add any completion logic here (e.g., animations, score increase)
+            // runtime(loop through all exist order) drink list (TODO)
+            // add customer ordered drink into dynamic list
+            // [place drink on customer]
+            // grab customer ordered drink
+            // int --i, iter
         }
     }
 
