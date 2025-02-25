@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kimi/Scene 6.unity
     guid: 8e31d8fb11d03b34d81095a05faf1a8c
+  - enabled: 1
+    path: Assets/Scenes/Kimi/Scene 7.unity
+    guid: e842395f5cbd6f84c8873efa463cc0ad
+  - enabled: 1
+    path: Assets/Scenes/Kimi/RealScenes/Final Scene nigth try.unity
+    guid: ffe85328ef8c11643b3286c354eec83b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

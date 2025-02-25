@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &16649332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &40585040
 RectTransform:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &122813290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2751,6 +2751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 440816424}
   paused: 0
+  sfxObjects: []
 --- !u!114 &440816423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2938,7 +2939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &452409506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11541,8 +11542,8 @@ RectTransform:
   - {fileID: 1233084068}
   - {fileID: 1717003608}
   - {fileID: 1862900620}
-  - {fileID: 16649332}
   - {fileID: 40585040}
+  - {fileID: 16649332}
   m_Father: {fileID: 1653227621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13410,7 +13411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1717003608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13522,7 +13523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1737720201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14980,7 +14981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1862900620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15078,7 +15079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1868062194
 Transform:
   m_ObjectHideFlags: 0
@@ -15108,6 +15109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 1868062197}
   paused: 0
+  sfxObjects: []
 --- !u!114 &1868062196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16447,14 +16449,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timelines:
-  - {fileID: 8015029607647831795}
-  - {fileID: 5639278315472149075}
-  - {fileID: 7149139409209394491}
+  - {fileID: 6176835021052227290}
+  - {fileID: 737495121427912190}
+  - {fileID: 1868062197}
+  - {fileID: 7581405831356265053}
   canvases:
-  - {fileID: 3289745460733721646}
-  - {fileID: 3585798443681483044}
-  - {fileID: 1737720200}
+  - {fileID: 1717003607}
+  - {fileID: 1862900619}
+  - {fileID: 40585039}
+  - {fileID: 16649331}
   playOnAwake: 1
+  finishPlayedSceneTransition: 1
+  UIpanel: {fileID: 0}
 --- !u!1 &2001081907
 GameObject:
   m_ObjectHideFlags: 0
@@ -17617,6 +17623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4140880346984816436}
   paused: 0
+  sfxObjects: []
 --- !u!114 &2146009796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21335,7 +21342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &372590100892448828
 GameObject:
   m_ObjectHideFlags: 0
@@ -21467,6 +21474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7260514395121163352}
   paused: 0
+  sfxObjects: []
 --- !u!114 &415564029300306003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22394,6 +22402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 737495121427912190}
   paused: 0
+  sfxObjects: []
 --- !u!4 &845096948722886325
 Transform:
   m_ObjectHideFlags: 0
@@ -22692,6 +22701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 5639278315472149075}
   paused: 0
+  sfxObjects: []
 --- !u!4 &1035937958205923974
 Transform:
   m_ObjectHideFlags: 0
@@ -22827,6 +22837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7149139409209394491}
   paused: 0
+  sfxObjects: []
 --- !u!23 &1094018002676930828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23329,6 +23340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6125203465521898865}
   paused: 0
+  sfxObjects: []
 --- !u!4 &1315388054117040774
 Transform:
   m_ObjectHideFlags: 0
@@ -26233,6 +26245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7973242088158289109}
   paused: 0
+  sfxObjects: []
 --- !u!23 &2725479108366013442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27132,6 +27145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 8830430587577143956}
   paused: 0
+  sfxObjects: []
 --- !u!1 &3289745460733721646
 GameObject:
   m_ObjectHideFlags: 0
@@ -27150,7 +27164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &3306549335297252561
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27383,6 +27397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6820455710626121311}
   paused: 0
+  sfxObjects: []
 --- !u!1 &3418522958709087386
 GameObject:
   m_ObjectHideFlags: 0
@@ -27626,7 +27641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3587052127023968421
 GameObject:
   m_ObjectHideFlags: 0
@@ -27797,7 +27812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3712209198668537356
 Transform:
   m_ObjectHideFlags: 0
@@ -28258,6 +28273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6176835021052227290}
   paused: 0
+  sfxObjects: []
 --- !u!23 &3861218449217404667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28828,6 +28844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 6939566761220897464}
   paused: 0
+  sfxObjects: []
 --- !u!4 &4218769263471290852
 Transform:
   m_ObjectHideFlags: 0
@@ -30918,6 +30935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 8015029607647831795}
   paused: 0
+  sfxObjects: []
 --- !u!64 &5367969489151182857
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33254,7 +33272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6816245809110470650
 Transform:
   m_ObjectHideFlags: 0
@@ -34456,6 +34474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7581405831356265053}
   paused: 0
+  sfxObjects: []
 --- !u!23 &7204912050088861530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34813,6 +34832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4140880346984816436}
   paused: 0
+  sfxObjects: []
 --- !u!23 &7317466055192436668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35671,7 +35691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &7809916872065047626
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -37620,6 +37640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 7809916872065047626}
   paused: 0
+  sfxObjects: []
 --- !u!320 &8620737765725155583
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -38325,6 +38346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 8620737765725155583}
   paused: 0
+  sfxObjects: []
 --- !u!1 &8921730215381013422
 GameObject:
   m_ObjectHideFlags: 0
