@@ -5,12 +5,14 @@ using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
 
 public class TimelineManager : MonoBehaviour
 {
     public List<PlayableDirector> timelines = new List<PlayableDirector>();
     public List<GameObject> canvases = new List<GameObject>();
     private int _currentIndex = 0;
+    public bool playOnAwake = true;
 
     private void Start()
     {
@@ -18,6 +20,12 @@ public class TimelineManager : MonoBehaviour
         {
             return;
         }
+
+        foreach (GameObject canvas in canvases)
+        {
+            canvas.SetActive(false);
+        }
+
         foreach (PlayableDirector timeline in timelines)
         {
             timeline.Stop();
@@ -27,7 +35,12 @@ public class TimelineManager : MonoBehaviour
         {
             canvases[i].SetActive(false);
         }
-        PlayCurrentTimeline();
+
+        if(playOnAwake)
+        {
+            PlayCurrentTimeline();
+        }
+        
     }
 
     public void PlayCurrentTimeline()
@@ -42,6 +55,8 @@ public class TimelineManager : MonoBehaviour
             return;
         }
 
+        canvases[_currentIndex].SetActive(true);
+
         timelines[_currentIndex].stopped += OnCurrentTimelineStopped;
         timelines[_currentIndex].Play();
     }
@@ -49,6 +64,8 @@ public class TimelineManager : MonoBehaviour
     private void OnCurrentTimelineStopped(PlayableDirector director)
     {
         director.stopped -= OnCurrentTimelineStopped;
+
+        
         canvases[_currentIndex].SetActive(false);
         _currentIndex++;
 
