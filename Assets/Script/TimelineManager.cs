@@ -30,7 +30,7 @@ public class TimelineManager : MonoBehaviour
         PlayCurrentTimeline();
     }
 
-    private void PlayCurrentTimeline()
+    public void PlayCurrentTimeline()
     {
         foreach (PlayableDirector timeline in timelines)
         {

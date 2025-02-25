@@ -14,6 +14,7 @@ public class Customer : MonoBehaviour
     public DrinkData orderedDrink;
     private GameObject orderUI; // The UI element above the customer
     private bool _hasReceivedCoffee = false;
+    public TimelineManager timelineManager;
     
     // dictionary <key, value>
     // <"espresso", 0>
@@ -22,6 +23,7 @@ public class Customer : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
+        timelineManager = FindAnyObjectByType<TimelineManager>();
     }
 
     void Update()
@@ -74,6 +76,7 @@ public class Customer : MonoBehaviour
             // [place drink on customer]
             // grab customer ordered drink
             // int --i, iter
+            timelineManager.PlayCurrentTimeline();
         }
     }
 
