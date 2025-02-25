@@ -13522,7 +13522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1737720201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16449,9 +16449,11 @@ MonoBehaviour:
   timelines:
   - {fileID: 8015029607647831795}
   - {fileID: 5639278315472149075}
+  - {fileID: 7149139409209394491}
   canvases:
   - {fileID: 3289745460733721646}
   - {fileID: 3585798443681483044}
+  - {fileID: 1737720200}
   playOnAwake: 1
 --- !u!1 &2001081907
 GameObject:
@@ -34364,7 +34366,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 7549d24e73d7e9642b7c39e12658c26f, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -35669,7 +35671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!320 &7809916872065047626
 PlayableDirector:
   m_ObjectHideFlags: 0
