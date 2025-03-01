@@ -16161,6 +16161,7 @@ MonoBehaviour:
   - Scene 6
   - Scene 7
   - Final Scene nigth try
+  - Scene 0_1
 --- !u!4 &1868389723
 Transform:
   m_ObjectHideFlags: 0
@@ -17476,6 +17477,7 @@ MonoBehaviour:
   finishPlayedSceneTransition: 1
   UIpanel: {fileID: 0}
   levelLoader: {fileID: 2012134211}
+  finishGame: 0
 --- !u!1 &2001081907
 GameObject:
   m_ObjectHideFlags: 0
