@@ -15,6 +15,8 @@ public class TimelineManager : MonoBehaviour
     public bool playOnAwake = true;
     public bool finishPlayedSceneTransition = true;
     public GameObject UIpanel;
+    public LevelLoader levelLoader;
+    public bool finishGame = false;
 
     private void Start()
     {
@@ -85,7 +87,12 @@ public class TimelineManager : MonoBehaviour
 
             if(finishPlayedSceneTransition)
             {
-                LoadToNextScene();
+                levelLoader.LoadNextLevel();
+                // LoadToNextScene();
+            }
+            if(finishGame)
+            {
+                Application.Quit();
             }
         }
     }
