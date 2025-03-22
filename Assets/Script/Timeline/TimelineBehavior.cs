@@ -11,6 +11,7 @@ public class TimelineBehavior: MonoBehaviour
     public List<GameObject> sfxObjects_1;
     public List<GameObject> sfxObjects_2;
     public List<GameObject> sfxObjects_3;
+    public List<GameObject> sfxObjects_4;
 
     void Update()
     {
@@ -88,6 +89,22 @@ public class TimelineBehavior: MonoBehaviour
             if (audioSource3 != null)
             {
                 audioSource3.Play();
+            }
+            else
+            {
+                Debug.LogError("AudioSource component missing on " + gameObject.name);
+            }
+        }
+    }
+
+    public void PlaySFX4()
+    {
+        foreach (var gameObject in sfxObjects_4)
+        {
+            var audioSource4 = gameObject.GetComponent<AudioSource>();
+            if (audioSource4 != null)
+            {
+                audioSource4.Play();
             }
             else
             {
