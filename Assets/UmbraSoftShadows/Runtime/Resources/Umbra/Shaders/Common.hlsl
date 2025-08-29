@@ -40,6 +40,8 @@ float2 _SourceSize;
 
 float _ReceiverPlaneAltitude;
 
+int _EarlyOutSamples;
+
 #define dot2(x) dot(x,x)
 
 struct AttributesSimple {

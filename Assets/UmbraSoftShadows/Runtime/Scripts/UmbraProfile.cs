@@ -4,7 +4,8 @@ namespace Umbra {
 
     public enum ShadowSource {
         UnityShadows,
-        UmbraShadows
+        UmbraShadows,
+        OnlyContactShadows
     }
 
     public enum ContactShadowsInjectionPoint {
@@ -34,7 +35,9 @@ namespace Umbra {
 
     public enum NormalSource {
         ReconstructFromDepth,
-        NormalsPass
+        NormalsPass,
+        [InspectorName("GBuffer Normals")]
+        GBufferNormals
     }
 
     public enum LoopStep {
@@ -59,6 +62,10 @@ namespace Umbra {
         [Tooltip("Translates to the number of shadow map samples used to resolve shadows")]
         [Range(1, 64)]
         public int sampleCount = 16;
+
+        [Tooltip("Number of samples to early out if shadow is already fully resolved")]
+        [Range(1, 64)]
+        public int earlyOutSamples = 32;
 
         [Tooltip("Size of the directional light which influences the penumbra size")]
         [Range(0f, 32)]
@@ -131,8 +138,16 @@ namespace Umbra {
         [Tooltip("Manual adjustment of shadow smoothness multiplier for this cascade")]
         public float cascade4Scale = 1f;
 
-        [Tooltip("Method used to obtain surface normals in forward rendering path (not used in deferred). Reconstruct from depth is faster but less accurate.")]
+        [Tooltip("Method used to obtain surface normals. Reconstruct from depth is fastest, normals pass is more accurate, and GBuffer normals (deferred only) uses existing GBuffer data.")]
         public NormalSource normalsSource = NormalSource.ReconstructFromDepth;
+
+        /// <summary>
+        /// Gets the effective normals source, falling back to ReconstructFromDepth when GBufferNormals is selected but not in deferred mode
+        /// </summary>
+        public NormalSource effectiveNormalsSource => 
+            normalsSource == NormalSource.GBufferNormals && !UmbraSoftShadows.isDeferred 
+                ? NormalSource.ReconstructFromDepth 
+                : normalsSource;
 
         [Tooltip("Reduces the number of samples while keeping the shadow size")]
         public LoopStep loopStepOptimization = LoopStep.Default;
@@ -149,12 +164,11 @@ namespace Umbra {
         [Tooltip("Resolves screen space shadows in a reduced buffer of half of screen size")]
         public bool downsample;
 
+        [Tooltip("Forces a depth prepass so depth and normals are available even for forward-only materials (useful in Deferred when using forward only materials).")]
+        public bool forceDepthPrepass;
+
         [Tooltip("Prevents shadow blurring on geometry edges")]
         public bool preserveEdges = true;
-
-        [Tooltip("Bias applied to Umbra shadows. Use only if self-shadowing occurs on certain surfaces.")]
-        [Range(0, 10)]
-        public float bias;
 
         [Tooltip("Stylized look for shadows")]
         public Style style = Style.Default;
@@ -170,6 +184,8 @@ namespace Umbra {
         public float contactShadowsIntensityMultiplier = 0.85f;
 
         public ContactShadowsInjectionPoint contactShadowsInjectionPoint = ContactShadowsInjectionPoint.ShadowTexture;
+
+        public ContactShadowsInjectionPoint actualContactShadowsInjectionPoint => shadowSource == ShadowSource.OnlyContactShadows || contactShadowsInjectionPoint == ContactShadowsInjectionPoint.AfterOpaque ? ContactShadowsInjectionPoint.AfterOpaque : contactShadowsInjectionPoint;
 
         [Range(1, 64)]
         public int contactShadowsSampleCount = 16;
@@ -196,6 +212,24 @@ namespace Umbra {
         [Tooltip("Attenuates contact shadows on the edges of screen")]
         [Range(0, 0.5f)]
         public float contactShadowsVignetteSize = 0.15f;
+
+        [Tooltip("Adds an offset to the pixel position to avoid self-occlusion")]
+        [Range(0f, 1f)]
+        public float contactShadowsBias = 0.001f;
+
+        [Tooltip("Bias applied at far distances. Use only if self-shadowing occurs on certain surfaces.")]
+        [Range(0, 1)]
+        public float contactShadowsBiasFar = 0.4f;        
+
+        [Tooltip("Softens the edges of contact shadows. Higher values create softer edges.")]
+        [Range(0.01f, 0.5f)]
+        public float contactShadowsEdgeSoftness = 0.1f;
+
+        [Tooltip("Enables soft edges for contact shadows. When disabled, shadows have hard edges for better performance.")]
+        public bool contactShadowsSoftEdges;
+
+        [Tooltip("Makes contact shadows planar by ignoring the Y component of the light direction. Useful for ground shadows.")]
+        public bool contactShadowsPlanarShadows;
 
         [Tooltip("Adds an extra pass after opaque with custom colored shadows")]
         public bool overlayShadows;
@@ -237,6 +271,7 @@ namespace Umbra {
 
 
         public void ApplyPreset(UmbraPreset preset) {
+            shadowSource = ShadowSource.UmbraShadows;
             switch (preset) {
                 case UmbraPreset.Fast:
                     sampleCount = 12;

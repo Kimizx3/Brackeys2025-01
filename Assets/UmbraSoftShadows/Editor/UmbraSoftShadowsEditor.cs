@@ -10,6 +10,8 @@ namespace Umbra {
     public class UmbraSoftShadowsEditor : Editor {
 
         SerializedProperty profile, debugShadows;
+        SerializedProperty contactShadowsSource;
+        SerializedProperty pointLightsTrigger;
 
         static UmbraPreset preset = UmbraPreset.None;
         static GUIStyle boxStyle;
@@ -19,6 +21,8 @@ namespace Umbra {
         private void OnEnable() {
             profile = serializedObject.FindProperty("profile");
             debugShadows = serializedObject.FindProperty("debugShadows");
+            contactShadowsSource = serializedObject.FindProperty("contactShadowsSource");
+            pointLightsTrigger = serializedObject.FindProperty("pointLightsTrigger");
         }
 
         public override void OnInspectorGUI() {
@@ -40,6 +44,23 @@ namespace Umbra {
                 EditorGUILayout.Separator();
             }
 
+            serializedObject.Update();
+
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.PropertyField(profile);
+            if (profile.objectReferenceValue != null) {
+                if (GUILayout.Button("Save To Asset", GUILayout.Width(120))) {
+                    ExportProfile();
+                }
+            } else {
+                if (GUILayout.Button("Create Profile", GUILayout.Width(120))) {
+                    CreateProfile();
+                }
+            }
+            EditorGUILayout.EndHorizontal();
+
+            if (profile.objectReferenceValue == null) return;
+
             EditorGUILayout.BeginHorizontal();
             preset = (UmbraPreset)EditorGUILayout.EnumPopup(new GUIContent("Sample Preset"), preset);
             if (GUILayout.Button("Apply", GUILayout.Width(60))) {
@@ -49,10 +70,15 @@ namespace Umbra {
             }
             EditorGUILayout.EndHorizontal();
 
-            serializedObject.Update();
-
-            EditorGUILayout.PropertyField(profile);
             EditorGUILayout.PropertyField(debugShadows);
+            EditorGUILayout.PropertyField(contactShadowsSource);
+            
+            if (contactShadowsSource.enumValueIndex == (int)ContactShadowsSource.PointLights) {
+                EditorGUILayout.PropertyField(pointLightsTrigger);
+                if (UmbraPointLightContactShadows.umbraPointLights.Count == 0) {
+                    EditorGUILayout.HelpBox("No suitable point lights found. Add a UmbraPointLightContactShadows component to a point light to enable contact shadows on the light.", MessageType.Info);
+                }
+            }
 
             if (profile.objectReferenceValue != null) {
                 if (cachedProfile != profile.objectReferenceValue) {
@@ -67,17 +93,7 @@ namespace Umbra {
                 EditorGUILayout.BeginVertical(boxStyle);
                 cachedProfileEditor.OnInspectorGUI();
 
-                EditorGUILayout.Separator();
-
-                if (GUILayout.Button("Save As New Profile")) {
-                    ExportProfile();
-                }
                 EditorGUILayout.EndVertical();
-            } else {
-                EditorGUILayout.HelpBox("Create or assign a profile.", MessageType.Info);
-                if (GUILayout.Button("New Profile")) {
-                    CreateProfile();
-                }
             }
 
             serializedObject.ApplyModifiedProperties();

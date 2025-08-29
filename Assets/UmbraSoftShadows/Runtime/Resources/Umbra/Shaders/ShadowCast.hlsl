@@ -293,6 +293,7 @@ half4 FragCast(Varyings input) : SV_Target {
                 #endif
                 shadow += SAMPLE_TEXTURE2D_SHADOW(_MainLightShadowmapTexture, sampler_MainLightShadowmapTexture, cr2);
                 samples++;
+                if (samples > _EarlyOutSamples && (shadow <= 0 || shadow >= samples)) break;
             END_LOOP
             shadow /= samples;
 

@@ -15,14 +15,19 @@ namespace Umbra {
         SerializedProperty blurDepthAttenStart, blurDepthAttenLength, blurGrazingAttenuation;
         SerializedProperty blendCascades, cascade1BlendingStrength, cascade2BlendingStrength, cascade3BlendingStrength;
         SerializedProperty cascade1Scale, cascade2Scale, cascade3Scale, cascade4Scale;
-        SerializedProperty loopStepOptimization, frameSkipOptimization, skipFrameMaxCameraDisplacement, skipFrameMaxCameraRotation, downsample;
+        SerializedProperty loopStepOptimization, frameSkipOptimization, skipFrameMaxCameraDisplacement, skipFrameMaxCameraRotation, downsample, forceDepthPrepass;
         SerializedProperty style, maskTexture, maskScale;
-        SerializedProperty contactShadows, contactShadowsInjectionPoint, contactShadowsSampleCount, contactShadowsStepping, contactShadowsThicknessNear, contactShadowsThicknessDistanceMultiplier, contactShadowsJitter;
+        SerializedProperty contactShadows, contactShadowsInjectionPoint, contactShadowsSampleCount, contactShadowsStepping;
+        SerializedProperty contactShadowsThicknessNear, contactShadowsThicknessDistanceMultiplier, contactShadowsJitter, contactShadowsBias, contactShadowsBiasFar;
         SerializedProperty contactShadowsIntensityMultiplier, contactShadowsDistanceFade, contactShadowsStartDistance, contactShadowsStartDistanceFade, contactShadowsNormalBias, contactShadowsVignetteSize;
+        SerializedProperty contactShadowsEdgeSoftness, contactShadowsSoftEdges, contactShadowsPlanarShadows;
         SerializedProperty transparentReceiverPlane, receiverPlaneAltitude;
+        SerializedProperty earlyOutSamples;
 
         static GUIStyle titleLabelStyle;
         static Color titleColor;
+
+        Light thisLight;
 
         private void OnEnable () {
             if (target == null) return;
@@ -64,6 +69,7 @@ namespace Umbra {
             skipFrameMaxCameraDisplacement = serializedObject.FindProperty("skipFrameMaxCameraDisplacement");
             skipFrameMaxCameraRotation = serializedObject.FindProperty("skipFrameMaxCameraRotation");
             downsample = serializedObject.FindProperty("downsample");
+            forceDepthPrepass = serializedObject.FindProperty("forceDepthPrepass");
             style = serializedObject.FindProperty("style");
             maskTexture = serializedObject.FindProperty("maskTexture");
             maskScale = serializedObject.FindProperty("maskScale");
@@ -74,14 +80,29 @@ namespace Umbra {
             contactShadowsThicknessNear = serializedObject.FindProperty("contactShadowsThicknessNear");
             contactShadowsThicknessDistanceMultiplier = serializedObject.FindProperty("contactShadowsThicknessDistanceMultiplier");
             contactShadowsJitter = serializedObject.FindProperty("contactShadowsJitter");
+            contactShadowsBias = serializedObject.FindProperty("contactShadowsBias");
+            contactShadowsBiasFar = serializedObject.FindProperty("contactShadowsBiasFar");
             contactShadowsDistanceFade = serializedObject.FindProperty("contactShadowsDistanceFade");
             contactShadowsStartDistance = serializedObject.FindProperty("contactShadowsStartDistance");
             contactShadowsStartDistanceFade = serializedObject.FindProperty("contactShadowsStartDistanceFade");
             contactShadowsNormalBias = serializedObject.FindProperty("contactShadowsNormalBias");
             contactShadowsVignetteSize = serializedObject.FindProperty("contactShadowsVignetteSize");
             contactShadowsIntensityMultiplier = serializedObject.FindProperty("contactShadowsIntensityMultiplier");
+            contactShadowsEdgeSoftness = serializedObject.FindProperty("contactShadowsEdgeSoftness");
+            contactShadowsSoftEdges = serializedObject.FindProperty("contactShadowsSoftEdges");
+            contactShadowsPlanarShadows = serializedObject.FindProperty("contactShadowsPlanarShadows");
             transparentReceiverPlane = serializedObject.FindProperty("transparentReceiverPlane");
             receiverPlaneAltitude = serializedObject.FindProperty("receiverPlaneAltitude");
+            earlyOutSamples = serializedObject.FindProperty("earlyOutSamples");
+
+#if UNITY_2023_1_OR_NEWER
+            UmbraSoftShadows umbraSoftShadows = FindAnyObjectByType<UmbraSoftShadows>(FindObjectsInactive.Include);
+#else
+            UmbraSoftShadows umbraSoftShadows = FindObjectOfType<UmbraSoftShadows>(true);
+#endif
+            if (umbraSoftShadows != null) {
+                thisLight = umbraSoftShadows.GetComponent<Light>();
+            }
         }
 
         public override void OnInspectorGUI () {
@@ -91,6 +112,14 @@ namespace Umbra {
             DrawSectionTitle("General Settings");
             EditorGUILayout.PropertyField(shadowSource);
 
+            if (thisLight != null) {
+                if (shadowSource.intValue != (int)ShadowSource.OnlyContactShadows && thisLight.shadows == LightShadows.None) {
+                    EditorGUILayout.HelpBox("Light has no shadows. Umbra Soft Shadows will not work.", MessageType.Warning);
+                }
+                else if (shadowSource.intValue == (int)ShadowSource.OnlyContactShadows && thisLight.shadows != LightShadows.None) {
+                    EditorGUILayout.HelpBox("Disable light shadows to use just contact shadows.", MessageType.Info);
+                }
+            }
             if (shadowSource.intValue == (int)ShadowSource.UmbraShadows) {
                 EditorGUILayout.PropertyField(sampleCount);
                 EditorGUILayout.PropertyField(lightSize);
@@ -119,28 +148,50 @@ namespace Umbra {
                     EditorGUI.indentLevel--;
                 }
                 if (UmbraSoftShadows.isDeferred) {
-                    GUI.enabled = false;
-                    EditorGUILayout.LabelField("Normals Source", "Gbuffer Normals");
-                    GUI.enabled = true;
+                    EditorGUILayout.PropertyField(normalsSource);
                 }
                 else {
+                    // In forward mode, show normals source but handle GBufferNormals fallback
+                    if (normalsSource.intValue == (int)NormalSource.GBufferNormals) {
+                        EditorGUILayout.HelpBox("GBuffer Normals is only available in Deferred rendering. Falling back to Reconstruct From Depth.", MessageType.Info);
+                    }
                     EditorGUILayout.PropertyField(normalsSource);
                 }
             }
 
-            EditorGUILayout.PropertyField(contactShadows);
-            if (contactShadows.boolValue) {
+            if (shadowSource.intValue != (int)ShadowSource.OnlyContactShadows) {
+                EditorGUILayout.PropertyField(contactShadows);
                 EditorGUI.indentLevel++;
+            }
+            else {
+                // In OnlyContactShadows mode, show normals source but handle GBufferNormals fallback
+                if (!UmbraSoftShadows.isDeferred && normalsSource.intValue == (int)NormalSource.GBufferNormals) {
+                    EditorGUILayout.HelpBox("GBuffer Normals is only available in Deferred rendering. Falling back to Reconstruct From Depth.", MessageType.Info);
+                }
+                EditorGUILayout.PropertyField(normalsSource);
+                EditorGUILayout.Separator();
+                DrawSectionTitle("Contact Shadows Settings");
+            }
+            if (shadowSource.intValue == (int)ShadowSource.OnlyContactShadows || contactShadows.boolValue) {
                 EditorGUILayout.PropertyField(contactShadowsIntensityMultiplier, new GUIContent("Intensity"));
                 EditorGUILayout.PropertyField(contactShadowsDistanceFade, new GUIContent("Distance Fade"));
                 EditorGUILayout.PropertyField(contactShadowsSampleCount, new GUIContent("Sample Count"));
                 EditorGUILayout.PropertyField(contactShadowsStepping, new GUIContent("Stepping"));
                 EditorGUILayout.PropertyField(contactShadowsThicknessNear, new GUIContent("Thickness Near"));
                 EditorGUILayout.PropertyField(contactShadowsThicknessDistanceMultiplier, new GUIContent("Thickness Distance Multiplier"));
+                EditorGUILayout.PropertyField(contactShadowsPlanarShadows, new GUIContent("Planar Shadows"));
                 EditorGUILayout.PropertyField(contactShadowsJitter, new GUIContent("Jitter"));
                 EditorGUILayout.PropertyField(contactShadowsStartDistance, new GUIContent("Start Distance"));
                 EditorGUILayout.PropertyField(contactShadowsStartDistanceFade, new GUIContent("Start Distance Fade"));
+                EditorGUILayout.PropertyField(contactShadowsBias, new GUIContent("Depth Bias Near"));
+                EditorGUILayout.PropertyField(contactShadowsBiasFar, new GUIContent("Depth Bias Far"));
                 EditorGUILayout.PropertyField(contactShadowsNormalBias, new GUIContent("Normal Bias"));
+                EditorGUILayout.PropertyField(contactShadowsSoftEdges, new GUIContent("Soft Edges"));
+                if (contactShadowsSoftEdges.boolValue) {
+                    EditorGUI.indentLevel++;
+                    EditorGUILayout.PropertyField(contactShadowsEdgeSoftness, new GUIContent("Edge Softness"));
+                    EditorGUI.indentLevel--;
+                }
                 EditorGUILayout.PropertyField(contactShadowsVignetteSize, new GUIContent("Vignette Size"));
                 if (shadowSource.intValue == (int)ShadowSource.UmbraShadows) {
                     EditorGUILayout.PropertyField(contactShadowsInjectionPoint, new GUIContent("Injection Point"));
@@ -153,6 +204,8 @@ namespace Umbra {
                     EditorGUILayout.LabelField("Injection Point", "After Opaque");
                     GUI.enabled = true;
                 }
+            }
+            if (shadowSource.intValue != (int)ShadowSource.OnlyContactShadows) {
                 EditorGUI.indentLevel--;
             }
 
@@ -192,38 +245,44 @@ namespace Umbra {
             }
 
             DrawSectionTitle("Advanced");
-            EditorGUILayout.PropertyField(downsample);
-            if (downsample.boolValue) {
-                EditorGUI.indentLevel++;
-                EditorGUILayout.PropertyField(preserveEdges, new GUIContent("Edge Preserve"));
-                EditorGUI.indentLevel--;
-            }
-            if (shadowSource.intValue == (int)ShadowSource.UmbraShadows) {
-                EditorGUILayout.PropertyField(loopStepOptimization, new GUIContent("Loop Optimization"));
-            }
-            EditorGUILayout.PropertyField(frameSkipOptimization, new GUIContent("Frame Skip Optimization"));
-            if (frameSkipOptimization.boolValue) {
-                EditorGUI.indentLevel++;
-                EditorGUILayout.PropertyField(skipFrameMaxCameraDisplacement, new GUIContent("Max Camera Displacement"));
-                EditorGUILayout.PropertyField(skipFrameMaxCameraRotation, new GUIContent("Max Camera Rotation"));
-                EditorGUI.indentLevel--;
-            }
-            if (shadowSource.intValue == (int)ShadowSource.UmbraShadows) {
-                EditorGUILayout.PropertyField(blendCascades);
-                if (blendCascades.boolValue) {
+            if (shadowSource.intValue != (int)ShadowSource.OnlyContactShadows) {
+                EditorGUILayout.PropertyField(downsample);
+                if (downsample.boolValue) {
                     EditorGUI.indentLevel++;
-                    EditorGUILayout.PropertyField(cascade1BlendingStrength, new GUIContent("Cascade 1 Blending"));
-                    EditorGUILayout.PropertyField(cascade2BlendingStrength, new GUIContent("Cascade 2 Blending"));
-                    EditorGUILayout.PropertyField(cascade3BlendingStrength, new GUIContent("Cascade 3 Blending"));
-                    if (cascade1BlendingStrength.floatValue > 5f || cascade2BlendingStrength.floatValue > 5f || cascade3BlendingStrength.floatValue > 5f) {
-                        EditorGUILayout.HelpBox("Setting a high value in blending can introduce artifacts between the cascades. Reduce this value if this happens.", MessageType.Info);
-                    }
+                    EditorGUILayout.PropertyField(preserveEdges, new GUIContent("Edge Preserve"));
                     EditorGUI.indentLevel--;
                 }
-                EditorGUILayout.PropertyField(cascade1Scale);
-                EditorGUILayout.PropertyField(cascade2Scale);
-                EditorGUILayout.PropertyField(cascade3Scale);
-                EditorGUILayout.PropertyField(cascade4Scale);
+            }
+            EditorGUILayout.PropertyField(forceDepthPrepass);
+            if (shadowSource.intValue != (int)ShadowSource.UnityShadows) {
+                EditorGUILayout.PropertyField(loopStepOptimization, new GUIContent("Loop Optimization"));
+            }
+            if (shadowSource.intValue != (int)ShadowSource.OnlyContactShadows) {
+                EditorGUILayout.PropertyField(frameSkipOptimization, new GUIContent("Frame Skip Optimization"));
+                if (frameSkipOptimization.boolValue) {
+                    EditorGUI.indentLevel++;
+                    EditorGUILayout.PropertyField(skipFrameMaxCameraDisplacement, new GUIContent("Max Camera Displacement"));
+                    EditorGUILayout.PropertyField(skipFrameMaxCameraRotation, new GUIContent("Max Camera Rotation"));
+                    EditorGUI.indentLevel--;
+                }
+                EditorGUILayout.PropertyField(earlyOutSamples);
+                if (shadowSource.intValue == (int)ShadowSource.UmbraShadows) {
+                    EditorGUILayout.PropertyField(blendCascades);
+                    if (blendCascades.boolValue) {
+                        EditorGUI.indentLevel++;
+                        EditorGUILayout.PropertyField(cascade1BlendingStrength, new GUIContent("Cascade 1 Blending"));
+                        EditorGUILayout.PropertyField(cascade2BlendingStrength, new GUIContent("Cascade 2 Blending"));
+                        EditorGUILayout.PropertyField(cascade3BlendingStrength, new GUIContent("Cascade 3 Blending"));
+                        if (cascade1BlendingStrength.floatValue > 5f || cascade2BlendingStrength.floatValue > 5f || cascade3BlendingStrength.floatValue > 5f) {
+                            EditorGUILayout.HelpBox("Setting a high value in blending can introduce artifacts between the cascades. Reduce this value if this happens.", MessageType.Info);
+                        }
+                        EditorGUI.indentLevel--;
+                    }
+                    EditorGUILayout.PropertyField(cascade1Scale);
+                    EditorGUILayout.PropertyField(cascade2Scale);
+                    EditorGUILayout.PropertyField(cascade3Scale);
+                    EditorGUILayout.PropertyField(cascade4Scale);
+                }
             }
             EditorGUILayout.PropertyField(transparentReceiverPlane);
             if (transparentReceiverPlane.boolValue) {
@@ -234,6 +293,8 @@ namespace Umbra {
                 EditorGUILayout.PropertyField(receiverPlaneAltitude, new GUIContent("Altitude"));
                 EditorGUI.indentLevel--;
             }
+
+
             serializedObject.ApplyModifiedProperties();
         }
 

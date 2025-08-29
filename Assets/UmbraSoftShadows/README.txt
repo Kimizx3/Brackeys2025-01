@@ -46,6 +46,21 @@ https://assetstore.unity.com/publishers/15018
 Version history
 ---------------
 
+Version 7.1
+- Added "Force Depth Prepass" option in Advanced Section. Useful to support forward-only materials in deferred rendering path.
+
+Version 7.0.1
+- [Fix] Fixed compatibility with forward opaques in deferred rendering path (also must choose Normals Source = Reconstruct From Depth)
+
+Version 7.0
+- Contact shadows: added support for point lights
+- More options for constat shadows: depth bias far, edge softness, planar shadows
+
+Version 6.1
+- Added early out samples option
+- Added option to render only contact shadows
+- Added bias option to contact shadows
+
 Version 6.0
 - Added "Overlay Shadows" option which allows additional customization options
 

@@ -17,7 +17,14 @@ float4 _ContactShadowsData3;
 #define THICKNESS_NEAR _ContactShadowsData3.x
 #define THICKNESS_DEPTH_MULTIPLIER _ContactShadowsData3.y
 #define VIGNETTE_SIZE _ContactShadowsData3.z
+#define BIAS _ContactShadowsData3.w
 
+float4 _ContactShadowsData4;
+#define BIAS_FAR _ContactShadowsData4.x
+#define EDGE_SOFTNESS _ContactShadowsData4.y
+#define SHADOWS_3D _ContactShadowsData4.z
+
+float4 _PointLightPosition;
 
 #if _LOOP_STEP_X3
     #define LOOP_STEP 3
@@ -73,6 +80,11 @@ half4 FragContactShadows(Varyings input) : SV_Target {
     float2 uv = input.texcoord.xy;
 
     float rawDepth = SampleSceneDepth(uv);
+
+    #if !_RECEIVER_PLANE
+        if (IsSkyBox(rawDepth)) return half4(0, 0, 0, 0);
+    #endif    
+
     float depthPersp = Linear01Depth(rawDepth, _ZBufferParams);
     float depthOrtho = rawDepth;
     #if UNITY_REVERSED_Z
@@ -97,38 +109,96 @@ half4 FragContactShadows(Varyings input) : SV_Target {
     #endif
     wpos0 += norm * CONTACT_SHADOWS_NORMAL_BIAS;
 
-    float3 step = _MainLightPosition.xyz * STEPPING;
+    #if _RECEIVER_PLANE
+        if (wpos0.y < _ReceiverPlaneAltitude) {
+            float3 cameraToWpos = wpos0 - _WorldSpaceCameraPos;
+            float t = (_ReceiverPlaneAltitude - _WorldSpaceCameraPos.y) / cameraToWpos.y;
+            wpos0 = _WorldSpaceCameraPos + t * cameraToWpos;            
+            #if _NORMALS_TEXTURE
+                norm = float3(0, 1, 0);
+            #endif                
+        }
+    #endif
+
+    float3 lightDirection;
+    #if _USE_POINT_LIGHT
+        _PointLightPosition.y = lerp(wpos0.y - 0.05f, _PointLightPosition.y, SHADOWS_3D);
+        lightDirection = normalize(_PointLightPosition.xyz - wpos0);
+    #else
+        lightDirection = _MainLightPosition.xyz;
+    #endif
+    
+    float3 step = lightDirection * STEPPING;
 
     half randomVal = InterleavedGradientNoise(uv * _SourceSize.xy, 0);
     wpos0 += step * (randomVal * JITTER);
 
-    float bias = 0.0025 * depth01;
+    float bias = depth01 * lerp(BIAS, BIAS_FAR, depth01);
     float thickness = THICKNESS_NEAR + depth01 * THICKNESS_DEPTH_MULTIPLIER;
     float maxDist = STEPPING * SAMPLE_COUNT;
 
     half shadow = 1.0;
     half dist = 0;
-    LOOP(k, SAMPLE_COUNT)
+    
+    #if _SOFT_EDGES
+        // Complex loop with edge softness
+        float softestShadow = 1.0;
+        
+        LOOP(k, SAMPLE_COUNT)
 
-        float3 wpos = wpos0 + step * k;
-        float3 coords = GetSSCoords(wpos);
+            float3 wpos = wpos0 + step * k;
+            float3 coords = GetSSCoords(wpos);
 
-        if (any(floor(coords.xy)!=0)) break;
-        float depth = GetLinearDepth01(coords.xy);
+            if (any(floor(coords.xy)!=0)) break;
+            float depth = GetLinearDepth01(coords.xy);
 
-        float depthDiff = coords.z - depth;
-        if (depthDiff > bias && depthDiff < thickness) {
-            dist = STEPPING * k;
-            shadow = lerp(0, DISTANCE_FADE, (float)k / SAMPLE_COUNT);
-            break;
-        }
+            float depthDiff = coords.z - depth;
+            if (depthDiff > bias && depthDiff < thickness) {
+                // Soft edge calculation based on how close we are to the bias threshold
+                float edgeFade = saturate((depthDiff - bias) / (thickness * EDGE_SOFTNESS));
+                
+                dist = STEPPING * k;
+                float distanceFade = lerp(0, DISTANCE_FADE, (float)k / SAMPLE_COUNT);
+                
+                // Additional softening based on distance
+                float distanceSoftness = saturate(dist / (STEPPING * SAMPLE_COUNT * 0.5));
+                distanceFade = lerp(distanceFade, 1.0, distanceSoftness * 0.3);
+                
+                float currentShadow = lerp(1.0, distanceFade, edgeFade);
+                softestShadow = min(softestShadow, currentShadow);
+                
+                // Continue sampling for softer edges
+                if (edgeFade > 0.98 && k > SAMPLE_COUNT * 0.5) break;
+            }
 
-    END_LOOP
+        END_LOOP
+        
+        shadow = softestShadow;
+    #else
+        // Simple loop that exits immediately on hit
+        LOOP(k, SAMPLE_COUNT)
+
+            float3 wpos = wpos0 + step * k;
+            float3 coords = GetSSCoords(wpos);
+
+            if (any(floor(coords.xy)!=0)) break;
+            float depth = GetLinearDepth01(coords.xy);
+
+            float depthDiff = coords.z - depth;
+            if (depthDiff > bias && depthDiff < thickness) {
+                dist = STEPPING * k;
+                shadow = lerp(0, DISTANCE_FADE, (float)k / SAMPLE_COUNT);
+                break;
+            }
+
+        END_LOOP
+    #endif
 
     shadow = saturate( shadow + 1.0 - saturate((depth01 - CONTACT_SHADOWS_MIN_DISTANCE) / CONTACT_SHADOWS_MIN_DISTANCE_FADE) );
 
     // apply shadow intensity
     half4 shadowParams = GetMainLightShadowParams();
+    if (all(shadowParams.xy == 0)) shadowParams.x = 1; // if shadows are disabled, shadowParams is not set
     half shadowIntensity = shadowParams.x * INTENSITY_MULTIPLIER;
 
     if (VIGNETTE_SIZE > 0) {

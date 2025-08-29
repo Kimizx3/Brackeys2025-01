@@ -21,7 +21,7 @@ namespace Umbra {
                 public TextureHandle rtCameraNormalsTexture;
             }
 
-            public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData) {
+            public override void RecordRenderGraph (RenderGraph renderGraph, ContextContainer frameData) {
 
                 if (mat == null) {
                     Debug.LogError("Umbra material not initialized");
@@ -46,7 +46,7 @@ namespace Umbra {
 
                     Camera cam = cameraData.camera;
 #if UNITY_EDITOR
-                            if (profile.frameSkipOptimization && Application.isPlaying) {
+                    if (profile.frameSkipOptimization && Application.isPlaying) {
 #else
                     if (profile.frameSkipOptimization) {
 #endif
@@ -64,15 +64,13 @@ namespace Umbra {
 
                     TextureHandle shadowmap = renderGraph.ImportTexture(m_RenderTarget);
                     builder.UseTexture(shadowmap, AccessFlags.ReadWrite);
-                  
+
                     if (UmbraSoftShadows.isDeferred && resourceData.gBuffer[2].IsValid()) {
                         passData.rtCameraNormalsTexture = resourceData.gBuffer[2];
                         builder.UseTexture(passData.rtCameraNormalsTexture, AccessFlags.Read);
-                        passData.rtCameraDepthTexture = resourceData.gBuffer[4];
-                        builder.UseTexture(passData.rtCameraDepthTexture, AccessFlags.Read);
-                    } else {
-                        builder.UseTexture(resourceData.cameraDepthTexture, AccessFlags.Read);
                     }
+                    passData.rtCameraDepthTexture = resourceData.cameraDepthTexture;
+                    builder.UseTexture(resourceData.cameraDepthTexture, AccessFlags.Read);
                     if ((input & ScriptableRenderPassInput.Normal) != 0) {
                         builder.UseTexture(resourceData.cameraNormalsTexture, AccessFlags.Read);
                     }
@@ -96,12 +94,12 @@ namespace Umbra {
             }
 
 
-            static void ExecutePass(CommandBuffer cmd, PassData passData) {
+            static void ExecutePass (CommandBuffer cmd, PassData passData) {
 
                 UmbraProfile profile = settings.profile;
                 int frameCount = Time.frameCount;
 #if UNITY_EDITOR
-                    bool useFrame = !Application.isPlaying || !profile.frameSkipOptimization || newShadowmap || !usesCachedShadowmap;
+                bool useFrame = !Application.isPlaying || !profile.frameSkipOptimization || newShadowmap || !usesCachedShadowmap;
 #else
                 bool useFrame = !profile.frameSkipOptimization || newShadowmap || !usesCachedShadowmap;
 #endif
@@ -120,7 +118,8 @@ namespace Umbra {
                             RenderingUtils.ReAllocateIfNeeded(ref m_DownscaledRenderTarget, desc, FilterMode.Point, TextureWrapMode.Clamp);
 #endif
                         shadowsHandle = m_DownscaledRenderTarget;
-                    } else {
+                    }
+                    else {
                         shadowsHandle = m_RenderTarget;
                     }
 
@@ -133,13 +132,15 @@ namespace Umbra {
 
                     if (profile.shadowSource == ShadowSource.UnityShadows) {
                         castShadowsPass = Pass.UnityShadows;
-                    } else {
+                    }
+                    else {
                         castShadowsPass = Pass.UmbraCastShadows;
 
                         if (profile.transparentReceiverPlane) {
                             mat.EnableKeyword(ShaderParams.SKW_RECEIVER_PLANE);
                             cmd.SetGlobalFloat(ShaderParams.ReceiverPlaneAltitude, profile.receiverPlaneAltitude);
-                        } else {
+                        }
+                        else {
                             mat.DisableKeyword(ShaderParams.SKW_RECEIVER_PLANE);
                         }
 
@@ -149,6 +150,7 @@ namespace Umbra {
                         cmd.SetGlobalVector(ShaderParams.ShadowData3, new Vector4(profile.blurDepthAttenStart / farClipPlane, profile.blurDepthAttenLength / farClipPlane, profile.blurGrazingAttenuation, profile.blurEdgeSharpness));
                         cmd.SetGlobalVector(ShaderParams.ShadowData4, new Vector4(profile.occludersCount, profile.occludersSearchRadius * 0.02f, profile.contactStrength > 0 ? profile.contactStrengthKnee * 0.1f : 0.00001f, profile.maskScale));
                         cmd.SetGlobalVector(ShaderParams.SourceSize, new Vector4(desc.width, desc.height, 0, 0));
+                        cmd.SetGlobalInt(ShaderParams.EarlyOutSamples, profile.earlyOutSamples);
 
                         if (cascadeCount > 1) {
                             VisibleLight shadowLight = passData.lightData.visibleLights[shadowLightIndex];
@@ -182,16 +184,18 @@ namespace Umbra {
                             cmd.SetGlobalFloatArray(ShaderParams.UmbraCascadeScales, cascadeScales);
                         }
 
-                        if (UmbraSoftShadows.isDeferred || profile.normalsSource == NormalSource.NormalsPass || profile.downsample) {
+                        if ((UmbraSoftShadows.isDeferred && profile.normalsSource == NormalSource.GBufferNormals) || profile.effectiveNormalsSource == NormalSource.NormalsPass || profile.downsample) {
                             mat.EnableKeyword(ShaderParams.SKW_NORMALS_TEXTURE);
-                        } else {
+                        }
+                        else {
                             mat.DisableKeyword(ShaderParams.SKW_NORMALS_TEXTURE);
                         }
 
 #if !UNITY_WEBGL
                         if (profile.enableContactHardening) {
                             mat.EnableKeyword(ShaderParams.SKW_CONTACT_HARDENING);
-                        } else
+                        }
+                        else
 #endif
                         {
                             mat.DisableKeyword(ShaderParams.SKW_CONTACT_HARDENING);
@@ -201,14 +205,16 @@ namespace Umbra {
                         mat.DisableKeyword(ShaderParams.SKW_LOOP_STEP_X2);
                         if (profile.loopStepOptimization == LoopStep.x3) {
                             mat.EnableKeyword(ShaderParams.SKW_LOOP_STEP_X3);
-                        } else if (profile.loopStepOptimization == LoopStep.x2) {
+                        }
+                        else if (profile.loopStepOptimization == LoopStep.x2) {
                             mat.EnableKeyword(ShaderParams.SKW_LOOP_STEP_X2);
                         }
 
                         if (profile.style == Style.Textured && profile.maskTexture != null) {
                             mat.EnableKeyword(ShaderParams.SKW_MASK_TEXTURE);
                             mat.SetTexture(ShaderParams.MaskTexture, profile.maskTexture);
-                        } else {
+                        }
+                        else {
                             mat.DisableKeyword(ShaderParams.SKW_MASK_TEXTURE);
                         }
                     }
@@ -225,22 +231,11 @@ namespace Umbra {
                     }
 
                     // Add contact shadows
-                    if (profile.contactShadows) {
-                        mat.SetInt(ShaderParams.ContactShadowsSampleCount, profile.contactShadowsSampleCount);
-                        float contactShadowsMaxDistance;
-                        if (settings.profile.shadowSource == ShadowSource.UnityShadows || settings.profile.contactShadowsInjectionPoint == ContactShadowsInjectionPoint.AfterOpaque) {
-                            contactShadowsMaxDistance = 1;
-                        } else {
-                            contactShadowsMaxDistance = shadowMaxDistance / farClipPlane;
-                        }
-                        mat.SetVector(ShaderParams.ContactShadowsData1, new Vector4(profile.contactShadowsStepping, profile.contactShadowsIntensityMultiplier, profile.contactShadowsJitter, profile.contactShadowsDistanceFade));
-                        mat.SetVector(ShaderParams.ContactShadowsData2, new Vector4(profile.contactShadowsStartDistance / farClipPlane, profile.contactShadowsStartDistanceFade / farClipPlane, contactShadowsMaxDistance, profile.contactShadowsNormalBias));
-                        mat.SetVector(ShaderParams.ContactShadowsData3, new Vector4(profile.contactShadowsThicknessNear / farClipPlane, profile.contactShadowsThicknessDistanceMultiplier * 0.1f, profile.contactShadowsVignetteSize, 0));
-                        if (!settings.debugShadows && profile.contactShadowsInjectionPoint == ContactShadowsInjectionPoint.ShadowTexture) {
+                    if (profile.contactShadows && SetupContactShadowsMaterial(passData.cameraData.camera, profile, mat)) {
+                        if (!settings.debugShadows && profile.actualContactShadowsInjectionPoint == ContactShadowsInjectionPoint.ShadowTexture) {
                             Blitter.BlitCameraTexture(cmd, shadowsHandle, shadowsHandle, mat, (int)Pass.ContactShadows);
                         }
                     }
-
 
                     // Downscale depth for upscaler 
                     if (profile.downsample && profile.preserveEdges) {
@@ -249,7 +244,8 @@ namespace Umbra {
                         cmd.GetTemporaryRT(ShaderParams.DownsampledDepth, downscampledDepthDesc);
                         FullScreenBlit(cmd, ShaderParams.DownsampledDepth, mat, (int)Pass.DownsampledDepth);
                         mat.EnableKeyword(ShaderParams.SKW_PRESERVE_EDGES);
-                    } else {
+                    }
+                    else {
                         mat.DisableKeyword(ShaderParams.SKW_PRESERVE_EDGES);
                     }
 
@@ -258,7 +254,8 @@ namespace Umbra {
                             // upscale
                             FullScreenBlit(cmd, m_DownscaledRenderTarget, m_RenderTarget, mat, (int)Pass.ComposeUnity);
                         }
-                    } else {
+                    }
+                    else {
                         if (profile.style == Style.Default && profile.blurIterations > 0) {
                             cmd.SetGlobalFloat(ShaderParams.BlurSpread, profile.blurSpread);
 
@@ -275,10 +272,12 @@ namespace Umbra {
                                     shadowsRT = blurredRT;
                                     cmd.SetGlobalFloat(ShaderParams.BlurScale, k + 1f);
                                 }
-                            } else {
+                            }
+                            else {
                                 if (profile.blurType == BlurType.Gaussian15) {
                                     mat.EnableKeyword(ShaderParams.SKW_BLUR_HQ);
-                                } else {
+                                }
+                                else {
                                     mat.DisableKeyword(ShaderParams.SKW_BLUR_HQ);
                                 }
                                 FullScreenBlit(cmd, shadowsRT, ShaderParams.BlurTemp, mat, (int)Pass.BlurHoriz);
@@ -293,7 +292,8 @@ namespace Umbra {
 
                             // blit blurred shadows
                             FullScreenBlit(cmd, blurredRT, m_RenderTarget, mat, (int)Pass.ComposeWithBlending);
-                        } else if (profile.downsample && profile.preserveEdges) {
+                        }
+                        else if (profile.downsample && profile.preserveEdges) {
                             // upscale
                             FullScreenBlit(cmd, m_DownscaledRenderTarget, m_RenderTarget, mat, (int)Pass.Compose);
                         }
@@ -314,7 +314,7 @@ namespace Umbra {
                 internal UniversalShadowData shadowData;
             }
 
-            private static void ExecutePass(RasterCommandBuffer cmd, UniversalShadowData shadowData) {
+            private static void ExecutePass (RasterCommandBuffer cmd, UniversalShadowData shadowData) {
                 int cascadesCount = shadowData.mainLightShadowCascadesCount;
                 bool mainLightShadows = shadowData.supportsMainLightShadows;
                 bool receiveShadowsNoCascade = mainLightShadows && cascadesCount == 1;
@@ -328,7 +328,7 @@ namespace Umbra {
                 cmd.SetKeyword(ShaderGlobalKeywords.MainLightShadowCascades, receiveShadowsCascades);
             }
 
-            public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData) {
+            public override void RecordRenderGraph (RenderGraph renderGraph, ContextContainer frameData) {
                 using (var builder = renderGraph.AddRasterRenderPass<PassData>("Umbra Screen Space Shadow Post Pass", out var passData, m_ProfilingSampler)) {
                     UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();
 
@@ -351,7 +351,7 @@ namespace Umbra {
                 internal Camera cam;
             }
 
-            private static void ExecutePass(RasterCommandBuffer cmd, Camera cam) {
+            private static void ExecutePass (RasterCommandBuffer cmd, Camera cam) {
                 Material mat = UmbraScreenSpaceShadowsPass.mat;
                 if (mat == null) return;
 
@@ -372,7 +372,7 @@ namespace Umbra {
                 }
             }
 
-            public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData) {
+            public override void RecordRenderGraph (RenderGraph renderGraph, ContextContainer frameData) {
 
                 using (var builder = renderGraph.AddRasterRenderPass<PassData>("Umbra Debug Pass", out var passData, m_ProfilingSampler)) {
                     UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();
@@ -393,28 +393,44 @@ namespace Umbra {
 
             internal class PassData {
                 internal TextureHandle colorTexture;
+                internal TextureHandle depthTexture;
             }
 
-            private static void ExecutePass(RasterCommandBuffer cmd, RTHandle source) {
+            private static void ExecutePass (RasterCommandBuffer cmd, RTHandle source, RTHandle depth) {
                 Material mat = UmbraScreenSpaceShadowsPass.mat;
                 if (mat == null) return;
 
                 using (new ProfilingScope(cmd, m_ProfilingSampler)) {
+                    mat.SetTexture(ShaderParams.CameraDepthTexture, depth);
+                    UmbraProfile profile = settings.profile;
+                    if (profile.transparentReceiverPlane) {
+                        cmd.SetGlobalFloat(ShaderParams.ReceiverPlaneAltitude, profile.receiverPlaneAltitude);
+                    }
+                    cmd.SetGlobalVector(ShaderParams.SourceSize, new Vector4(source.rt.width, source.rt.height, 0, 0));
                     Blitter.BlitTexture(cmd, source, new Vector4(1, 1, 0, 0), mat, (int)Pass.ContactShadowsAfterOpaque);
                 }
             }
 
-            public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData) {
+            public override void RecordRenderGraph (RenderGraph renderGraph, ContextContainer frameData) {
 
                 using (var builder = renderGraph.AddRasterRenderPass<PassData>("Umbra Contact Shadows After Opaque Pass", out var passData, m_ProfilingSampler)) {
                     UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();
 
                     TextureHandle color = resourceData.activeColorTexture;
+                    if (UmbraSoftShadows.isDeferred && resourceData.gBuffer[4].IsValid()) {
+                        passData.depthTexture = resourceData.gBuffer[4];
+                        builder.UseTexture(passData.depthTexture, AccessFlags.Read);
+                    }
+                    else {
+                        passData.depthTexture = resourceData.cameraDepthTexture;
+                        builder.UseTexture(resourceData.cameraDepthTexture, AccessFlags.Read);
+                    }
+                    builder.AllowGlobalStateModification(true);
                     builder.SetRenderAttachment(color, 0, AccessFlags.Write);
                     passData.colorTexture = color;
 
                     builder.SetRenderFunc((PassData data, RasterGraphContext rgContext) => {
-                        ExecutePass(rgContext.cmd, data.colorTexture);
+                        ExecutePass(rgContext.cmd, data.colorTexture, data.depthTexture);
                     });
                 }
             }
@@ -426,19 +442,19 @@ namespace Umbra {
                 internal TextureHandle colorTexture;
             }
 
-            private static void ExecutePass(RasterCommandBuffer cmd, RTHandle source) {
+            private static void ExecutePass (RasterCommandBuffer cmd, RTHandle source) {
                 Material mat = UmbraScreenSpaceShadowsPass.mat;
                 if (mat == null) return;
 
                 using (new ProfilingScope(cmd, m_ProfilingSampler)) {
                     Color shadowColor = settings.profile.overlayShadowsColor;
                     shadowColor.a = settings.profile.overlayShadowsIntensity;
-                    mat.SetColor(ShaderParams.OverlayShadowColor, shadowColor);                    
+                    mat.SetColor(ShaderParams.OverlayShadowColor, shadowColor);
                     Blitter.BlitTexture(cmd, source, new Vector4(1, 1, 0, 0), mat, (int)Pass.OverlayShadows);
                 }
             }
 
-            public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData) {
+            public override void RecordRenderGraph (RenderGraph renderGraph, ContextContainer frameData) {
 
                 using (var builder = renderGraph.AddRasterRenderPass<PassData>("Umbra Overlay Shadows", out var passData, m_ProfilingSampler)) {
                     UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();

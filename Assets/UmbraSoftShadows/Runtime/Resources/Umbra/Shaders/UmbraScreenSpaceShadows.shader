@@ -1,7 +1,10 @@
 Shader "Hidden/Kronnect/UmbraScreenSpaceShadows"
 {
     Properties {
+        // _MainTex ("Main Tex", 2D) = "white" {}
+        // _Color ("Color", Color) = (1, 1, 1, 1)
         [NoScaleoffset] _NoiseTex("Noise Tex", 2D) = "white" {}
+        _ContactShadowsBlend ("Contact Shadows Blend", Int) = 10 // OneMinusSrcAlpha
     }
     SubShader
     {
@@ -155,6 +158,8 @@ Shader "Hidden/Kronnect/UmbraScreenSpaceShadows"
             #pragma multi_compile_local_fragment _ _LOOP_STEP_X2 _LOOP_STEP_X3
             #pragma multi_compile_local_fragment _ _NORMALS_TEXTURE
             #pragma multi_compile_local_fragment _ _RECEIVER_PLANE
+            #pragma multi_compile_local_fragment _ _USE_POINT_LIGHT
+            #pragma multi_compile_local_fragment _ _SOFT_EDGES
             #include "ContactShadows.hlsl"
             ENDHLSL
         }
@@ -184,13 +189,15 @@ Shader "Hidden/Kronnect/UmbraScreenSpaceShadows"
         Pass
         {
             Name "Contact Shadows After Opaque"
-            Blend SrcAlpha OneMinusSrcAlpha
+            Blend SrcAlpha [_ContactShadowsBlend]
             HLSLPROGRAM
             #pragma vertex Vert
             #pragma fragment FragContactShadows
             #pragma multi_compile_local_fragment _ _LOOP_STEP_X2 _LOOP_STEP_X3
             #pragma multi_compile_local_fragment _ _NORMALS_TEXTURE
             #pragma multi_compile_local_fragment _ _RECEIVER_PLANE
+            #pragma multi_compile_local_fragment _ _USE_POINT_LIGHT
+            #pragma multi_compile_local_fragment _ _SOFT_EDGES
             #define CONTACT_SHADOWS_AFTER_OPAQUE
             #include "ContactShadows.hlsl"
             ENDHLSL

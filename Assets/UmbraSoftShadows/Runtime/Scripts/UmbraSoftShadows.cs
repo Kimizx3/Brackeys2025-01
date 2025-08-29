@@ -2,35 +2,50 @@ using UnityEngine;
 
 namespace Umbra {
 
+    public enum ContactShadowsSource {
+        DirectionalLight,
+        PointLights
+    }
+
     [ExecuteAlways]
     [HelpURL("https://kronnect.com/guides-category/umbra-soft-shadows")]
     public class UmbraSoftShadows : MonoBehaviour {
 
         [Tooltip("Currently used umbra profile with settings")]
         public UmbraProfile profile;
+
+        [Tooltip("Source of contact shadows")]
+        public ContactShadowsSource contactShadowsSource = ContactShadowsSource.DirectionalLight;
+
+        [Tooltip("Object whose position is used to determine if it's inside point light volumes")]
+        public Transform pointLightsTrigger;
+
         public bool debugShadows;
 
         public static bool installed;
         public static bool isDeferred;
+        public static UmbraSoftShadows instance;
 
-        private void OnEnable() {
+
+        private void OnEnable () {
             CheckProfile();
+            instance = this;
         }
 
-        private void OnDisable()
-        {
+        private void OnDisable () {
             UmbraRenderFeature.UnregisterUmbraLight(this);
+            instance = null;
         }
 
-        void OnValidate() {
+        void OnValidate () {
             CheckProfile();
         }
 
-        private void Reset() {
+        private void Reset () {
             CheckProfile();
         }
 
-        void CheckProfile() {
+        void CheckProfile () {
             if (profile == null) {
                 profile = ScriptableObject.CreateInstance<UmbraProfile>();
                 profile.name = "New Umbra Profile";
