@@ -19,6 +19,12 @@ public class Customer : MonoBehaviour
     // dictionary <key, value>
     // <"espresso", 0>
     // <"espresso", 1>
+
+    // PlayableDirector GameObject
+    [SerializeField] private string timelineKeyOnOrderCompleted = "TL_Mood";
+    
+    [SerializeField] private int timelineIndexOnOrderCompleted = -1;
+
     
     void Start()
     {
@@ -65,20 +71,33 @@ public class Customer : MonoBehaviour
         if (!_hasReceivedCoffee)
         {
             _hasReceivedCoffee = true;
+
             if (orderUI != null)
             {
                 orderUI.SetActive(false);
                 // track each order completion
             }
-            // ✅ Add any completion logic here (e.g., animations, score increase)
-            // runtime(loop through all exist order) drink list (TODO)
-            // add customer ordered drink into dynamic list
-            // [place drink on customer]
-            // grab customer ordered drink
-            // int --i, iter
-            timelineManager.PlayCurrentTimeline();
+            
+            if (timelineManager != null)
+            {
+                if (!string.IsNullOrWhiteSpace(timelineKeyOnOrderCompleted))
+                {
+                    timelineManager.Play(timelineKeyOnOrderCompleted, null);
+                }
+                
+                else if (timelineIndexOnOrderCompleted >= 0)
+                {
+                    timelineManager.Play(timelineIndexOnOrderCompleted);
+                }
+                
+                else
+                {
+                    timelineManager.Play(0);
+                }
+            }
         }
     }
+
 
     private void CompleteOrder()
     {

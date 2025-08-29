@@ -44,19 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b59322b5144dff4990a66b9387c73af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timelines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  timelines: []
+  canvases: []
+  playOnAwake: 0
+  finishPlayedSceneTransition: 0
+  UIpanel: {fileID: 0}
+  levelLoader: {fileID: 0}
+  finishGame: 0
