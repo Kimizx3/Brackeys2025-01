@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ae910ff995c5d0d4f8c335ed940140e5
+timeCreated: 1484930003
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Bed_small.prefab
+  uploadId: 695354

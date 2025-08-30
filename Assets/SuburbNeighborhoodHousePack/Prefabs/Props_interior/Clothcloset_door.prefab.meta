@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 489b0b0ddbe5d924591af1006a03e172
+timeCreated: 1484330627
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Clothcloset_door.prefab
+  uploadId: 695354

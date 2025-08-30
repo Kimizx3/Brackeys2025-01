@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f55660c56d92aa444be9bafe02529c48
+timeCreated: 1492700013
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Basement_box.prefab
+  uploadId: 695354
