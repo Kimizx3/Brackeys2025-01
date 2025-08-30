@@ -35,6 +35,7 @@ public class DialogueController : MonoBehaviour
     Coroutine _typingCoro;
     Coroutine _fadeCoro;
     Action _pendingProceed;
+    FocusMinigame _activeFocus;
 
     void Awake()
     {
@@ -73,12 +74,22 @@ public class DialogueController : MonoBehaviour
         }
 
         var step = steps[_index];
+        
+        Fire(step.onStepStart);
 
         // 如果选择在开始Timeline期间隐藏对话
         if (step.playTimelineOnStart && _timeline != null && !string.IsNullOrEmpty(step.startTimelineKey))
         {
             if (step.hideUIWhileStartTimeline) SetUIVisible(false);
-            _timeline.Play(step.startTimelineKey, () => ShowStep(step));
+            //句首Timeline开始
+            Fire(step.onStartTimelineStart);
+
+            _timeline.Play(step.startTimelineKey, () =>
+            {
+                //句首Timeline结束
+                Fire(step.onStartTimelineEnd);
+                ShowStep(step);
+            });
         }
         else
         {
@@ -184,14 +195,28 @@ public class DialogueController : MonoBehaviour
 
     void EndOfStepThenProceed(DialogueStep step)
     {
+        Fire(step.onGateSuccess);
+        
         // 如果选择在“结束Timeline期间隐藏对话”
         if (step.playTimelineOnEnd && _timeline != null && !string.IsNullOrEmpty(step.endTimelineKey))
         {
             if (step.hideUIWhileEndTimeline) SetUIVisible(false);
-            _timeline.Play(step.endTimelineKey, Proceed);
+            //句末Timeline开始
+            Fire(step.onEndTimelineStart);
+
+            _timeline.Play(step.endTimelineKey, () =>
+            {
+                //句末Timeline结束
+                Fire(step.onEndTimelineEnd);
+
+                //对话结束
+                Fire(step.onStepEnd);
+                Proceed();
+            });
         }
         else
         {
+            Fire(step.onStepEnd);
             Proceed();
         }
     }
@@ -207,6 +232,7 @@ public class DialogueController : MonoBehaviour
                 var drag = prev.draggable.GetComponent<SimpleDragItem>();
                 if (drag) drag.enabled = false;
             }
+            if (_activeFocus) { _activeFocus.StopGame(); _activeFocus = null; }
         }
     }
 
@@ -264,6 +290,14 @@ public class DialogueController : MonoBehaviour
         g.interactable = visible;
         g.blocksRaycasts = visible;
     }
+    
+    //执行动作数组
+    void Fire(FadeAction[] actions)
+    {
+        if (actions == null) return;
+        for (int i = 0; i < actions.Length; i++)
+            if (actions[i] != null) actions[i].Execute();
+    }
 }
 
 [Serializable]
@@ -276,33 +310,40 @@ public class DialogueStep
 
     [Header("完成条件（Gate）")]
     public DialogueGateType gateType = DialogueGateType.ClickAnywhere;
-    // ClickButton 时指定
+    //ClickButton时指定
     public Button button;
-    // DragToZone 时指定
+    //DragToZone时指定
     public RectTransform draggable;
-    // DragToZone 时指定
+    //DragToZone时指定
     public RectTransform dropZone;
-    
+    //gateType=FocusMinigame时指定
     [Tooltip("拍照交互拖这里")]
     public FocusMinigame focusMinigame;
 
     [Header("衔接Timeline")]
-    // 句首
+    //句首
     public bool playTimelineOnStart = false;
     public string startTimelineKey;
-    // 句末
+    //句末
     public bool playTimelineOnEnd = false;
     public string endTimelineKey;
 
     [Header("对话隐藏选项")]
     [Tooltip("在Timeline播放期间隐藏对话UI")]
     public bool hideUIWhileStartTimeline = false;
-
     [Tooltip("在Gate交互进行期间隐藏对话UI")]
     public bool hideUIWhileGate = false;
-
     [Tooltip("在结束Timeline播放期间隐藏对话UI")]
     public bool hideUIWhileEndTimeline = false;
+    
+    [Header("显隐动作（按时机触发，可为空）")]
+    public FadeAction[] onStepStart;           //进入本句时
+    public FadeAction[] onStartTimelineStart;  //句首Timeline开始时
+    public FadeAction[] onStartTimelineEnd;    //句首Timeline结束时
+    public FadeAction[] onGateSuccess;         //Gate通过时
+    public FadeAction[] onEndTimelineStart;    //句末Timeline开始时
+    public FadeAction[] onEndTimelineEnd;      //句末Timeline结束时
+    public FadeAction[] onStepEnd;             //离开本句时
 }
 
 public enum DialogueGateType
