@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44dd3900115034545946143dd861b5fd
+timeCreated: 1469865543
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Materials/House_Exterior_Equip_Night.mat
+  uploadId: 695354
