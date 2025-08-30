@@ -1,18 +1,19 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class DialogueController : MonoBehaviour
 {
-    [Header("UI Group (对话UI：底板/立绘/名字/文本)")]
-    [Tooltip("对话UI的容器")]
+    [Header("UI Group")]
     public CanvasGroup dialogueUIGroup;
 
-    [Header("UI References (位于对话UI容器下)")]
+    [Header("UI References")]
     public Image portraitImage;
-    public TMP_Text nameText;
+    public Text nameText;
     public TMP_Text dialogueText;
 
     [Header("Typing")]
@@ -20,73 +21,115 @@ public class DialogueController : MonoBehaviour
     public bool allowSkipTyping = true;
 
     [Header("UI Fade")]
-    // 显隐淡入淡出时长
     public float uiFadeDuration = 0.15f;
 
-    [Header("Timeline Player (放TimelineManager")]
+    [Header("Timeline Player (拖 TimelineManager 即可)")]
     public MonoBehaviour timelinePlayer;
     ITimelinePlayer _timeline;
 
-    [Header("Sequence")]
+    [Header("对话配置")]
+    [Tooltip("Way1：直接在控制器里配置所有步骤。若 Segments 非空，将被忽略。")]
     public DialogueStep[] steps;
+
+    [Tooltip("Way2：将一段段的 DialogueSegment 按顺序拖进来（推荐）。运行时会自动拼接所有段的 steps。")]
+    public DialogueSegment[] segments;
+
+    // segments非空,运行时拼接后的步骤表
+    DialogueStep[] _activeSteps;
+    bool UseSegments => segments != null && segments.Length > 0;
+    int StepCount => UseSegments ? (_activeSteps?.Length ?? 0) : (steps?.Length ?? 0);
+    DialogueStep GetStep(int i) => UseSegments ? _activeSteps[i] : steps[i];
 
     int _index = -1;
     bool _isTyping = false;
-    Coroutine _typingCoro;
-    Coroutine _fadeCoro;
+    Coroutine _typingCoro, _fadeCoro;
     Action _pendingProceed;
     FocusMinigame _activeFocus;
 
     void Awake()
     {
         if (timelinePlayer != null) _timeline = timelinePlayer as ITimelinePlayer;
-        if (_timeline == null)
-            Debug.LogWarning("[DialogueController] timelinePlayer 未赋值或未实现 ITimelinePlayer。");
-        
+        if (_timeline == null) Debug.LogWarning("[DialogueController] timelinePlayer 未赋值或未实现 ITimelinePlayer。");
+
         if (dialogueUIGroup != null)
         {
             dialogueUIGroup.alpha = 1f;
             dialogueUIGroup.interactable = true;
             dialogueUIGroup.blocksRaycasts = true;
         }
+
+        BuildActiveSteps();
     }
 
-    void Start()
+    void BuildActiveSteps()
     {
-        StartSequence();
+        if (!UseSegments)
+        {
+            _activeSteps = null;
+            return;
+        }
+
+        var list = new List<DialogueStep>(256);
+        foreach (var seg in segments)
+        {
+            if (!seg || seg.steps == null) continue;
+            foreach (var s in seg.steps)
+                if (s != null) list.Add(s);
+        }
+        _activeSteps = list.ToArray();
     }
 
+    void Start() => StartSequence();
+    
     public void StartSequence(int startIndex = 0)
     {
         _index = startIndex - 1;
         Proceed();
     }
 
+    //从指定段和段内步骤开始（仅当Segments非空时生效）
+    public void StartSequence(int segmentIndex, int stepInSegment)
+    {
+        if (!UseSegments) { StartSequence(stepInSegment); return; }
+        int abs = 0;
+        for (int s = 0; s < segments.Length; s++)
+        {
+            int count = segments[s]?.steps?.Length ?? 0;
+            if (s == segmentIndex)
+            {
+                abs += Mathf.Clamp(stepInSegment, 0, Mathf.Max(0, count - 1));
+                StartSequence(abs);
+                return;
+            }
+            abs += count;
+        }
+        StartSequence(0);
+    }
+
     public void Proceed()
     {
         _pendingProceed = null;
 
-        if (++_index >= steps.Length)
+        if (++_index >= StepCount)
         {
             SetUIVisible(true);
-            Debug.Log("Dialogue sequence finished.");
             return;
         }
 
-        var step = steps[_index];
-        
+        var step = GetStep(_index);
+
+        // 触发对话开始
         Fire(step.onStepStart);
 
-        // 如果选择在开始Timeline期间隐藏对话
+        // 句首Timeline
         if (step.playTimelineOnStart && _timeline != null && !string.IsNullOrEmpty(step.startTimelineKey))
         {
-            if (step.hideUIWhileStartTimeline) SetUIVisible(false);
-            //句首Timeline开始
-            Fire(step.onStartTimelineStart);
+            if (step.hideDialogueUIThisStep || step.hideUIWhileStartTimeline)
+                SetUIVisible(false, instant: true);
 
+            Fire(step.onStartTimelineStart);
             _timeline.Play(step.startTimelineKey, () =>
             {
-                //句首Timeline结束
                 Fire(step.onStartTimelineEnd);
                 ShowStep(step);
             });
@@ -99,29 +142,39 @@ public class DialogueController : MonoBehaviour
 
     void ShowStep(DialogueStep step)
     {
-        if (!step.hideUIWhileGate)
-            SetUIVisible(true);
-
-        if (portraitImage) portraitImage.sprite = step.portrait;
-        if (nameText) nameText.text = step.speaker;
-
-        if (_typingCoro != null) StopCoroutine(_typingCoro);
-        _typingCoro = StartCoroutine(TypeText(step.content));
+        bool hideThisStep = ShouldHideDialogueUI(step);
+        SetUIVisible(!hideThisStep, instant: true);
         
-        if (step.hideUIWhileGate)
-            SetUIVisible(false);
+        if (portraitImage != null) portraitImage.sprite = step.portrait;
+        if (nameText != null) nameText.text = step.speaker ?? "";
+
+        if (dialogueText != null)
+        {
+            if (_typingCoro != null) StopCoroutine(_typingCoro);
+            _typingCoro = StartCoroutine(TypeText(step.content ?? ""));
+        }
+        else
+        {
+            Debug.LogWarning("[Dialogue] dialogueText 未赋值，无法显示台词。");
+        }
         
         SetupGateFor(step);
+    }
+
+    bool ShouldHideDialogueUI(DialogueStep step)
+    {
+        // 强制隐藏优先；否则按“Gate 期间隐藏”的旧开关
+        return step.hideDialogueUIThisStep || step.hideUIWhileGate;
     }
 
     IEnumerator TypeText(string content)
     {
         _isTyping = true;
-        dialogueText.text = "";
+        if (dialogueText) dialogueText.text = "";
 
         if (charsPerSecond <= 0f)
         {
-            dialogueText.text = content;
+            if (dialogueText) dialogueText.text = content;
             _isTyping = false;
             yield break;
         }
@@ -129,7 +182,7 @@ public class DialogueController : MonoBehaviour
         float tPerChar = 1f / charsPerSecond;
         for (int i = 0; i < content.Length; i++)
         {
-            dialogueText.text = content.Substring(0, i + 1);
+            if (dialogueText) dialogueText.text = content.Substring(0, i + 1);
             yield return new WaitForSeconds(tPerChar);
         }
         _isTyping = false;
@@ -175,18 +228,29 @@ public class DialogueController : MonoBehaviour
                     _pendingProceed = () => EndOfStepThenProceed(step);
                 }
                 break;
-            
+
             case DialogueGateType.FocusMinigame:
                 if (step.focusMinigame != null)
                 {
-                    step.focusMinigame.StartGame(() =>
-                    {
-                        EndOfStepThenProceed(step);
-                    });
+                    _activeFocus = step.focusMinigame;
+                    _activeFocus.StopGame();
+                    _activeFocus.StartGame(() => EndOfStepThenProceed(step));
                 }
                 else
                 {
-                    Debug.LogWarning($"[Dialogue] Step {_index} 是 FocusMinigame 但未指定 focusMinigame，降级为任意点击。");
+                    Debug.LogWarning($"[Dialogue] Step {_index} 是 FocusMinigame 但未指定组件，降级为任意点击。");
+                    _pendingProceed = () => EndOfStepThenProceed(step);
+                }
+                break;
+
+            case DialogueGateType.TimelineComplete:
+                if (_timeline != null && !string.IsNullOrEmpty(step.gateTimelineKey))
+                {
+                    _timeline.Play(step.gateTimelineKey, () => EndOfStepThenProceed(step));
+                }
+                else
+                {
+                    Debug.LogWarning($"[Dialogue] Step {_index} 设为 TimelineComplete 但未配置 timelinePlayer 或 gateTimelineKey，降级为任意点击。");
                     _pendingProceed = () => EndOfStepThenProceed(step);
                 }
                 break;
@@ -196,20 +260,17 @@ public class DialogueController : MonoBehaviour
     void EndOfStepThenProceed(DialogueStep step)
     {
         Fire(step.onGateSuccess);
-        
-        // 如果选择在“结束Timeline期间隐藏对话”
+
+        // 句末 Timeline（可选）
         if (step.playTimelineOnEnd && _timeline != null && !string.IsNullOrEmpty(step.endTimelineKey))
         {
-            if (step.hideUIWhileEndTimeline) SetUIVisible(false);
-            //句末Timeline开始
-            Fire(step.onEndTimelineStart);
+            if (step.hideDialogueUIThisStep || step.hideUIWhileEndTimeline)
+                SetUIVisible(false, instant: true);
 
+            Fire(step.onEndTimelineStart);
             _timeline.Play(step.endTimelineKey, () =>
             {
-                //句末Timeline结束
                 Fire(step.onEndTimelineEnd);
-
-                //对话结束
                 Fire(step.onStepEnd);
                 Proceed();
             });
@@ -223,9 +284,9 @@ public class DialogueController : MonoBehaviour
 
     void ClearAllGateBindings()
     {
-        if (_index >= 0 && _index < steps.Length)
+        if (_index >= 0 && _index < StepCount)
         {
-            var prev = steps[_index];
+            var prev = GetStep(_index);
             if (prev.button) { prev.button.onClick.RemoveAllListeners(); prev.button.gameObject.SetActive(false); }
             if (prev.draggable)
             {
@@ -241,7 +302,7 @@ public class DialogueController : MonoBehaviour
         if (_pendingProceed != null && Input.GetMouseButtonDown(0))
         {
             if (_isTyping && allowSkipTyping)
-                FinishTypingNow(steps[_index].content);
+                FinishTypingNow(GetStep(_index).content);
             else
                 _pendingProceed?.Invoke();
         }
@@ -250,16 +311,13 @@ public class DialogueController : MonoBehaviour
     void FinishTypingNow(string fullText)
     {
         if (_typingCoro != null) StopCoroutine(_typingCoro);
-        dialogueText.text = fullText;
+        if (dialogueText) dialogueText.text = fullText ?? "";
         _isTyping = false;
     }
 
-    // =========== 对话UI显隐 ============
     void SetUIVisible(bool visible, bool instant = false)
     {
-        if (dialogueUIGroup == null)
-            return;
-
+        if (dialogueUIGroup == null) return;
         if (_fadeCoro != null) StopCoroutine(_fadeCoro);
 
         if (instant || uiFadeDuration <= 0f)
@@ -290,8 +348,8 @@ public class DialogueController : MonoBehaviour
         g.interactable = visible;
         g.blocksRaycasts = visible;
     }
-    
-    //执行动作数组
+
+    // 执行动作数组
     void Fire(FadeAction[] actions)
     {
         if (actions == null) return;
@@ -308,42 +366,40 @@ public class DialogueStep
     public Sprite portrait;
     [TextArea(2, 5)] public string content;
 
-    [Header("完成条件（Gate）")]
+    [Header("Gate 条件")]
     public DialogueGateType gateType = DialogueGateType.ClickAnywhere;
-    //ClickButton时指定
-    public Button button;
-    //DragToZone时指定
-    public RectTransform draggable;
-    //DragToZone时指定
-    public RectTransform dropZone;
-    //gateType=FocusMinigame时指定
-    [Tooltip("拍照交互拖这里")]
-    public FocusMinigame focusMinigame;
+    public Button button;                  // ClickButton
+    public RectTransform draggable;        // DragToZone
+    public RectTransform dropZone;         // DragToZone
+    public FocusMinigame focusMinigame;    // FocusMinigame
 
-    [Header("衔接Timeline")]
-    //句首
+    //TimelineComplete时要等待的时间线
+    [Tooltip("TimelineComplet要等待完成的Timeline名")]
+    public string gateTimelineKey;
+
+    [Header("与 Timeline 点播（可选）")]
     public bool playTimelineOnStart = false;
-    public string startTimelineKey;
-    //句末
+    public string startTimelineKey;        // 句首
     public bool playTimelineOnEnd = false;
-    public string endTimelineKey;
+    public string endTimelineKey;          // 句末
 
-    [Header("对话隐藏选项")]
-    [Tooltip("在Timeline播放期间隐藏对话UI")]
-    public bool hideUIWhileStartTimeline = false;
-    [Tooltip("在Gate交互进行期间隐藏对话UI")]
-    public bool hideUIWhileGate = false;
-    [Tooltip("在结束Timeline播放期间隐藏对话UI")]
-    public bool hideUIWhileEndTimeline = false;
-    
+    [Header("对话UI强制隐藏（仅本步）")]
+    [Tooltip("勾选后：整步对话UI都隐藏（不受 Gate/Timeline 隐藏项影响），逻辑照常运行。")]
+    public bool hideDialogueUIThisStep = false;
+
+    [Header("UI 隐藏选项（按需勾选）")]
+    public bool hideUIWhileStartTimeline = false; // 句首TL期间隐藏
+    public bool hideUIWhileGate = false;          // Gate期间隐藏
+    public bool hideUIWhileEndTimeline = false;   // 句末TL期间隐藏
+
     [Header("显隐动作（按时机触发，可为空）")]
-    public FadeAction[] onStepStart;           //进入本句时
-    public FadeAction[] onStartTimelineStart;  //句首Timeline开始时
-    public FadeAction[] onStartTimelineEnd;    //句首Timeline结束时
-    public FadeAction[] onGateSuccess;         //Gate通过时
-    public FadeAction[] onEndTimelineStart;    //句末Timeline开始时
-    public FadeAction[] onEndTimelineEnd;      //句末Timeline结束时
-    public FadeAction[] onStepEnd;             //离开本句时
+    public FadeAction[] onStepStart;           // 进入本句
+    public FadeAction[] onStartTimelineStart;  // 句首TL开始
+    public FadeAction[] onStartTimelineEnd;    // 句首TL结束
+    public FadeAction[] onGateSuccess;         // Gate通过
+    public FadeAction[] onEndTimelineStart;    // 句末TL开始
+    public FadeAction[] onEndTimelineEnd;      // 句末TL结束
+    public FadeAction[] onStepEnd;             // 离开本句
 }
 
 public enum DialogueGateType
@@ -351,5 +407,6 @@ public enum DialogueGateType
     ClickAnywhere,
     ClickButton,
     DragToZone,
-    FocusMinigame
+    FocusMinigame,
+    TimelineComplete
 }
