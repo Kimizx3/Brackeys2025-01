@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bb51227ab414b034c93c3f2407daaa96
+timeCreated: 1484674717
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/T_sink.prefab
+  uploadId: 695354

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc032fb956b742c49a4ef669aecdbccd
+timeCreated: 1484675039
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/T_bathtub.prefab
+  uploadId: 695354

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b600efb99aab96c47859cc2818aae2f0
+timeCreated: 1483549296
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Kitcabinet_full_cabinet.prefab
+  uploadId: 695354

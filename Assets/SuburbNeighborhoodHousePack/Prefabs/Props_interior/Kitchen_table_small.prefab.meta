@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4e7b09db280c08419bdbabcb198799b
+timeCreated: 1483896805
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Kitchen_table_small.prefab
+  uploadId: 695354

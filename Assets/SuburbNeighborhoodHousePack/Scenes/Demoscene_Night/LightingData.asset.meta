@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 830ac50cf77a09c4882c1751d4c9fea1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Scenes/Demoscene_Night/LightingData.asset
+  uploadId: 695354

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ee63cbdc50ca9da48b2c4d28fa7d1596
+timeCreated: 1484333195
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Lamp_bedroom.prefab
+  uploadId: 695354

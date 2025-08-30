@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a422438477a64e7498bf7999328ba960
+timeCreated: 1483640850
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Sofa_large.prefab
+  uploadId: 695354

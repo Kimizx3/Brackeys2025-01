@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 28a82ccd1f9d22f42a975fbefef653d0
+timeCreated: 1484171429
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Lamp_wall_fluorescent.prefab
+  uploadId: 695354

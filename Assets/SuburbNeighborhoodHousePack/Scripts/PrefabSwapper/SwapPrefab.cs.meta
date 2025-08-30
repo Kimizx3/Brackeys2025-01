@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1920c326c54c46bdba951557dffb3f98
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Scripts/PrefabSwapper/SwapPrefab.cs
+  uploadId: 695354

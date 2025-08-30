@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fd0bda948e12a76499e5d331b25b553a
+timeCreated: 1484474344
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/Garage_paintbucket.prefab
+  uploadId: 695354

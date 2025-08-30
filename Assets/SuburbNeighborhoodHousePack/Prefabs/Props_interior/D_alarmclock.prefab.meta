@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0cd5d31c840d90547a224b3302050bdb
+timeCreated: 1484841336
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/D_alarmclock.prefab
+  uploadId: 695354

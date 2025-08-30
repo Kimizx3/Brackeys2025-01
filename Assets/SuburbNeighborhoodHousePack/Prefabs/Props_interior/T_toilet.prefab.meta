@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba2f4fe7bfdac494da2c41da4315fb85
+timeCreated: 1484674862
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72712
+  packageName: Suburb Neighborhood House Pack (Modular)
+  packageVersion: 2.0.0
+  assetPath: Assets/SuburbNeighborhoodHousePack/Prefabs/Props_interior/T_toilet.prefab
+  uploadId: 695354
