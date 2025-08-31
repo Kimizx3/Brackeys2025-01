@@ -7,26 +7,28 @@ using UnityEngine.UI;
 public class Fadable : MonoBehaviour
 {
     [Header("Behavior")]
-    [Tooltip("Hide 完成后 SetActive(false)，Show 前 SetActive(true)")]
     public bool toggleGameObjectActive = false;
-
-    [Tooltip("若根或子层有 CanvasGroup，则在淡出时联动 interactable/blocksRaycasts")]
     public bool controlRaycastsIfCanvasGroup = true;
 
+    [Header("Graphics Control")]
+    [Tooltip("若不存在 CanvasGroup，是否改动子节点的 Graphic/SpriteRenderer 的 alpha。拍照玩法建议关掉。")]
+    public bool affectChildrenGraphics = true;
+
     [Header("Activation Root (可选)")]
-    [Tooltip("要被激活/隐藏的根对象。为空=本物体。若一开始关的是外层容器，可指定它。")]
     public GameObject activationRoot;
-
-    [Tooltip("当目标在层级中不可见时，是否沿父链逐级 SetActive(true) 直到可见。")]
     public bool autoActivateAncestorsIfNeeded = true;
-
-    [Tooltip("Hide 完成后，是否把自动点亮过的父物体再关回去（谨慎使用）。")]
     public bool revertAutoActivatedOnHide = false;
+
+    [Header("SFX（可选）")]
+    [Tooltip("用于播放显隐音效的 AudioSource；留空则会自动挂在本物体上")]
+    public AudioSource sfxSource;
+    public AudioClip sfxOnShow;
+    public AudioClip sfxOnHide;
+    [Range(0f, 1f)] public float sfxVolume = 1f;
 
     [Header("Debug")]
     public bool debugLogs = false;
 
-    // ------- runtime -------
     CanvasGroup _cg;
     readonly List<Graphic> _graphics = new List<Graphic>();
     readonly List<SpriteRenderer> _sprites = new List<SpriteRenderer>();
@@ -34,60 +36,60 @@ public class Fadable : MonoBehaviour
     bool _inited;
     readonly List<GameObject> _autoActivatedChain = new List<GameObject>();
 
-    #region Public API
+    void EnsureInit()
+    {
+        if (_inited) return;
+        _cg = GetComponent<CanvasGroup>();
+        if (_cg == null) _cg = GetComponentInChildren<CanvasGroup>(true);
+        _graphics.Clear(); GetComponentsInChildren(true, _graphics);
+        _sprites.Clear();  _sprites.AddRange(GetComponentsInChildren<SpriteRenderer>(true));
+        if (sfxSource == null) sfxSource = GetComponent<AudioSource>();
+        if (sfxSource == null) sfxSource = gameObject.AddComponent<AudioSource>();
+        sfxSource.playOnAwake = false;
+        _inited = true;
+    }
+
     public void Show(float duration) => FadeTo(1f, duration);
     public void Hide(float duration) => FadeTo(0f, duration);
 
     public void FadeTo(float targetAlpha, float duration)
     {
-        // 目标根：默认=本物体
-        GameObject targetRoot = activationRoot ? activationRoot : gameObject;
+        EnsureInit();
 
-        // ★ 在启动前，确保层级可见 + 组件启用
-        if (toggleGameObjectActive && targetAlpha > 0f)
+        GameObject targetRoot = activationRoot ? activationRoot : gameObject;
+        bool wantShow = targetAlpha > 0f;
+
+        // 显示：先激活层级，再播放 SFX
+        if (toggleGameObjectActive && wantShow)
         {
             EnsureHierarchyActive(targetRoot);
-            // 确保脚本启用（有些同学会把组件勾掉）
             if (!enabled) enabled = true;
-            // 懂事儿一点：要淡入就先把 alpha 置 0，避免激活瞬间闪现
-            if (duration > 0f) { EnsureInit(); SetAlpha(0f); }
+            if (duration > 0f) SetAlpha(0f);
+
+            if (sfxOnShow) SafePlayOneShot(sfxOnShow);
+        }
+        else
+        {
+            // 在开始时播 SFX（对象仍是激活状态，能听到）
+            if (!wantShow && sfxOnHide) SafePlayOneShot(sfxOnHide);
         }
 
-        if (duration <= 0f)
+        // 宿主不可用或 duration=0 -> 直接生效（不启协程）
+        if (duration <= 0f || !isActiveAndEnabled || !gameObject.activeInHierarchy)
         {
-            EnsureInit();
             SetAlpha(targetAlpha);
             AfterFade(targetRoot, targetAlpha);
+            if (debugLogs && (!isActiveAndEnabled || !gameObject.activeInHierarchy))
+                Debug.Log($"[Fadable] Instant apply because host inactive/disabled. target={targetAlpha}");
             return;
         }
 
         if (_fadeCoro != null) StopCoroutine(_fadeCoro);
         _fadeCoro = StartCoroutine(CoFade(targetRoot, targetAlpha, duration));
     }
-    #endregion
-
-    #region Internals
-    void EnsureInit()
-    {
-        if (_inited) return;
-
-        // 注意：即便对象一开始是 Inactive，这里也能收集到（true 会遍历不激活对象）
-        _cg = GetComponent<CanvasGroup>();
-        if (_cg == null) _cg = GetComponentInChildren<CanvasGroup>(true);
-
-        _graphics.Clear();
-        GetComponentsInChildren(true, _graphics);
-
-        _sprites.Clear();
-        _sprites.AddRange(GetComponentsInChildren<SpriteRenderer>(true));
-
-        _inited = true;
-    }
 
     IEnumerator CoFade(GameObject targetRoot, float target, float dur)
     {
-        EnsureInit();
-
         float start = GetCurrentAlpha();
         float t = 0f;
         while (t < dur)
@@ -98,59 +100,23 @@ public class Fadable : MonoBehaviour
             SetAlpha(a);
             yield return null;
         }
-
         SetAlpha(target);
         AfterFade(targetRoot, target);
     }
 
-    void EnsureHierarchyActive(GameObject targetRoot)
-    {
-        _autoActivatedChain.Clear();
-
-        // 已经在层级里可见，仅需自己 activeSelf=true 即可
-        if (targetRoot.activeInHierarchy)
-        {
-            if (!targetRoot.activeSelf)
-            {
-                targetRoot.SetActive(true);
-                _autoActivatedChain.Add(targetRoot);
-                if (debugLogs) Debug.Log($"[Fadable] '{name}' SetActive(true) on '{targetRoot.name}'");
-            }
-            return;
-        }
-
-        if (!autoActivateAncestorsIfNeeded) return;
-
-        // 逐级点亮祖先链（从顶往下）
-        Stack<Transform> stack = new Stack<Transform>();
-        Transform cur = targetRoot.transform;
-        while (cur != null) { stack.Push(cur); cur = cur.parent; }
-
-        while (stack.Count > 0)
-        {
-            var tr = stack.Pop();
-            if (!tr.gameObject.activeSelf)
-            {
-                tr.gameObject.SetActive(true);
-                _autoActivatedChain.Add(tr.gameObject);
-                if (debugLogs) Debug.Log($"[Fadable] '{name}' Auto-activate '{tr.gameObject.name}'");
-            }
-        }
-    }
-
     float GetCurrentAlpha()
     {
-        EnsureInit();
         if (_cg) return _cg.alpha;
-        if (_graphics.Count > 0) { var g = _graphics[0]; return g ? g.color.a : 1f; }
-        if (_sprites.Count > 0) { var s = _sprites[0]; return s ? s.color.a : 1f; }
+        if (affectChildrenGraphics)
+        {
+            if (_graphics.Count > 0 && _graphics[0]) return _graphics[0].color.a;
+            if (_sprites.Count  > 0 && _sprites[0])  return _sprites[0].color.a;
+        }
         return 1f;
     }
 
     void SetAlpha(float a)
     {
-        EnsureInit();
-
         if (_cg)
         {
             _cg.alpha = a;
@@ -160,18 +126,48 @@ public class Fadable : MonoBehaviour
                 _cg.interactable = vis;
                 _cg.blocksRaycasts = vis;
             }
+            return;
         }
-        else
+
+        if (!affectChildrenGraphics) return;
+
+        for (int i = 0; i < _graphics.Count; i++)
         {
-            for (int i = 0; i < _graphics.Count; i++)
+            var g = _graphics[i]; if (!g) continue;
+            var c = g.color; c.a = a; g.color = c;
+        }
+        for (int i = 0; i < _sprites.Count; i++)
+        {
+            var s = _sprites[i]; if (!s) continue;
+            var c = s.color; c.a = a; s.color = c;
+        }
+    }
+
+    void EnsureHierarchyActive(GameObject targetRoot)
+    {
+        _autoActivatedChain.Clear();
+
+        if (targetRoot.activeInHierarchy)
+        {
+            if (!targetRoot.activeSelf)
             {
-                var g = _graphics[i]; if (!g) continue;
-                var c = g.color; c.a = a; g.color = c;
+                targetRoot.SetActive(true);
+                _autoActivatedChain.Add(targetRoot);
             }
-            for (int i = 0; i < _sprites.Count; i++)
+            return;
+        }
+
+        if (!autoActivateAncestorsIfNeeded) return;
+
+        Stack<Transform> stk = new Stack<Transform>();
+        for (var tr = targetRoot.transform; tr != null; tr = tr.parent) stk.Push(tr);
+        while (stk.Count > 0)
+        {
+            var tr = stk.Pop();
+            if (!tr.gameObject.activeSelf)
             {
-                var s = _sprites[i]; if (!s) continue;
-                var c = s.color; c.a = a; s.color = c;
+                tr.gameObject.SetActive(true);
+                _autoActivatedChain.Add(tr.gameObject);
             }
         }
     }
@@ -180,7 +176,6 @@ public class Fadable : MonoBehaviour
     {
         if (toggleGameObjectActive && a <= 0f)
         {
-            // 可选：回退自动点亮的父链（谨慎）
             if (revertAutoActivatedOnHide && _autoActivatedChain.Count > 0)
             {
                 for (int i = _autoActivatedChain.Count - 1; i >= 0; --i)
@@ -190,30 +185,22 @@ public class Fadable : MonoBehaviour
                 }
                 _autoActivatedChain.Clear();
             }
-
-            if (targetRoot && targetRoot.activeSelf)
-            {
-                targetRoot.SetActive(false);
-                if (debugLogs) Debug.Log($"[Fadable] '{name}' SetActive(false) on '{targetRoot.name}'");
-            }
+            if (targetRoot && targetRoot.activeSelf) targetRoot.SetActive(false);
         }
-
         if (debugLogs) Debug.Log($"[Fadable] '{name}' alpha={a:0.00} (root='{targetRoot?.name}')");
     }
-    #endregion
+
+    void SafePlayOneShot(AudioClip clip)
+    {
+        if (!clip || !sfxSource) return;
+        
+        sfxSource.PlayOneShot(clip, sfxVolume);
+    }
 
 #if UNITY_EDITOR
-    // 右键菜单快速测试（运行时）
-    [ContextMenu("Test/Show 0.2s")]
-    void _TestShow() => Show(0.2f);
-
-    [ContextMenu("Test/Hide 0.2s")]
-    void _TestHide() => Hide(0.2f);
-
-    [ContextMenu("Test/Instant Show")]
-    void _TestShowInstant() => Show(0f);
-
-    [ContextMenu("Test/Instant Hide")]
-    void _TestHideInstant() => Hide(0f);
+    [ContextMenu("Test/Show 0.2s")]  void _t1() => Show(0.2f);
+    [ContextMenu("Test/Hide 0.2s")]  void _t2() => Hide(0.2f);
+    [ContextMenu("Test/Instant Show")] void _t3() => Show(0f);
+    [ContextMenu("Test/Instant Hide")] void _t4() => Hide(0f);
 #endif
 }

@@ -23,9 +23,12 @@ public class DialogueController : MonoBehaviour
     [Header("UI Fade")]
     public float uiFadeDuration = 0.15f;
 
-    [Header("Timeline Player (拖 TimelineManager 即可)")]
+    [Header("拖TimelineManager")]
     public MonoBehaviour timelinePlayer;
     ITimelinePlayer _timeline;
+    
+    [Header("Audio: BGM")]
+    public BGMController bgmController;
 
     [Header("对话配置")]
     [Tooltip("Way1：直接在控制器里配置所有步骤。若 Segments 非空，将被忽略。")]
@@ -59,6 +62,8 @@ public class DialogueController : MonoBehaviour
         }
 
         BuildActiveSteps();
+        
+        if (bgmController != null) bgmController.BuildIndexFromSegments(segments);
     }
 
     void BuildActiveSteps()
@@ -115,6 +120,8 @@ public class DialogueController : MonoBehaviour
             SetUIVisible(true);
             return;
         }
+        
+        if (bgmController != null) bgmController.ApplyForAbsoluteIndex(_index);
 
         var step = GetStep(_index);
 
@@ -366,33 +373,33 @@ public class DialogueStep
     public Sprite portrait;
     [TextArea(2, 5)] public string content;
 
-    [Header("Gate 条件")]
+    [Header("Gate通过条件")]
     public DialogueGateType gateType = DialogueGateType.ClickAnywhere;
     public Button button;                  // ClickButton
     public RectTransform draggable;        // DragToZone
     public RectTransform dropZone;         // DragToZone
     public FocusMinigame focusMinigame;    // FocusMinigame
 
-    //TimelineComplete时要等待的时间线
+    //TimelineComplete
     [Tooltip("TimelineComplet要等待完成的Timeline名")]
     public string gateTimelineKey;
 
-    [Header("与 Timeline 点播（可选）")]
+    [Header("Timeline衔接")]
     public bool playTimelineOnStart = false;
-    public string startTimelineKey;        // 句首
+    public string startTimelineKey;
     public bool playTimelineOnEnd = false;
-    public string endTimelineKey;          // 句末
+    public string endTimelineKey;
 
-    [Header("对话UI强制隐藏（仅本步）")]
-    [Tooltip("勾选后：整步对话UI都隐藏（不受 Gate/Timeline 隐藏项影响），逻辑照常运行。")]
+    [Header("对话UI强制隐藏")]
+    [Tooltip("勾选后：整步对话UI都隐藏")]
     public bool hideDialogueUIThisStep = false;
 
-    [Header("UI 隐藏选项（按需勾选）")]
-    public bool hideUIWhileStartTimeline = false; // 句首TL期间隐藏
-    public bool hideUIWhileGate = false;          // Gate期间隐藏
-    public bool hideUIWhileEndTimeline = false;   // 句末TL期间隐藏
+    [Header("UI隐藏选项")]
+    public bool hideUIWhileStartTimeline = false;
+    public bool hideUIWhileGate = false;
+    public bool hideUIWhileEndTimeline = false;
 
-    [Header("显隐动作（按时机触发，可为空）")]
+    [Header("显隐对象")]
     public FadeAction[] onStepStart;           // 进入本句
     public FadeAction[] onStartTimelineStart;  // 句首TL开始
     public FadeAction[] onStartTimelineEnd;    // 句首TL结束
