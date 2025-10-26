@@ -1,51 +1,49 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class FocusHandleDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    RectTransform _track, _handle;
-    Canvas _canvas;
-    //允许的X轴范围
+    RectTransform _track;
+    RectTransform _handle;
+    Action<float> _onValueChanged;
+    Action<float> _onDragEnd;
     float _xMin, _xMax;
-    //拖动过程回调（0~1）
-    System.Action<float> _onValueChanged;
-    //松手回调（0~1）
-    System.Action<float> _onEndDrag;
+    bool _inited;
 
-    public void Init(RectTransform trackRect,
-        System.Action<float> onValueChanged,
-        System.Action<float> onEndDrag = null)
+    public void Init(RectTransform track, Action<float> onValueChanged, Action<float> onDragEnd)
     {
-        _track = trackRect;
-        _handle = transform as RectTransform;
-        _canvas = GetComponentInParent<Canvas>();
+        _track = track;
+        _handle = GetComponent<RectTransform>();
         _onValueChanged = onValueChanged;
-        _onEndDrag = onEndDrag;
+        _onDragEnd = onDragEnd;
 
         var r = _track.rect;
         float half = _handle.rect.width * 0.5f;
         _xMin = r.xMin + half;
         _xMax = r.xMax - half;
+        _inited = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData) { }
 
     public void OnDrag(PointerEventData eventData)
     {
-        float scale = (_canvas && _canvas.scaleFactor != 0) ? _canvas.scaleFactor : 1f;
-        float x = _handle.anchoredPosition.x + eventData.delta.x / scale;
-        x = Mathf.Clamp(x, _xMin, _xMax);
-        _handle.anchoredPosition = new Vector2(x, _handle.anchoredPosition.y);
+        if (!_inited) return;
+        Vector2 local;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(_track, eventData.position, eventData.pressEventCamera, out local);
+        float x = Mathf.Clamp(local.x, _xMin, _xMax);
+        var p = _handle.anchoredPosition;
+        _handle.anchoredPosition = new Vector2(x, p.y);
 
-        float t = Mathf.InverseLerp(_xMin, _xMax, x);
-        //拖动中：仅更新清晰度，不判定成功
-        _onValueChanged?.Invoke(t);
+        float norm = Mathf.InverseLerp(_xMin, _xMax, x);
+        _onValueChanged?.Invoke(norm);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        float t = Mathf.InverseLerp(_xMin, _xMax, _handle.anchoredPosition.x);
-        //松手时：再做成功判定
-        _onEndDrag?.Invoke(t);
+        if (!_inited) return;
+        float norm = Mathf.InverseLerp(_xMin, _xMax, _handle.anchoredPosition.x);
+        _onDragEnd?.Invoke(norm);
     }
 }

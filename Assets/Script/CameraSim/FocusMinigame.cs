@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FocusMinigame : MonoBehaviour
+public class FocusMinigame : MonoBehaviour, IFocusMinigame
 {
     [Header("=== 拍照画面")]
     // 顶层：清晰图
