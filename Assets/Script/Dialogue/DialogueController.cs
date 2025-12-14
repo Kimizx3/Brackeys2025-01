@@ -47,7 +47,7 @@ public class DialogueController : MonoBehaviour
     bool _isTyping = false;
     Coroutine _typingCoro, _fadeCoro;
     Action _pendingProceed;
-    FocusMinigame _activeFocus;
+    IFocusMinigame _activeFocus; 
 
     void Awake()
     {
@@ -236,31 +236,60 @@ public class DialogueController : MonoBehaviour
                 }
                 break;
 
+            // case DialogueGateType.FocusMinigame:
+            //     if (step.focusMinigame != null)
+            //     {
+            //         _activeFocus = step.focusMinigame;
+            //         _activeFocus.StopGame();
+            //         _activeFocus.StartGame(() => EndOfStepThenProceed(step));
+            //     }
+            //     else
+            //     {
+            //         Debug.LogWarning($"[Dialogue] Step {_index} 是 FocusMinigame 但未指定组件，降级为任意点击。");
+            //         _pendingProceed = () => EndOfStepThenProceed(step);
+            //     }
+            //     break;
+            //
+            // case DialogueGateType.TimelineComplete:
+            //     if (_timeline != null && !string.IsNullOrEmpty(step.gateTimelineKey))
+            //     {
+            //         _timeline.Play(step.gateTimelineKey, () => EndOfStepThenProceed(step));
+            //     }
+            //     else
+            //     {
+            //         Debug.LogWarning($"[Dialogue] Step {_index} 设为 TimelineComplete 但未配置 timelinePlayer 或 gateTimelineKey，降级为任意点击。");
+            //         _pendingProceed = () => EndOfStepThenProceed(step);
+            //     }
+            //     break;
+            
             case DialogueGateType.FocusMinigame:
+            {
+                IFocusMinigame game = null;
+
                 if (step.focusMinigame != null)
                 {
-                    _activeFocus = step.focusMinigame;
-                    _activeFocus.StopGame();
+                    // ① 若这个组件本身就实现了接口（推荐：MultiFocusMinigame / FocusMinigame）
+                    game = step.focusMinigame as IFocusMinigame;
+
+                    // ② 或者拖的是父节点/其它组件，尝试在同物体再取一次
+                    if (game == null)
+                        game = step.focusMinigame.GetComponent(typeof(IFocusMinigame)) as IFocusMinigame;
+                }
+
+                if (game != null)
+                {
+                    _activeFocus = game;
+                    _activeFocus.StopGame(); // 防重入
                     _activeFocus.StartGame(() => EndOfStepThenProceed(step));
                 }
                 else
                 {
-                    Debug.LogWarning($"[Dialogue] Step {_index} 是 FocusMinigame 但未指定组件，降级为任意点击。");
+                    Debug.LogWarning($"[Dialogue] Step {_index} 是 FocusMinigame 但未找到 IFocusMinigame 组件，降级为任意点击。");
                     _pendingProceed = () => EndOfStepThenProceed(step);
                 }
                 break;
+            }
 
-            case DialogueGateType.TimelineComplete:
-                if (_timeline != null && !string.IsNullOrEmpty(step.gateTimelineKey))
-                {
-                    _timeline.Play(step.gateTimelineKey, () => EndOfStepThenProceed(step));
-                }
-                else
-                {
-                    Debug.LogWarning($"[Dialogue] Step {_index} 设为 TimelineComplete 但未配置 timelinePlayer 或 gateTimelineKey，降级为任意点击。");
-                    _pendingProceed = () => EndOfStepThenProceed(step);
-                }
-                break;
         }
     }
 
@@ -300,7 +329,7 @@ public class DialogueController : MonoBehaviour
                 var drag = prev.draggable.GetComponent<SimpleDragItem>();
                 if (drag) drag.enabled = false;
             }
-            if (_activeFocus) { _activeFocus.StopGame(); _activeFocus = null; }
+            if (_activeFocus != null) { _activeFocus.StopGame(); _activeFocus = null; }
         }
     }
 
@@ -378,7 +407,7 @@ public class DialogueStep
     public Button button;                  // ClickButton
     public RectTransform draggable;        // DragToZone
     public RectTransform dropZone;         // DragToZone
-    public FocusMinigame focusMinigame;    // FocusMinigame
+    public MonoBehaviour focusMinigame;    // FocusMinigame
 
     //TimelineComplete
     [Tooltip("TimelineComplet要等待完成的Timeline名")]

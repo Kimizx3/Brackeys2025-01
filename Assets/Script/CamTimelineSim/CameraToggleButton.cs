@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// 机位按钮：外观切换 + 把点击上报给 BeatTimelineChallenge。
+/// </summary>
 [RequireComponent(typeof(Button))]
 public class CameraToggleButton : MonoBehaviour, IPointerClickHandler
 {
@@ -15,28 +18,18 @@ public class CameraToggleButton : MonoBehaviour, IPointerClickHandler
     public string stoppedText = "开始";
     public string recordingText = "停止";
 
-    private Button _btn;
-    private TimelineClickChallenge _controller;
-    private bool _isRecording = false;
+    Button _btn;
+    BeatTimelineChallenge _controller;
+    bool _isRecording = false;
 
     void Awake()
     {
         _btn = GetComponent<Button>();
-        _btn.onClick.AddListener(OnClicked);
+        _btn.onClick.AddListener(() => _controller?.OnCameraButtonClicked(this));
         ApplyVisual();
-        Debug.Log($"[CamBtn:{name}] Awake cameraId={cameraId}", this);
-    }
-    void OnEnable()
-    {
-        ApplyVisual();
-        Debug.Log($"[CamBtn:{name}] OnEnable (interactable={_btn.interactable}, active={gameObject.activeInHierarchy})", this);
     }
 
-    public void SetController(TimelineClickChallenge c)
-    {
-        _controller = c;
-        Debug.Log($"[CamBtn:{name}] SetController => {(_controller ? _controller.name : "null")}", this);
-    }
+    public void SetController(BeatTimelineChallenge c) => _controller = c;
 
     public void ResetVisualToStopped()
     {
@@ -56,14 +49,10 @@ public class CameraToggleButton : MonoBehaviour, IPointerClickHandler
         if (label) label.text = _isRecording ? recordingText : stoppedText;
     }
 
-    void OnClicked()
-    {
-        Debug.Log($"[CamBtn:{name}] Button.onClick (controller={(_controller? _controller.name : "null")})", this);
-        _controller?.OnCameraButtonClicked(this);
-    }
-    
+    // 作为辅助日志：保证点击确实到达了按钮
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log($"[CamBtn:{name}] IPointerClickHandler received ({eventData.button})", this);
+        // 这里不做别的，仅作为“点击事件抵达 UI”的确认信号
+        // Debug.Log($"[CamBtn:{name}] pointer click");
     }
 }

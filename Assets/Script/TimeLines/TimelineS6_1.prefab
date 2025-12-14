@@ -75,6 +75,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -7037052204937835392, guid: 7549d24e73d7e9642b7c39e12658c26f, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 5138467753565771166, guid: 7549d24e73d7e9642b7c39e12658c26f, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &8460196352709632376
@@ -121,3 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 1412475382185317392}
   paused: 0
+  sfxObjects: []
+  sfxObjects_1: []
+  sfxObjects_2: []
+  sfxObjects_3: []
+  sfxObjects_4: []
