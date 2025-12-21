@@ -5,9 +5,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class DialogueController : MonoBehaviour
 {
+    public enum PlayMode
+    {
+        Flatten,
+        Flow
+    }
+
+    [Header("Play Mode")]
+    public PlayMode playMode = PlayMode.Flatten;
+
     [Header("UI Group")]
     public CanvasGroup dialogueUIGroup;
 
@@ -26,28 +34,62 @@ public class DialogueController : MonoBehaviour
     [Header("拖TimelineManager")]
     public MonoBehaviour timelinePlayer;
     ITimelinePlayer _timeline;
-    
+
     [Header("Audio: BGM")]
     public BGMController bgmController;
 
-    [Header("对话配置")]
-    [Tooltip("Way1：直接在控制器里配置所有步骤。若 Segments 非空，将被忽略。")]
+    [Header("对话配置（旧模式 Flatten 使用）")]
     public DialogueStep[] steps;
-
-    [Tooltip("Way2：将一段段的 DialogueSegment 按顺序拖进来（推荐）。运行时会自动拼接所有段的 steps。")]
     public DialogueSegment[] segments;
 
-    // segments非空,运行时拼接后的步骤表
+    [Header("Flow 主线段（仅 playMode=Flow 使用）")]
+    [Tooltip("只放主线会按顺序播放的段。分支段不要放这里！")]
+    public DialogueSegment[] mainlineSegments;
+
+    [Header("Choice UI（选项）")]
+    public GameObject choicePanel;
+    public Transform choiceContainer;
+    public Button choiceButtonPrefab;
+
+    [Header("Score（积分）")]
+    public string defaultScoreKey = "affection";
+    public bool logScore = true;
+    readonly Dictionary<string, int> _scores = new Dictionary<string, int>();
+
+    // ====== Flatten
     DialogueStep[] _activeSteps;
     bool UseSegments => segments != null && segments.Length > 0;
     int StepCount => UseSegments ? (_activeSteps?.Length ?? 0) : (steps?.Length ?? 0);
     DialogueStep GetStep(int i) => UseSegments ? _activeSteps[i] : steps[i];
 
     int _index = -1;
+    
+    DialogueSegment _curSeg = null;
+    int _curStepInSeg = -1;
+    int _curMainlineIndex = -1;
+
+    struct ReturnPoint
+    {
+        public DialogueSegment seg;
+        public int stepInSeg;
+    }
+    readonly Stack<ReturnPoint> _returnStack = new Stack<ReturnPoint>();
+    
     bool _isTyping = false;
     Coroutine _typingCoro, _fadeCoro;
     Action _pendingProceed;
-    IFocusMinigame _activeFocus; 
+    IFocusMinigame _activeFocus;
+    
+    bool _inChoiceFeedback = false;
+    DialogueLine[] _feedbackLines;
+    int _feedbackLineIndex;
+    
+    int _resumeAbsIndexAfterFeedback = -1;
+    int _resumeStepInSegAfterFeedback = -1;
+    
+    DialogueStep _choiceStepWaitingToComplete = null;
+
+    readonly List<Button> _spawnedChoiceButtons = new List<Button>();
 
     void Awake()
     {
@@ -61,10 +103,21 @@ public class DialogueController : MonoBehaviour
             dialogueUIGroup.blocksRaycasts = true;
         }
 
-        BuildActiveSteps();
-        
         if (bgmController != null) bgmController.BuildIndexFromSegments(segments);
+
+        BuildActiveSteps();
+
+        if (choicePanel) choicePanel.SetActive(false);
     }
+
+    void Start()
+    {
+        if (playMode == PlayMode.Flow)
+            StartFlowMainline(0, 0);
+        else
+            StartSequence(0);
+    }
+
 
     void BuildActiveSteps()
     {
@@ -84,17 +137,20 @@ public class DialogueController : MonoBehaviour
         _activeSteps = list.ToArray();
     }
 
-    void Start() => StartSequence();
-    
+
     public void StartSequence(int startIndex = 0)
     {
+        playMode = PlayMode.Flatten;
         _index = startIndex - 1;
+        _inChoiceFeedback = false;
+        _choiceStepWaitingToComplete = null;
         Proceed();
     }
 
-    //从指定段和段内步骤开始（仅当Segments非空时生效）
     public void StartSequence(int segmentIndex, int stepInSegment)
     {
+        playMode = PlayMode.Flatten;
+
         if (!UseSegments) { StartSequence(stepInSegment); return; }
         int abs = 0;
         for (int s = 0; s < segments.Length; s++)
@@ -111,24 +167,100 @@ public class DialogueController : MonoBehaviour
         StartSequence(0);
     }
 
+
+    public void StartFlowMainline(int mainlineIndex, int stepInSeg)
+    {
+        playMode = PlayMode.Flow;
+
+        if (mainlineSegments == null || mainlineSegments.Length == 0)
+        {
+            Debug.LogError("[Flow] mainlineSegments 为空，无法开始。");
+            return;
+        }
+
+        mainlineIndex = Mathf.Clamp(mainlineIndex, 0, mainlineSegments.Length - 1);
+        var seg = mainlineSegments[mainlineIndex];
+        if (seg == null || seg.steps == null || seg.steps.Length == 0)
+        {
+            Debug.LogError("[Flow] 主线段为空或 steps 为空。");
+            return;
+        }
+
+        _curSeg = seg;
+        _curMainlineIndex = mainlineIndex;
+        _curStepInSeg = stepInSeg - 1;
+
+        _inChoiceFeedback = false;
+        _choiceStepWaitingToComplete = null;
+        HideChoiceUI();
+        ClearAllGateBindings();
+        Proceed();
+    }
+
+    void JumpToSegmentFlow(DialogueSegment seg, int stepInSeg, bool clearReturnStack = false)
+    {
+        playMode = PlayMode.Flow;
+
+        if (clearReturnStack) _returnStack.Clear();
+
+        if (seg == null || seg.steps == null || seg.steps.Length == 0)
+        {
+            Debug.LogError("[Flow] JumpToSegmentFlow: seg 或 steps 为空。");
+            return;
+        }
+
+        _curSeg = seg;
+        _curStepInSeg = stepInSeg - 1;
+        _curMainlineIndex = FindMainlineIndex(seg);
+
+        _inChoiceFeedback = false;
+        _choiceStepWaitingToComplete = null;
+        HideChoiceUI();
+        ClearAllGateBindings();
+        Proceed();
+    }
+
+    int FindMainlineIndex(DialogueSegment seg)
+    {
+        if (seg == null || mainlineSegments == null) return -1;
+        for (int i = 0; i < mainlineSegments.Length; i++)
+            if (mainlineSegments[i] == seg) return i;
+        return -1;
+    }
+
+
     public void Proceed()
     {
         _pendingProceed = null;
 
+        // ✅反馈对白优先
+        if (_inChoiceFeedback)
+        {
+            ProceedChoiceFeedback();
+            return;
+        }
+
+        if (playMode == PlayMode.Flow)
+            ProceedFlow();
+        else
+            ProceedFlatten();
+    }
+
+
+    void ProceedFlatten()
+    {
         if (++_index >= StepCount)
         {
             SetUIVisible(true);
             return;
         }
-        
+
         if (bgmController != null) bgmController.ApplyForAbsoluteIndex(_index);
 
         var step = GetStep(_index);
 
-        // 触发对话开始
         Fire(step.onStepStart);
 
-        // 句首Timeline
         if (step.playTimelineOnStart && _timeline != null && !string.IsNullOrEmpty(step.startTimelineKey))
         {
             if (step.hideDialogueUIThisStep || step.hideUIWhileStartTimeline)
@@ -147,11 +279,100 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+
+    void ProceedFlow()
+    {
+        if (_curSeg == null || _curSeg.steps == null)
+        {
+            Debug.LogError("[Flow] 当前段为空。");
+            return;
+        }
+
+        _curStepInSeg++;
+
+        if (_curStepInSeg >= _curSeg.steps.Length)
+        {
+            if (_returnStack.Count > 0)
+            {
+                var rp = _returnStack.Pop();
+                JumpToSegmentFlow(rp.seg, rp.stepInSeg);
+                return;
+            }
+            
+            if (_curMainlineIndex >= 0)
+            {
+                int next = _curMainlineIndex + 1;
+                if (mainlineSegments != null && next < mainlineSegments.Length)
+                {
+                    StartFlowMainline(next, 0);
+                    return;
+                }
+            }
+
+            SetUIVisible(true);
+            return;
+        }
+
+        var step = _curSeg.steps[_curStepInSeg];
+
+        Fire(step.onStepStart);
+
+        if (step.playTimelineOnStart && _timeline != null && !string.IsNullOrEmpty(step.startTimelineKey))
+        {
+            if (step.hideDialogueUIThisStep || step.hideUIWhileStartTimeline)
+                SetUIVisible(false, instant: true);
+
+            Fire(step.onStartTimelineStart);
+            _timeline.Play(step.startTimelineKey, () =>
+            {
+                Fire(step.onStartTimelineEnd);
+                ShowStep(step);
+            });
+        }
+        else
+        {
+            ShowStep(step);
+        }
+    }
+
+    // =========================
+    // ShowStep
     void ShowStep(DialogueStep step)
     {
-        bool hideThisStep = ShouldHideDialogueUI(step);
+        HideChoiceUI();
+        ClearAllGateBindings();
+
+        bool hideThisStep = step.hideDialogueUIThisStep || step.hideUIWhileGate;
         SetUIVisible(!hideThisStep, instant: true);
-        
+
+        switch (step.stepKind)
+        {
+            case DialogueStepKind.Normal:
+                _choiceStepWaitingToComplete = null;
+                ShowNormalLine(step);
+                SetupGateFor(step);
+                break;
+
+            case DialogueStepKind.Choice:
+                _choiceStepWaitingToComplete = null;
+                ShowChoiceStep(step);
+                break;
+
+            case DialogueStepKind.BranchByScore:
+                _choiceStepWaitingToComplete = null;
+                ExecuteBranchByScore(step);
+                break;
+
+            default:
+                _choiceStepWaitingToComplete = null;
+                ShowNormalLine(step);
+                SetupGateFor(step);
+                break;
+        }
+    }
+
+    void ShowNormalLine(DialogueStep step)
+    {
         if (portraitImage != null) portraitImage.sprite = step.portrait;
         if (nameText != null) nameText.text = step.speaker ?? "";
 
@@ -164,14 +385,6 @@ public class DialogueController : MonoBehaviour
         {
             Debug.LogWarning("[Dialogue] dialogueText 未赋值，无法显示台词。");
         }
-        
-        SetupGateFor(step);
-    }
-
-    bool ShouldHideDialogueUI(DialogueStep step)
-    {
-        // 强制隐藏优先；否则按“Gate 期间隐藏”的旧开关
-        return step.hideDialogueUIThisStep || step.hideUIWhileGate;
     }
 
     IEnumerator TypeText(string content)
@@ -195,10 +408,17 @@ public class DialogueController : MonoBehaviour
         _isTyping = false;
     }
 
+    void FinishTypingNow(string fullText)
+    {
+        if (_typingCoro != null) StopCoroutine(_typingCoro);
+        if (dialogueText) dialogueText.text = fullText ?? "";
+        _isTyping = false;
+    }
+
+    // =========================
+    // Gate
     void SetupGateFor(DialogueStep step)
     {
-        ClearAllGateBindings();
-
         switch (step.gateType)
         {
             case DialogueGateType.ClickAnywhere:
@@ -217,7 +437,7 @@ public class DialogueController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning($"[Dialogue] Step {_index} 选择 ClickButton 但未指定 Button，降级为任意点击。");
+                    Debug.LogWarning($"[Dialogue] ClickButton 未指定 Button，降级为任意点击。");
                     _pendingProceed = () => EndOfStepThenProceed(step);
                 }
                 break;
@@ -231,47 +451,18 @@ public class DialogueController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning($"[Dialogue] Step {_index} 选择 DragToZone 但未指定拖拽物/目标，降级为任意点击。");
+                    Debug.LogWarning($"[Dialogue] DragToZone 未指定 draggable/dropZone，降级为任意点击。");
                     _pendingProceed = () => EndOfStepThenProceed(step);
                 }
                 break;
 
-            // case DialogueGateType.FocusMinigame:
-            //     if (step.focusMinigame != null)
-            //     {
-            //         _activeFocus = step.focusMinigame;
-            //         _activeFocus.StopGame();
-            //         _activeFocus.StartGame(() => EndOfStepThenProceed(step));
-            //     }
-            //     else
-            //     {
-            //         Debug.LogWarning($"[Dialogue] Step {_index} 是 FocusMinigame 但未指定组件，降级为任意点击。");
-            //         _pendingProceed = () => EndOfStepThenProceed(step);
-            //     }
-            //     break;
-            //
-            // case DialogueGateType.TimelineComplete:
-            //     if (_timeline != null && !string.IsNullOrEmpty(step.gateTimelineKey))
-            //     {
-            //         _timeline.Play(step.gateTimelineKey, () => EndOfStepThenProceed(step));
-            //     }
-            //     else
-            //     {
-            //         Debug.LogWarning($"[Dialogue] Step {_index} 设为 TimelineComplete 但未配置 timelinePlayer 或 gateTimelineKey，降级为任意点击。");
-            //         _pendingProceed = () => EndOfStepThenProceed(step);
-            //     }
-            //     break;
-            
             case DialogueGateType.FocusMinigame:
             {
                 IFocusMinigame game = null;
 
                 if (step.focusMinigame != null)
                 {
-                    // ① 若这个组件本身就实现了接口（推荐：MultiFocusMinigame / FocusMinigame）
                     game = step.focusMinigame as IFocusMinigame;
-
-                    // ② 或者拖的是父节点/其它组件，尝试在同物体再取一次
                     if (game == null)
                         game = step.focusMinigame.GetComponent(typeof(IFocusMinigame)) as IFocusMinigame;
                 }
@@ -279,17 +470,21 @@ public class DialogueController : MonoBehaviour
                 if (game != null)
                 {
                     _activeFocus = game;
-                    _activeFocus.StopGame(); // 防重入
+                    _activeFocus.StopGame();
                     _activeFocus.StartGame(() => EndOfStepThenProceed(step));
                 }
                 else
                 {
-                    Debug.LogWarning($"[Dialogue] Step {_index} 是 FocusMinigame 但未找到 IFocusMinigame 组件，降级为任意点击。");
+                    Debug.LogWarning($"[Dialogue] FocusMinigame 未找到 IFocusMinigame，降级为任意点击。");
                     _pendingProceed = () => EndOfStepThenProceed(step);
                 }
                 break;
             }
 
+            case DialogueGateType.TimelineComplete:
+                Debug.LogWarning($"[Dialogue] TimelineComplete 未启用实现，降级为任意点击。");
+                _pendingProceed = () => EndOfStepThenProceed(step);
+                break;
         }
     }
 
@@ -297,7 +492,6 @@ public class DialogueController : MonoBehaviour
     {
         Fire(step.onGateSuccess);
 
-        // 句末 Timeline（可选）
         if (step.playTimelineOnEnd && _timeline != null && !string.IsNullOrEmpty(step.endTimelineKey))
         {
             if (step.hideDialogueUIThisStep || step.hideUIWhileEndTimeline)
@@ -320,35 +514,71 @@ public class DialogueController : MonoBehaviour
 
     void ClearAllGateBindings()
     {
-        if (_index >= 0 && _index < StepCount)
+        try
         {
-            var prev = GetStep(_index);
-            if (prev.button) { prev.button.onClick.RemoveAllListeners(); prev.button.gameObject.SetActive(false); }
-            if (prev.draggable)
+            if (playMode == PlayMode.Flatten)
             {
-                var drag = prev.draggable.GetComponent<SimpleDragItem>();
-                if (drag) drag.enabled = false;
+                if (_index >= 0 && _index < StepCount)
+                {
+                    var prev = GetStep(_index);
+                    if (prev.button) { prev.button.onClick.RemoveAllListeners(); prev.button.gameObject.SetActive(false); }
+                    if (prev.draggable)
+                    {
+                        var drag = prev.draggable.GetComponent<SimpleDragItem>();
+                        if (drag) drag.enabled = false;
+                    }
+                    if (_activeFocus != null) { _activeFocus.StopGame(); _activeFocus = null; }
+                }
             }
-            if (_activeFocus != null) { _activeFocus.StopGame(); _activeFocus = null; }
+            else
+            {
+                if (_curSeg != null && _curSeg.steps != null && _curStepInSeg >= 0 && _curStepInSeg < _curSeg.steps.Length)
+                {
+                    var prev = _curSeg.steps[_curStepInSeg];
+                    if (prev != null && prev.button) { prev.button.onClick.RemoveAllListeners(); prev.button.gameObject.SetActive(false); }
+                    if (prev != null && prev.draggable)
+                    {
+                        var drag = prev.draggable.GetComponent<SimpleDragItem>();
+                        if (drag) drag.enabled = false;
+                    }
+                    if (_activeFocus != null) { _activeFocus.StopGame(); _activeFocus = null; }
+                }
+            }
         }
+        catch { }
     }
 
     void Update()
     {
         if (_pendingProceed != null && Input.GetMouseButtonDown(0))
         {
-            if (_isTyping && allowSkipTyping)
-                FinishTypingNow(GetStep(_index).content);
-            else
-                _pendingProceed?.Invoke();
-        }
-    }
+            if (choicePanel != null && choicePanel.activeSelf) return;
 
-    void FinishTypingNow(string fullText)
-    {
-        if (_typingCoro != null) StopCoroutine(_typingCoro);
-        if (dialogueText) dialogueText.text = fullText ?? "";
-        _isTyping = false;
+            if (_isTyping && allowSkipTyping)
+            {
+                string full = "";
+                if (playMode == PlayMode.Flatten) full = GetStep(_index).content;
+                else if (_curSeg != null && _curSeg.steps != null) full = _curSeg.steps[_curStepInSeg].content;
+                FinishTypingNow(full);
+            }
+            else
+            {
+                _pendingProceed?.Invoke();
+            }
+        }
+        
+        if (_inChoiceFeedback && Input.GetMouseButtonDown(0))
+        {
+            if (_isTyping && allowSkipTyping)
+            {
+                var cur = _feedbackLines[Mathf.Clamp(_feedbackLineIndex, 0, _feedbackLines.Length - 1)];
+                FinishTypingNow(cur.content);
+            }
+            else
+            {
+                ProceedChoiceFeedback();
+            }
+        }
     }
 
     void SetUIVisible(bool visible, bool instant = false)
@@ -385,18 +615,241 @@ public class DialogueController : MonoBehaviour
         g.blocksRaycasts = visible;
     }
 
-    // 执行动作数组
     void Fire(FadeAction[] actions)
     {
         if (actions == null) return;
         for (int i = 0; i < actions.Length; i++)
             if (actions[i] != null) actions[i].Execute();
     }
+
+    // =========================
+    // Score
+    public int GetScore(string key)
+    {
+        if (string.IsNullOrEmpty(key)) key = defaultScoreKey;
+        return _scores.TryGetValue(key, out var v) ? v : 0;
+    }
+
+    public void AddScore(string key, int delta)
+    {
+        if (string.IsNullOrEmpty(key)) key = defaultScoreKey;
+        int before = GetScore(key);
+        _scores[key] = before + delta;
+        if (logScore) Debug.Log($"[Score] {key}: {before} -> {_scores[key]} (delta {delta})");
+    }
+
+    // =========================
+    // Choice
+    void ShowChoiceStep(DialogueStep step)
+    {
+        if (portraitImage != null) portraitImage.sprite = step.portrait;
+        if (nameText != null) nameText.text = step.speaker ?? "";
+
+        if (dialogueText != null)
+        {
+            if (_typingCoro != null) StopCoroutine(_typingCoro);
+            dialogueText.text = step.content ?? "";
+            _isTyping = false;
+        }
+
+        if (choicePanel == null || choiceContainer == null || choiceButtonPrefab == null)
+        {
+            Debug.LogError("[Choice] 缺少 choicePanel / choiceContainer / choiceButtonPrefab。");
+            EndOfStepThenProceed(step);
+            return;
+        }
+
+        choicePanel.SetActive(true);
+        ClearSpawnedChoiceButtons();
+
+        if (step.options == null || step.options.Length == 0)
+        {
+            Debug.LogWarning("[Choice] options 为空，直接完成本步。");
+            HideChoiceUI();
+            EndOfStepThenProceed(step);
+            return;
+        }
+
+        for (int i = 0; i < step.options.Length; i++)
+        {
+            var opt = step.options[i];
+            var btn = Instantiate(choiceButtonPrefab, choiceContainer);
+            _spawnedChoiceButtons.Add(btn);
+            
+            var rt = btn.transform as RectTransform;
+            if (rt != null)
+            {
+                rt.localScale = Vector3.one;
+                rt.anchoredPosition3D = Vector3.zero;
+            }
+            
+            TMP_Text tmp = btn.GetComponentInChildren<TMP_Text>(true);
+            if (tmp != null) tmp.text = opt.optionText;
+            else
+            {
+                Text t = btn.GetComponentInChildren<Text>(true);
+                if (t != null) t.text = opt.optionText;
+                else Debug.LogError("[Choice] ButtonPrefab 没有 Text 或 TMP_Text 子节点，无法显示选项文本。");
+            }
+
+            btn.onClick.AddListener(() => OnPickChoice(step, opt));
+        }
+    }
+
+    void OnPickChoice(DialogueStep currentChoiceStep, ChoiceOption opt)
+    {
+        HideChoiceUI();
+        
+        if (opt.applyScore)
+            AddScore(string.IsNullOrEmpty(opt.scoreKey) ? defaultScoreKey : opt.scoreKey, opt.scoreDelta);
+
+        _choiceStepWaitingToComplete = currentChoiceStep;
+        
+        if (playMode == PlayMode.Flatten) _resumeAbsIndexAfterFeedback = _index + 1;
+        else _resumeStepInSegAfterFeedback = _curStepInSeg + 1;
+        
+        if (opt.feedbackLines == null || opt.feedbackLines.Length == 0)
+        {
+            CompleteChoiceStepAndContinue();
+            return;
+        }
+
+        _inChoiceFeedback = true;
+        _feedbackLines = opt.feedbackLines;
+        _feedbackLineIndex = 0;
+        ShowFeedbackLine(_feedbackLines[0]);
+    }
+
+    void ShowFeedbackLine(DialogueLine line)
+    {
+        if (portraitImage != null) portraitImage.sprite = line.portrait;
+        if (nameText != null) nameText.text = line.speaker ?? "";
+
+        if (dialogueText != null)
+        {
+            if (_typingCoro != null) StopCoroutine(_typingCoro);
+            _typingCoro = StartCoroutine(TypeText(line.content ?? ""));
+        }
+        
+        _pendingProceed = null;
+    }
+
+    void ProceedChoiceFeedback()
+    {
+        if (!_inChoiceFeedback || _feedbackLines == null)
+        {
+            _inChoiceFeedback = false;
+            return;
+        }
+
+        _feedbackLineIndex++;
+        if (_feedbackLineIndex >= _feedbackLines.Length)
+        {
+            _inChoiceFeedback = false;
+            _feedbackLines = null;
+
+            CompleteChoiceStepAndContinue();
+            return;
+        }
+
+        ShowFeedbackLine(_feedbackLines[_feedbackLineIndex]);
+    }
+
+    void CompleteChoiceStepAndContinue()
+    {
+        var step = _choiceStepWaitingToComplete;
+        _choiceStepWaitingToComplete = null;
+
+        if (step != null)
+        {
+            EndOfStepThenProceed(step);
+            return;
+        }
+        
+        ResumeAfterChoiceFallback();
+    }
+
+    void ResumeAfterChoiceFallback()
+    {
+        if (playMode == PlayMode.Flatten)
+            _index = _resumeAbsIndexAfterFeedback - 1;
+        else
+            _curStepInSeg = _resumeStepInSegAfterFeedback - 1;
+
+        Proceed();
+    }
+
+    void HideChoiceUI()
+    {
+        if (choicePanel) choicePanel.SetActive(false);
+        ClearSpawnedChoiceButtons();
+    }
+
+    void ClearSpawnedChoiceButtons()
+    {
+        for (int i = 0; i < _spawnedChoiceButtons.Count; i++)
+            if (_spawnedChoiceButtons[i] != null) Destroy(_spawnedChoiceButtons[i].gameObject);
+        _spawnedChoiceButtons.Clear();
+    }
+
+    // =========================
+    // BranchByScore
+    void ExecuteBranchByScore(DialogueStep step)
+    {
+        if (playMode != PlayMode.Flow)
+        {
+            Debug.LogWarning("[BranchByScore] 当前是 Flatten 模式，建议切到 Flow。这里直接 Proceed().");
+            Proceed();
+            return;
+        }
+
+        string key = string.IsNullOrEmpty(step.branchScoreKey) ? defaultScoreKey : step.branchScoreKey;
+        int v = GetScore(key);
+
+        if (step.branchRanges == null || step.branchRanges.Length == 0)
+        {
+            Debug.LogWarning("[BranchByScore] 未配置 branchRanges，继续下一步。");
+            Proceed();
+            return;
+        }
+
+        for (int i = 0; i < step.branchRanges.Length; i++)
+        {
+            var r = step.branchRanges[i];
+            if (r == null) continue;
+
+            if (v >= r.minInclusive && v <= r.maxInclusive)
+            {
+                DialogueSegment returnSeg = r.returnToMainlineSegment != null ? r.returnToMainlineSegment : _curSeg;
+                int returnStep = r.returnToMainlineSegment != null ? r.returnStepInSegment : (_curStepInSeg + 1);
+
+                _returnStack.Push(new ReturnPoint { seg = returnSeg, stepInSeg = Mathf.Max(0, returnStep) });
+
+                if (r.branchSegment == null)
+                {
+                    Debug.LogError("[BranchByScore] branchSegment 为空，直接回返回点继续。");
+                    var rp = _returnStack.Pop();
+                    JumpToSegmentFlow(rp.seg, rp.stepInSeg);
+                    return;
+                }
+
+                JumpToSegmentFlow(r.branchSegment, r.branchStartStepInSegment, clearReturnStack: false);
+                return;
+            }
+        }
+
+        Proceed();
+    }
 }
+
+#region Data Types
 
 [Serializable]
 public class DialogueStep
 {
+    [Header("Step类型")]
+    public DialogueStepKind stepKind = DialogueStepKind.Normal;
+
     [Header("显示")]
     public string speaker;
     public Sprite portrait;
@@ -404,14 +857,10 @@ public class DialogueStep
 
     [Header("Gate通过条件")]
     public DialogueGateType gateType = DialogueGateType.ClickAnywhere;
-    public Button button;                  // ClickButton
-    public RectTransform draggable;        // DragToZone
-    public RectTransform dropZone;         // DragToZone
-    public MonoBehaviour focusMinigame;    // FocusMinigame
-
-    //TimelineComplete
-    [Tooltip("TimelineComplet要等待完成的Timeline名")]
-    public string gateTimelineKey;
+    public Button button;
+    public RectTransform draggable;
+    public RectTransform dropZone;
+    public MonoBehaviour focusMinigame;
 
     [Header("Timeline衔接")]
     public bool playTimelineOnStart = false;
@@ -420,7 +869,6 @@ public class DialogueStep
     public string endTimelineKey;
 
     [Header("对话UI强制隐藏")]
-    [Tooltip("勾选后：整步对话UI都隐藏")]
     public bool hideDialogueUIThisStep = false;
 
     [Header("UI隐藏选项")]
@@ -429,13 +877,20 @@ public class DialogueStep
     public bool hideUIWhileEndTimeline = false;
 
     [Header("显隐对象")]
-    public FadeAction[] onStepStart;           // 进入本句
-    public FadeAction[] onStartTimelineStart;  // 句首TL开始
-    public FadeAction[] onStartTimelineEnd;    // 句首TL结束
-    public FadeAction[] onGateSuccess;         // Gate通过
-    public FadeAction[] onEndTimelineStart;    // 句末TL开始
-    public FadeAction[] onEndTimelineEnd;      // 句末TL结束
-    public FadeAction[] onStepEnd;             // 离开本句
+    public FadeAction[] onStepStart;
+    public FadeAction[] onStartTimelineStart;
+    public FadeAction[] onStartTimelineEnd;
+    public FadeAction[] onGateSuccess;
+    public FadeAction[] onEndTimelineStart;
+    public FadeAction[] onEndTimelineEnd;
+    public FadeAction[] onStepEnd;
+
+    [Header("Choice（stepKind=Choice）")]
+    public ChoiceOption[] options;
+
+    [Header("BranchByScore（stepKind=BranchByScore）")]
+    public string branchScoreKey = "affection";
+    public BranchRange[] branchRanges;
 }
 
 public enum DialogueGateType
@@ -446,3 +901,50 @@ public enum DialogueGateType
     FocusMinigame,
     TimelineComplete
 }
+
+public enum DialogueStepKind
+{
+    Normal,
+    Choice,
+    BranchByScore
+}
+
+[Serializable]
+public class DialogueLine
+{
+    public string speaker;
+    public Sprite portrait;
+    [TextArea(2, 5)] public string content;
+}
+
+[Serializable]
+public class ChoiceOption
+{
+    [Header("按钮文本")]
+    public string optionText = "选项";
+
+    [Header("积分变化")]
+    public bool applyScore = true;
+    public string scoreKey = "affection";
+    public int scoreDelta = 0;
+
+    [Header("即时反馈对白（选中后播放，播完才算完成本Choice步骤）")]
+    public DialogueLine[] feedbackLines;
+}
+
+[Serializable]
+public class BranchRange
+{
+    public int minInclusive = 0;
+    public int maxInclusive = 999;
+
+    [Header("进入分支段")]
+    public DialogueSegment branchSegment;
+    public int branchStartStepInSegment = 0;
+
+    [Header("分支播放结束后的返回点")]
+    public DialogueSegment returnToMainlineSegment;
+    public int returnStepInSegment = 0;
+}
+
+#endregion
