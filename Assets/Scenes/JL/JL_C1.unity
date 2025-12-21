@@ -433,7 +433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: 
@@ -466,7 +468,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: 
@@ -496,7 +500,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: 
@@ -526,7 +532,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: 
@@ -556,7 +564,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Wow, he's running around like a chicken with its head cut off.
@@ -592,7 +602,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: Ah... that group seems to have put the camera back in its original position...
@@ -619,7 +631,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: That guy just spent ages mixing it for them.
@@ -646,7 +660,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangBackChange
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -679,7 +695,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -709,7 +727,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_JiangShocked
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -742,7 +762,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_LinEat
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -781,7 +803,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Jiang_Go
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -817,7 +841,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_JiangLin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -844,7 +870,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Jiang_Face
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -874,7 +902,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Whoa, you\u2019re like a kangaroo, pulling out snacks all the time?"
@@ -904,7 +934,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "\u2026Better than starving."
@@ -931,7 +963,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Haha, fair. Smart move. I always forget food and end up starving.
@@ -958,7 +992,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "\u2026\u2026"
@@ -985,7 +1021,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Oh, right. I\u2019m Jack, same department. How about you?"
@@ -1012,7 +1050,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Lin.
@@ -1039,7 +1079,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Lin\u2026 Nice. Sounds natural, easy to remember. Makes it easier when
@@ -1067,7 +1109,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "\u2026"
@@ -1094,7 +1138,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Did you need something from me?
@@ -1121,7 +1167,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Not really. Just figured I\u2019d let you know\u2014been watching,
@@ -1149,7 +1197,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "No one in that group\u2019s listening to you."
@@ -1176,7 +1226,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: ...
@@ -1203,7 +1255,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Why not join our group? We could use someone who actually thinks straight.
@@ -1230,7 +1284,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: ... ...
@@ -1263,7 +1319,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: BlackBg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -1290,7 +1348,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (What a day. Totally drained.)
@@ -1317,7 +1377,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (People shouting at me all day. Adjust the lights. Move the camera.
@@ -1345,7 +1407,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (I step in, tweak it, nod. They nod back.)
@@ -1372,7 +1436,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(The second I walk away\u2014back to square one.)"
@@ -1399,7 +1465,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (Kind of pointless, really.)
@@ -1426,7 +1494,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(And there\u2019s another headache\u2026)"
@@ -1453,7 +1523,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(I really don\u2019t wanna deal with that overly friendly guy.)"
@@ -1480,7 +1552,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(He doesn\u2019t seem like someone who\u2019ll give up easily. If he
@@ -1508,7 +1582,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Why would he keep coming to me? It\u2019s not like I agreed to anything\u2026)"
@@ -1535,7 +1611,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: BlackBg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2547,7 +2625,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment_S2_P1
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_LinComputerRoom
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2580,7 +2660,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Computer_Editing_01
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2613,7 +2695,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Computer_Editing_02
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2652,7 +2736,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Computer_Editing_03
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2685,7 +2771,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: DoorOpen
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2721,7 +2809,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangIn
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2751,7 +2841,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Before_JPatL
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2784,7 +2876,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JPatL
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2817,7 +2911,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JPatL_shocked
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2850,7 +2946,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin_EarphoneOff
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2883,7 +2981,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jiang_Give
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -2916,7 +3016,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: Haha~ I went all the way to that coffee shop way out there just to get
@@ -2944,7 +3046,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: ...Maybe you should have it. I'm not too tired.
@@ -2971,7 +3075,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: Just kidding! It's your favorite coconut latte. Drink it while it's
@@ -2999,7 +3105,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin_Get_latte
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -3035,7 +3143,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: Plus, I got a surprise cookie along the way!
@@ -3065,7 +3175,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin_Get_cookie
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -3104,7 +3216,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: P1Over
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -3742,6 +3856,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &299091097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299091098}
+  - component: {fileID: 299091099}
+  m_Layer: 5
+  m_Name: Bubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &299091098
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299091097}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1403668839}
+  - {fileID: 1793103566}
+  - {fileID: 383425575}
+  - {fileID: 1756630358}
+  m_Father: {fileID: 340154295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &299091099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299091097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7763ff363ef4d2eb42ca71e55333c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 299091097}
+  bubbleRect: {fileID: 1403668839}
+  bubbleText: {fileID: 465318371}
+  pos1: {fileID: 1793103566}
+  pos2: {fileID: 383425575}
+  pos3: {fileID: 1756630358}
+  maxWidth: 400
+  padding: {x: 40, y: 28}
+  extraOffset: {x: 0, y: 0}
 --- !u!1 &307721697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,10 +4152,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1618301581}
-  - {fileID: 1858575162}
-  - {fileID: 480936485}
-  - {fileID: 2005063776}
+  - {fileID: 2137751185}
+  - {fileID: 299091098}
   m_Father: {fileID: 1206375787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4165,6 +4338,41 @@ MonoBehaviour:
   sfxOnHide: {fileID: 0}
   sfxVolume: 1
   debugLogs: 0
+--- !u!1 &383425574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383425575}
+  m_Layer: 5
+  m_Name: BubblePos2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &383425575
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383425574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299091098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -101, y: 3}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &383515758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,7 +4563,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment_S0
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -4391,7 +4601,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -4436,7 +4648,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -4472,7 +4686,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Photo
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -4505,7 +4721,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: BlackBg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -4656,7 +4874,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment_S3_P2
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (The wind carries that salty smell. My throat tightens.)
@@ -4683,7 +4903,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "(Words jam in my chest like pebbles stuck in gears. Won\u2019t turn.)"
@@ -4710,7 +4932,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (...)
@@ -4737,7 +4961,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "(If I don\u2019t say it\u2026)"
@@ -4764,7 +4990,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (How long have I been holding it in? How much longer can I keep holding
@@ -4792,7 +5020,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (Am I really gonna wait until I suffocate?)
@@ -4819,7 +5049,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "(I don\u2019t want that.)"
@@ -4846,7 +5078,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (...)
@@ -4873,7 +5107,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "(But if I do say it\u2026)"
@@ -4900,7 +5136,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (What kind of face will you make?)
@@ -4927,7 +5165,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (...)
@@ -4954,7 +5194,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: I lower my eyes to the camera.
@@ -4981,7 +5223,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "In the lens, you\u2019re smiling so bright."
@@ -5008,7 +5252,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: So bright, it leaves me no way out.
@@ -5526,6 +5772,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &465318369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 465318370}
+  - component: {fileID: 465318372}
+  - component: {fileID: 465318371}
+  m_Layer: 5
+  m_Name: BubbleText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &465318370
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465318369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1403668839}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &465318371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465318369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &465318372
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465318369}
+  m_CullTransparentMesh: 1
 --- !u!1 &469424528
 GameObject:
   m_ObjectHideFlags: 0
@@ -5700,7 +6025,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 340154295}
+  m_Father: {fileID: 2137751185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6371,7 +6696,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Bg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -6401,7 +6728,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Jack.
@@ -6428,7 +6757,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: Yeah?
@@ -6455,7 +6786,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "There\u2019s something I need to tell you."
@@ -6482,7 +6815,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: Go ahead. Why so serious all of a sudden?
@@ -6509,7 +6844,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "Honestly\u2026 since last fall, I\u2019ve realized you feel a little
@@ -6537,7 +6874,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
     content: "Different how? \u2019Cause I\u2019m better looking?"
@@ -6564,7 +6903,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: At first I thought I was imagining it.
@@ -6591,7 +6932,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "You\u2019re always joking around, saying things like you mean them,
@@ -6619,7 +6962,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "Still\u2026 I caught myself waiting for your replies."
@@ -6646,7 +6991,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "I remember what takeout you like, which songs you\u2019re into."
@@ -6673,7 +7020,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "I\u2019m not drunk, I\u2019m not messing around. I really\u2026 like
@@ -6701,7 +7050,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangRedFace
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -6731,7 +7082,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangRedFace1
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -6764,7 +7117,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangRedFace2
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -6797,7 +7152,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangRedFace3
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -6830,7 +7187,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangRedFace4
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -6863,7 +7222,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangRedFace5
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -6893,7 +7254,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: ZEKA & WINCY
     portrait: {fileID: 21300000, guid: 361fedb92bef7bb4791aa9510a3021a9, type: 3}
     content: TO BE CONTINUED
@@ -7575,7 +7938,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: C1_S0_P3
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -7608,7 +7973,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: TestOver
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 111111
@@ -7641,7 +8008,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 2
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 2
     speaker: TestOver
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -8454,7 +8823,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JL_Love
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -8484,7 +8855,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: ComputerScreen
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -8517,7 +8890,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: ComputerScreen_JiangCloser
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -8547,7 +8922,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin_RedFace
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -8583,7 +8960,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: You're too close...
@@ -8610,7 +8989,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangCloser
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -8643,7 +9024,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Oh? Is it close?
@@ -8670,7 +9053,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: So tell me, do you want me to come closer or stay away?
@@ -8697,7 +9082,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin_BlackBg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -8730,7 +9117,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(It\u2019s not supposed to be like this.)"
@@ -8757,7 +9146,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (In the middle of the night, the only sound here should be the hum of
@@ -8785,7 +9176,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -8812,7 +9205,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (But when he leaned closer, I remembered that day back in freshman year.)
@@ -8839,7 +9234,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Everyone was yelling in rehearsal, and he slipped me a cookie. Said
@@ -8867,7 +9264,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (I carried it around all day, melted in my pocket, sticky on my fingers.)
@@ -8894,7 +9293,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -8921,7 +9322,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (I thought moments like that would just fade.)
@@ -8948,7 +9351,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(But now he\u2019s right here, way too close.)"
@@ -8975,7 +9380,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (Close enough that his breath is warm in my ear.)
@@ -9002,7 +9409,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -9029,7 +9438,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (If he just stepped back a little, I could type normally.)
@@ -9056,7 +9467,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(If he doesn\u2019t move\u2026)"
@@ -9083,7 +9496,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Will he hear how fast my heart\u2019s beating?)"
@@ -9110,7 +9525,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (Part of me wants him to notice.)
@@ -9137,7 +9554,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(No\u2014better if he doesn\u2019t.)"
@@ -9164,7 +9583,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(\u2026So confusing.)"
@@ -9191,7 +9612,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -9218,7 +9641,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(\u2026If only it could stay like this.)"
@@ -9245,7 +9670,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Even if we\u2019re up all night, even if the project\u2019s a mess\u2014)"
@@ -9272,7 +9699,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(As long as someone\u2019s sitting next to me, watching all this chaos
@@ -9300,7 +9729,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(It feels like\u2026 maybe everything\u2019s still salvageable.)"
@@ -9327,7 +9758,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: SunLight
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -9360,7 +9793,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(\u2026Did I really fall asleep here? ...So cold.)"
@@ -9387,7 +9822,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Ah, already eight\u2026 Good thing it\u2019s Saturday, no one has
@@ -9415,7 +9852,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (Huh? Whose jacket is this?)
@@ -9442,7 +9881,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -9469,7 +9910,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangSleep
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -9499,7 +9942,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (!!!)
@@ -9526,7 +9971,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(He\u2019s still here?)"
@@ -9553,7 +10000,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Dressed so lightly\u2014how\u2019s he not freezing?)"
@@ -9580,7 +10029,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(And this jacket\u2026)"
@@ -9613,7 +10064,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Idiot... He\u2019s freezing himself, and still\u2026)"
@@ -9640,7 +10093,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (...)
@@ -9667,7 +10122,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "(Sunlight\u2019s on his face. Even his breathing looks soft.)"
@@ -9694,7 +10151,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "(I don\u2019t look away. Just feel something in me soften, little by
@@ -9722,7 +10181,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (...)
@@ -9749,7 +10210,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "(So this\u2026 this is what it feels like, to have someone care.)"
@@ -9782,7 +10245,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: BlackBg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -11218,7 +11683,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: C1_S0_P1
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -11486,7 +11953,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment_S1_P1
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "So stuffy\u2026 two more hours to go\u2026"
@@ -11519,7 +11988,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "It\u2019s like a marketplace in here."
@@ -11546,7 +12017,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Everyone shouting, rushing to get their part done.
@@ -11573,7 +12046,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: ......
@@ -11600,7 +12075,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "That backdrop\u2019s too tight, the seams don\u2019t even line up."
@@ -11627,7 +12104,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Light three\u2019s way too low\u2014it\u2019s stretching everyone\u2019s
@@ -11655,7 +12134,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "And the camera\u2019s off by half a step\u2014whoever walks in is gonna
@@ -11683,7 +12164,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: ......
@@ -11710,7 +12193,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Why don\u2019t I just go tell them?"
@@ -11737,7 +12222,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "What\u2019s the point? No one\u2019s listening."
@@ -11764,7 +12251,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "In the end it\u2019d just be one more voice, drowned out by the rest."
@@ -11791,7 +12280,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Will anyone even notice these problems?
@@ -11818,7 +12309,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Probably not.
@@ -11845,7 +12338,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "And even if no one fixes them, the play\u2019s still gonna go on."
@@ -11872,7 +12367,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Everyone\u2019s running on their own track. No one stops."
@@ -11899,7 +12396,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "If I don\u2019t step in, nothing\u2019s really wrong."
@@ -11926,7 +12425,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "Maybe\u2026 this is fine."
@@ -11956,7 +12457,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: 
@@ -11983,7 +12486,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Somebody
     portrait: {fileID: 21300000, guid: 64dd24b9e7cb4404e99a583b5559be5f, type: 3}
     content: Lin! Can you come over and take a look for us right now?
@@ -12010,7 +12515,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Well, I've gotten used to it anyway.
@@ -12043,7 +12550,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: emm...The lighting setup is barely passable.
@@ -12070,7 +12579,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Somebody
     portrait: {fileID: 21300000, guid: 64dd24b9e7cb4404e99a583b5559be5f, type: 3}
     content: I just can't seem to get the shot right no matter how I try. Maybe the
@@ -12101,7 +12612,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_CS
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -12128,7 +12641,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Got it.
@@ -12299,6 +12814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc196da050f99148a75d103c1c54a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  style1Root: {fileID: 2137751184}
+  bubbleUI: {fileID: 299091099}
   playMode: 1
   dialogueUIGroup: {fileID: 340154296}
   portraitImage: {fileID: 1858575163}
@@ -16176,6 +16693,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1403668838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403668839}
+  - component: {fileID: 1403668841}
+  - component: {fileID: 1403668840}
+  m_Layer: 5
+  m_Name: BubbleBg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1403668839
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403668838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 465318370}
+  m_Father: {fileID: 299091098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1403668840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403668838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1403668841
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403668838}
+  m_CullTransparentMesh: 1
 --- !u!1 &1425731058
 GameObject:
   m_ObjectHideFlags: 0
@@ -17517,11 +18110,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 340154295}
+  m_Father: {fileID: 2137751185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000009954, y: -155.34816}
+  m_AnchoredPosition: {x: -0, y: -155.34816}
   m_SizeDelta: {x: 806.9384, y: 161.8637}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618301582
@@ -19269,6 +19862,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748815893}
   m_CullTransparentMesh: 1
+--- !u!1 &1756630357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1756630358}
+  m_Layer: 5
+  m_Name: BubblePos3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1756630358
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756630357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299091098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 165, y: 24}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1760861178
 GameObject:
   m_ObjectHideFlags: 0
@@ -19502,6 +20130,41 @@ MonoBehaviour:
   sfxOnHide: {fileID: 0}
   sfxVolume: 1
   debugLogs: 0
+--- !u!1 &1793103565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1793103566}
+  m_Layer: 5
+  m_Name: BubblePos1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1793103566
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793103565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299091098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -213, y: -110}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1794561350
 GameObject:
   m_ObjectHideFlags: 0
@@ -19905,7 +20568,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JL_Love
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -19935,7 +20600,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: ComputerScreen
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -19968,7 +20635,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: ComputerScreen_JiangCloser
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -19998,7 +20667,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin_RedFace
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -20034,7 +20705,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: You're too close...
@@ -20061,7 +20734,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangCloser
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -20094,7 +20769,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Oh? Is it close?
@@ -20121,7 +20798,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Jack
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: So tell me, do you want me to come closer or stay away?
@@ -20148,7 +20827,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin_BlackBg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -20181,7 +20862,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Mind01
@@ -20208,7 +20891,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Mind02
@@ -20235,7 +20920,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Mind03
@@ -20262,7 +20949,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: SunLight
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -20295,7 +20984,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: Ah... When did I fall asleep here?
@@ -20322,7 +21013,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: a...achoo...It's so cold...Whose clothes are these on me?
@@ -20349,7 +21042,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: JiangSleep
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -20379,7 +21074,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: '!!!He is also...'
@@ -20406,7 +21103,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1949f90e84d16a948803ac5183b8ed5f, type: 3}
     content: This outfit... Is he an idiot? Doesn't he feel cold?
@@ -20439,7 +21138,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Mind
@@ -20466,7 +21167,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: Mind...
@@ -20795,7 +21498,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: C1_S0_P2
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -20825,7 +21530,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: TestOver
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 11111
@@ -20855,7 +21562,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 1
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 1
     speaker: TestChoice
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: "\u9009\u8C01"
@@ -20875,10 +21584,7 @@ MonoBehaviour:
     onStepStart: []
     onStartTimelineStart: []
     onStartTimelineEnd: []
-    onGateSuccess:
-    - target: {fileID: 685059877}
-      command: 1
-      duration: 0
+    onGateSuccess: []
     onEndTimelineStart: []
     onEndTimelineEnd: []
     onStepEnd: []
@@ -20907,6 +21613,35 @@ MonoBehaviour:
       - speaker: Nate
         portrait: {fileID: 21300000, guid: 361fedb92bef7bb4791aa9510a3021a9, type: 3}
         content: 333333
+    branchScoreKey: affection
+    branchRanges: []
+  - uiMode: 1
+    bubblePos: 2
+    stepKind: 0
+    speaker: Bubble
+    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
+    content: "\u6C14\u6CE1\u5BF9\u8BDD\u6D4B\u8BD5\u6C34\u6C34\u6C34\u6C34\u6C34\u6C34\u6C34\u6C34\u6C34\u6C34"
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
     branchScoreKey: affection
     branchRanges: []
 --- !u!1 &1858575161
@@ -20939,7 +21674,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 340154295}
+  m_Father: {fileID: 2137751185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21069,7 +21804,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment_S3_P1
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Null_SeaLove
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -21102,7 +21839,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (The sea-side sky is beautiful.)
@@ -21129,7 +21868,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (You too.)
@@ -21162,7 +21903,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: TakePhotoLin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -21207,7 +21950,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: CameraInFocus
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -21246,7 +21991,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: TakePhoto
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -21273,7 +22020,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: CameraOut
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -21312,7 +22061,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: (Truly beautiful.)
@@ -22057,7 +22808,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Segment_S1_P3
   steps:
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (After that, he just kept showing up.)
@@ -22084,7 +22837,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(When rehearsals were at their loudest, he\u2019d hand me a cookie
@@ -22112,7 +22867,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(I shouldn\u2019t have taken it, but somehow my hand just\u2026 reached
@@ -22140,7 +22897,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -22167,7 +22926,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (Another time I was so busy I skipped dinner. Got back to class, and
@@ -22195,7 +22956,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: '(A note on top: Keep it up.)'
@@ -22222,7 +22985,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(The handwriting was awful. Didn\u2019t need to ask who wrote it.)"
@@ -22249,7 +23014,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -22276,7 +23043,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (The most ridiculous thing?)
@@ -22303,7 +23072,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(He asked me to skip class with him\u2014during midterms, of all times.)"
@@ -22330,7 +23101,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (Who else would even think of something that dumb?)
@@ -22357,7 +23130,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -22384,7 +23159,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (But then that day it snowed.)
@@ -22411,7 +23188,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (At the library entrance, he pulled off half his scarf and wrapped it
@@ -22439,7 +23218,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Silly way to share a scarf\u2014it barely covered either of us.)"
@@ -22466,7 +23247,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (But it was warm.)
@@ -22493,7 +23276,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (...)
@@ -22520,7 +23305,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: (I was fine on my own before.)
@@ -22547,7 +23334,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(But because of him, I started realizing\u2014)"
@@ -22574,7 +23363,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: Lin
     portrait: {fileID: 21300000, guid: d99c1f8a767d24747a0d65ab38cce3f0, type: 3}
     content: "(Maybe being alone isn\u2019t always enough.)"
@@ -22601,7 +23392,9 @@ MonoBehaviour:
     options: []
     branchScoreKey: affection
     branchRanges: []
-  - stepKind: 0
+  - uiMode: 0
+    bubblePos: 1
+    stepKind: 0
     speaker: BlackBg
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: 
@@ -22661,7 +23454,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 340154295}
+  m_Father: {fileID: 2137751185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23860,6 +24653,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137223175}
   m_CullTransparentMesh: 1
+--- !u!1 &2137751184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137751185}
+  m_Layer: 5
+  m_Name: DialoguePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2137751185
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137751184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1618301581}
+  - {fileID: 1858575162}
+  - {fileID: 480936485}
+  - {fileID: 2005063776}
+  m_Father: {fileID: 340154295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2141130919
 GameObject:
   m_ObjectHideFlags: 0
