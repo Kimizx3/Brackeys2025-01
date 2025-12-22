@@ -36,6 +36,18 @@ public class BubbleDialogueUI : MonoBehaviour
             root.SetActive(visible);
     }
 
+    public void ShowAt(int positionIndex, string speaker, string content)
+    {
+        if (string.IsNullOrWhiteSpace(speaker))
+        {
+            ShowAt(positionIndex, content);
+            return;
+        }
+        
+        string merged = $"{speaker}\n{content}";
+        ShowAt(positionIndex, merged);
+    }
+    
     public void ShowAt(int positionIndex, string content)
     {
         if (root == null || bubbleRect == null || bubbleText == null)
@@ -45,30 +57,30 @@ public class BubbleDialogueUI : MonoBehaviour
         }
 
         root.SetActive(true);
-        
+
         Transform anchor = GetAnchor(positionIndex);
         if (anchor != null)
         {
             bubbleRect.position = anchor.position;
             bubbleRect.anchoredPosition += extraOffset;
         }
-        
+
         bubbleText.horizontalOverflow = HorizontalWrapMode.Wrap;
         bubbleText.verticalOverflow = VerticalWrapMode.Overflow;
         bubbleText.text = content ?? "";
-        
+
         Canvas.ForceUpdateCanvases();
 
         float preferredWidth = bubbleText.preferredWidth;
         float w = Mathf.Min(preferredWidth, maxWidth);
-        
+
         RectTransform textRT = bubbleText.rectTransform;
         textRT.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, w);
 
         Canvas.ForceUpdateCanvases();
 
         float h = bubbleText.preferredHeight;
-        
+
         float bgW = w + padding.x * 2f;
         float bgH = h + padding.y * 2f;
 

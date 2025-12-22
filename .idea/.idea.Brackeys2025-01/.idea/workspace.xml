@@ -5,41 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36be032e-76dd-4e00-9a9a-33795eced3fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/BeatTimelineChallenge.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/BeatTimelineChallenge.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/TimelineDoctor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/TimelineDoctor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/DialogueStepDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/DialogueStepDrawer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Brackeys2025-01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JL/JL_Demo1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JL/JL_Demo1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings/PC_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/CameraToggleButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/CameraToggleButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/ChallengeAutoStarter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/ChallengeAutoStarter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/TimelineClickChallenge.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CamTimelineSim/TimelineClickChallenge.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Dialogue/BubbleDialogueUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Dialogue/BubbleDialogueUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Dialogue/DialogueController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Dialogue/DialogueController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS6_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS6_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS7_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS7_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS7_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS7_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS8.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS9_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS9_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS9_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TimeLines/TimelineS9_2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timeline/test1.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/test1.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/font/Dialog SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/font/Dialog SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +168,7 @@
       <workItem from="1761406126977" duration="2809000" />
       <workItem from="1761466615976" duration="10993000" />
       <workItem from="1762069118228" duration="12636000" />
+      <workItem from="1766414499399" duration="3235000" />
     </task>
     <servers />
   </component>

@@ -381,33 +381,25 @@ public class DialogueController : MonoBehaviour
     
     void ApplyDialogueUIMode(DialogueStep step)
     {
-        // 1) 如果勾了“隐藏对话框UI”（你已有字段），直接隐藏全部
-        //    （优先级最高）
         if (step.hideDialogueUIThisStep || step.uiMode == DialogueUIMode.Hidden)
         {
             if (style1Root) style1Root.SetActive(false);
             if (bubbleUI) bubbleUI.SetVisible(false);
-
-            // 保留你原来的 CanvasGroup 控制（如果你在用 dialogueUIGroup）
+            
             SetUIVisible(false, instant: true);
             return;
         }
-
-        // 2) 方案2：气泡
+        
         if (step.uiMode == DialogueUIMode.Bubble)
         {
-            // 方案1根节点隐藏
             if (style1Root) style1Root.SetActive(false);
-
-            // CanvasGroup 仍然允许（可选），但我们主要控制 root
+            
             SetUIVisible(true, instant: true);
 
-            // 方案2 root 显示
             if (bubbleUI) bubbleUI.SetVisible(true);
             return;
         }
 
-        // 3) 默认：方案1
         if (bubbleUI) bubbleUI.SetVisible(false);
         if (style1Root) style1Root.SetActive(true);
         SetUIVisible(true, instant: true);
@@ -416,25 +408,20 @@ public class DialogueController : MonoBehaviour
 
     void ShowNormalLine(DialogueStep step)
     {
-        // 如果是气泡UI：只显示文本气泡（不显示 portrait/name）
         if (step.uiMode == DialogueUIMode.Bubble)
         {
             if (bubbleUI != null)
             {
-                bubbleUI.ShowAt(step.bubblePos, step.content ?? "");
+                bubbleUI.ShowAt(step.bubblePos, step.speaker, step.content ?? "");
             }
             else
             {
                 Debug.LogError("[Dialogue] step.uiMode=Bubble but bubbleUI is null.");
             }
-
-            // 方案2一般不需要打字机也行；你若想要打字机也可以做（下面给你保留）
-            // 这里为了和你现有体验一致：仍用打字机更新 bubbleText
-            // ——做法：如果你想在气泡里打字，我建议后续再加（避免这次改动影响太多）。
+            
             return;
         }
-
-        // ===== 方案1：你现有逻辑 =====
+        
         if (portraitImage != null) portraitImage.sprite = step.portrait;
         if (nameText != null) nameText.text = step.speaker ?? "";
 
@@ -913,12 +900,14 @@ public enum DialogueUIMode
 [Serializable]
 public class DialogueStep
 {
+    [Header("Editor Only（仅用于Inspector显示）")]
+    public string stepTitle;
+    
     [Header("对话框UI方案（每步选择）")]
     public DialogueUIMode uiMode = DialogueUIMode.Style1;
 
     [Tooltip("仅方案2(Bubble)有效：选择气泡显示位置编号 1/2/3")]
     [Range(1, 3)] public int bubblePos = 1;
-
     
     [Header("Step类型")]
     public DialogueStepKind stepKind = DialogueStepKind.Normal;
