@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class DialogueController : MonoBehaviour
 {
@@ -42,6 +43,9 @@ public class DialogueController : MonoBehaviour
     public MonoBehaviour timelinePlayer;
     ITimelinePlayer _timeline;
 
+    // [FormerlySerializedAs("bgmController")] [Header("Audio: BGM")]
+    // public BGMControllerOld bgmControllerOld;
+    
     [Header("Audio: BGM")]
     public BGMController bgmController;
 
@@ -117,7 +121,7 @@ public class DialogueController : MonoBehaviour
             dialogueUIGroup.blocksRaycasts = true;
         }
 
-        if (bgmController != null) bgmController.BuildIndexFromSegments(segments);
+        // if (bgmControllerOld != null) bgmControllerOld.BuildIndexFromSegments(segments);
 
         BuildActiveSteps();
 
@@ -269,9 +273,17 @@ public class DialogueController : MonoBehaviour
             return;
         }
 
-        if (bgmController != null) bgmController.ApplyForAbsoluteIndex(_index);
+        // if (bgmControllerOld != null) bgmControllerOld.ApplyForAbsoluteIndex(_index);
 
         var step = GetStep(_index);
+        
+        if (bgmController != null && TryGetFlattenPosition(_index, out var seg, out var stepInSeg))
+        {
+            // Flatten 下没有主/支之分，这里按 Any 处理；isMainlineSeg 可传 true 或者按是否在 mainlineSegments 判断
+            bool isMainlineSeg = (mainlineSegments != null && Array.IndexOf(mainlineSegments, seg) >= 0);
+            bgmController.Apply(seg, stepInSeg, isMainlineSeg);
+        }
+
 
         Fire(step.onStepStart);
 
@@ -351,6 +363,13 @@ public class DialogueController : MonoBehaviour
         }
 
         var step = _curSeg.steps[_curStepInSeg];
+        
+        if (bgmController != null)
+        {
+            bool isMainlineSeg = (_curMainlineIndex >= 0);
+            bgmController.Apply(_curSeg, _curStepInSeg, isMainlineSeg);
+        }
+
 
         Fire(step.onStepStart);
 
@@ -957,6 +976,32 @@ public class DialogueController : MonoBehaviour
 
         Proceed();
     }
+    
+    bool TryGetFlattenPosition(int absIndex, out DialogueSegment seg, out int stepInSeg)
+    {
+        seg = null;
+        stepInSeg = 0;
+
+        if (segments == null || segments.Length == 0) return false;
+
+        int cursor = 0;
+        for (int i = 0; i < segments.Length; i++)
+        {
+            var s = segments[i];
+            if (s == null || s.steps == null) continue;
+
+            int count = s.steps.Length;
+            if (absIndex >= cursor && absIndex < cursor + count)
+            {
+                seg = s;
+                stepInSeg = absIndex - cursor;
+                return true;
+            }
+            cursor += count;
+        }
+        return false;
+    }
+    
 }
 
 public enum DialogueUIMode
