@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8e0b84a052742404ab16824b508790b9
+guid: c88ac079e28645f44accab24aa53b247
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jesse_Smirk_0
+      name: Jesse_NormalShocked_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,15 +118,15 @@ TextureImporter:
         width: 1411
         height: 1370
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dc289da6583ccc4686a5bba4a622310
-      internalID: 1852628441
+      spriteID: 73a83c3380b5d2a42ab9d67f90a72f9c
+      internalID: 231758088
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7c2f40f2a8b11594a93c2811fb29af59
+    spriteID: 4dcc1dda5e7d83c4fb2f1a6c2ee4b549
     internalID: 0
     vertices: []
     indices: 
@@ -145,7 +145,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Jesse_Smirk_0: 1852628441
+      Jesse_NormalShocked_0: 231758088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
