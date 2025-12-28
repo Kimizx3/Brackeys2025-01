@@ -78,6 +78,9 @@ public class DialogueController : MonoBehaviour
     DialogueSegment _curSeg = null;
     int _curStepInSeg = -1;
     int _curMainlineIndex = -1;
+    
+    // int _choiceFeedbackBubblePos = 1;
+
 
     struct ReturnPoint
     {
@@ -772,6 +775,7 @@ public class DialogueController : MonoBehaviour
     void OnPickChoice(DialogueStep currentChoiceStep, ChoiceOption opt)
     {
         HideChoiceUI();
+        // _choiceFeedbackBubblePos = opt.feedbackBubblePos;
         
         if (opt.applyScore)
             AddScore(string.IsNullOrEmpty(opt.scoreKey) ? defaultScoreKey : opt.scoreKey, opt.scoreDelta);
@@ -795,15 +799,32 @@ public class DialogueController : MonoBehaviour
 
     void ShowFeedbackLine(DialogueLine line)
     {
-        if (portraitImage != null) portraitImage.sprite = line.portrait;
-        if (nameText != null) nameText.text = line.speaker ?? "";
-
-        if (dialogueText != null)
-        {
-            if (_typingCoro != null) StopCoroutine(_typingCoro);
-            _typingCoro = StartCoroutine(TypeText(line.content ?? ""));
-        }
+        // if (portraitImage != null) portraitImage.sprite = line.portrait;
+        // if (nameText != null) nameText.text = line.speaker ?? "";
+        //
+        // if (dialogueText != null)
+        // {
+        //     if (_typingCoro != null) StopCoroutine(_typingCoro);
+        //     _typingCoro = StartCoroutine(TypeText(line.content ?? ""));
+        // }
+        //
+        // _pendingProceed = null;
         
+        if (style1Root) style1Root.SetActive(false);
+        SetUIVisible(true, instant: true);
+
+        if (bubbleUI == null)
+        {
+            Debug.LogError("[Choice Feedback] bubbleUI is null. Please assign BubbleDialogueUI in DialogueController.");
+            return;
+        }
+
+        bubbleUI.SetVisible(true);
+        
+        int pos = Mathf.Clamp(line.bubblePos, 1, 3);
+        bubbleUI.ShowAt(pos, line.speaker, line.content ?? "");
+        
+        _isTyping = false;
         _pendingProceed = null;
     }
 
@@ -1026,6 +1047,10 @@ public class DialogueLine
 {
     public string speaker;
     public Sprite portrait;
+    
+    [Header("Bubble UI (1/2/3)")]
+    [Range(1, 3)] public int bubblePos = 1;
+    
     [TextArea(2, 5)] public string content;
 }
 
@@ -1039,6 +1064,9 @@ public class ChoiceOption
     public bool applyScore = true;
     public string scoreKey = "affection";
     public int scoreDelta = 0;
+    
+    // [Header("反馈对白使用气泡位置（1/2/3）")]
+    // [Range(1,3)] public int feedbackBubblePos = 1;
 
     [Header("即时反馈对白（选中后播放，播完才算完成本Choice步骤）")]
     public DialogueLine[] feedbackLines;

@@ -5331,8 +5331,8 @@ MonoBehaviour:
   pos1: {fileID: 1793103566}
   pos2: {fileID: 383425575}
   pos3: {fileID: 1756630358}
-  maxWidth: 400
-  padding: {x: 40, y: 28}
+  maxWidth: 300
+  padding: {x: 20, y: 10}
   extraOffset: {x: 0, y: 0}
 --- !u!1 &304109327
 GameObject:
@@ -8580,156 +8580,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &425910970
 GameObject:
   m_ObjectHideFlags: 0
@@ -9562,6 +9412,7 @@ Transform:
   - {fileID: 1104086709}
   - {fileID: 1402065964}
   - {fileID: 880147112}
+  - {fileID: 1797648762}
   m_Father: {fileID: 10059462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484753384
@@ -11387,216 +11238,6 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 1
       duration: 1
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -17408,309 +17049,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2On
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart:
-    - target: {fileID: 584540425}
-      command: 0
-      duration: 0.5
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &731297210
 GameObject:
   m_ObjectHideFlags: 0
@@ -19708,156 +19046,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &842320638
 GameObject:
   m_ObjectHideFlags: 0
@@ -21205,306 +20393,6 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 1
       duration: 1
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -25062,156 +23950,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Rayne2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Rayne
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: J_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &990087497
 GameObject:
   m_ObjectHideFlags: 0
@@ -28011,336 +26749,6 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 1
       duration: 1
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -31153,126 +29561,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ======
-    uiMode: 1
-    bubblePos: 0
-    stepKind: 0
-    speaker: xx
-    portrait: {fileID: 0}
-    content: xx
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Zayn1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Zayn
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &1206375786
 GameObject:
   m_ObjectHideFlags: 0
@@ -31463,12 +29751,13 @@ MonoBehaviour:
     onStepEnd: []
     options:
     - optionText: Midnight Blue
-      applyScore: 0
+      applyScore: 1
       scoreKey: RoleRoute
       scoreDelta: 2
       feedbackLines:
       - speaker: Nate
         portrait: {fileID: 21300000, guid: 361fedb92bef7bb4791aa9510a3021a9, type: 3}
+        bubblePos: 1
         content: Thanks for the coffee today. Tomorrow is Wednesday... honestly,
           just knowing I can stop by the shop after work makes it bearable. It's
           nice to have a place to vent.
@@ -31479,6 +29768,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Rayne
         portrait: {fileID: 21300000, guid: 64dd24b9e7cb4404e99a583b5559be5f, type: 3}
+        bubblePos: 1
         content: ...Thanks for the treat.
     - optionText: Sunlight Yellow
       applyScore: 1
@@ -31487,6 +29777,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Jack
         portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
+        bubblePos: 1
         content: "Hey Partner! \U0001F601 I applied! Hope I can get the job! \U0001F31F"
     - optionText: Warm Amber
       applyScore: 1
@@ -31495,6 +29786,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Zayn
         portrait: {fileID: 21300000, guid: 1949f90e84d16a948803ac5183b8ed5f, type: 3}
+        bubblePos: 1
         content: Please be careful out there. I'm really glad we found each other
           again... Goodnight.
     branchScoreKey: 
@@ -35043,216 +33335,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &1305851964
 GameObject:
   m_ObjectHideFlags: 0
@@ -37968,306 +36050,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &1402595417
 GameObject:
   m_ObjectHideFlags: 0
@@ -39801,6 +37583,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Nate
         portrait: {fileID: 21300000, guid: 361fedb92bef7bb4791aa9510a3021a9, type: 3}
+        bubblePos: 1
         content: Thanks for the coffee today. Tomorrow is Wednesday... honestly,
           just knowing I can stop by the shop after work makes it bearable. It's
           nice to have a place to vent.
@@ -39811,6 +37594,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Rayne
         portrait: {fileID: 21300000, guid: 64dd24b9e7cb4404e99a583b5559be5f, type: 3}
+        bubblePos: 1
         content: ...Thanks for the treat.
     - optionText: Jack
       applyScore: 1
@@ -39819,6 +37603,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Jack
         portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
+        bubblePos: 1
         content: "Hey Partner! \U0001F601 I applied! Hope I can get the job! \U0001F31F"
     - optionText: Zayn
       applyScore: 1
@@ -39827,6 +37612,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Zayn
         portrait: {fileID: 21300000, guid: 1949f90e84d16a948803ac5183b8ed5f, type: 3}
+        bubblePos: 1
         content: Please be careful out there. I'm really glad we found each other
           again... Goodnight.
     branchScoreKey: 
@@ -45148,49 +42934,35 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Jesse
         portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+        bubblePos: 1
         content: Here, Nate. On the house.
       - speaker: Jesse
         portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+        bubblePos: 1
         content: You look like you need some sugar. Stability isn't a bad thing,
           you know.
-      - speaker: Nate_smile
+      - speaker: Nate2_smile
         portrait: {fileID: -459481343, guid: 188553370f14c7d4996f0d4c06e66757, type: 3}
+        bubblePos: 3
         content: Thanks, Jesse.
-      - speaker: Etan
+      - speaker: Etan1
         portrait: {fileID: -383751959, guid: d4f213dddaeeb2a45b227255c2111b59, type: 3}
+        bubblePos: 2
         content: See? He takes care of you.
-      - speaker: Etan
+      - speaker: Etan1
         portrait: {fileID: -383751959, guid: d4f213dddaeeb2a45b227255c2111b59, type: 3}
+        bubblePos: 2
         content: I'm actually jealous. Maybe I should dye my hair back to black.
           Would I get free pastries then?
-      - speaker: Nate_laugh
+      - speaker: Nate2_laugh
         portrait: {fileID: -459481343, guid: 188553370f14c7d4996f0d4c06e66757, type: 3}
+        bubblePos: 3
         content: Get in line, Etan. I earned this VIP status.
     - optionText: Stay silent and watch
       applyScore: 1
       scoreKey: NateScore
       scoreDelta: 2
-      feedbackLines:
-      - speaker: Jesse
-        portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-        content: Here, Nate. On the house.
-      - speaker: Jesse
-        portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-        content: You look like you need some sugar. Stability isn't a bad thing,
-          you know.
-      - speaker: Nate_smile
-        portrait: {fileID: -459481343, guid: 188553370f14c7d4996f0d4c06e66757, type: 3}
-        content: Thanks, Jesse.
-      - speaker: Etan
-        portrait: {fileID: -383751959, guid: d4f213dddaeeb2a45b227255c2111b59, type: 3}
-        content: See? He takes care of you.
-      - speaker: Etan
-        portrait: {fileID: -383751959, guid: d4f213dddaeeb2a45b227255c2111b59, type: 3}
-        content: I'm actually jealous. Maybe I should dye my hair back to black.
-          Would I get free pastries then?
-      - speaker: Nate_laugh
-        portrait: {fileID: -459481343, guid: 188553370f14c7d4996f0d4c06e66757, type: 3}
-        content: Get in line, Etan. I earned this VIP status.
+      feedbackLines: []
     branchScoreKey: 
     branchRanges: []
   - stepTitle: Narration_PhoneRing
@@ -46799,276 +44571,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &1769222108
 GameObject:
   m_ObjectHideFlags: 0
@@ -47642,6 +45144,1138 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!1 &1797648761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1797648762}
+  - component: {fileID: 1797648763}
+  m_Layer: 0
+  m_Name: Nate_test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1797648762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797648761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 481645303}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1797648763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797648761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b604dc3b23fee9f488dfab7d1d82d987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segmentTitle: Nate_BE
+  steps:
+  - stepTitle: Nate2Off
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 584540425}
+      command: 1
+      duration: 0.3
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Black_Nate2On
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 1243683669}
+      command: 0
+      duration: 0.5
+    - target: {fileID: 1395254488}
+      command: 1
+      duration: 0.5
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd:
+    - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    - target: {fileID: 584540425}
+      command: 0
+      duration: 0
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: I... I don't know, Nate.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: Maybe Etan is right. Maybe you should be braver.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: If you feel like you're rotting... maybe you need to go.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: It's your choice. I can't decide for you.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse_inner_null
+    uiMode: 0
+    bubblePos: 0
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
+    content: The conflict in his eyes dies, replaced by a hollow determination.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Nate2_down
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate
+    portrait: {fileID: 0}
+    content: You're right.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Nate2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate
+    portrait: {fileID: 0}
+    content: It is my choice.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Nate2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate
+    portrait: {fileID: 0}
+    content: And I choose... to stop being afraid.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: "Nate\u2014"
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Nate2Off
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate
+    portrait: {fileID: 0}
+    content: Goodbye, Jesse. Thanks for... the coffee.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd:
+    - target: {fileID: 584540425}
+      command: 1
+      duration: 0.5
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: BlackBG
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 1243683669}
+      command: 0
+      duration: 0.3
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd:
+    - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan2On
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 632400059}
+      command: 0
+      duration: 0.5
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse_Relieved
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: Nate! You're back. I was worried.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: So? How did it go last night? Did you meet him?
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate(?)
+    portrait: {fileID: 0}
+    content: It was enlightening, Jesse.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate(?)
+    portrait: {fileID: 0}
+    content: I finally saw the truth.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: You sound... different.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: Are you... are you still Nate?
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate(?)
+    portrait: {fileID: 0}
+    content: Nate.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse_inner_null
+    uiMode: 0
+    bubblePos: 0
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
+    content: His smile turns into a predatory grin.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate(?)
+    portrait: {fileID: 0}
+    content: Of course, my dear barista.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate(?)
+    portrait: {fileID: 0}
+    content: From today... I am.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Black_AllOff
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 1243683669}
+      command: 0
+      duration: 0.5
+    - target: {fileID: 632400059}
+      command: 1
+      duration: 0.5
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd:
+    - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: ============
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Nate1
+    uiMode: 1
+    bubblePos: 2
+    stepKind: 0
+    speaker: Nate
+    portrait: {fileID: 0}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Nate2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Nate
+    portrait: {fileID: 0}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan1
+    uiMode: 1
+    bubblePos: 2
+    stepKind: 0
+    speaker: Etan
+    portrait: {fileID: 0}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Etan2
+    uiMode: 1
+    bubblePos: 3
+    stepKind: 0
+    speaker: Etan
+    portrait: {fileID: 0}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Narration
+    uiMode: 0
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse_inner
+    uiMode: 0
+    bubblePos: 0
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse_inner_null
+    uiMode: 0
+    bubblePos: 0
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
+    content: Test
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: 
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
 --- !u!1 &1808563069
 GameObject:
   m_ObjectHideFlags: 0
@@ -49269,6 +47903,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Lin
         portrait: {fileID: 21300000, guid: 1949f90e84d16a948803ac5183b8ed5f, type: 3}
+        bubblePos: 1
         content: 11111
     - optionText: Jack
       applyScore: 1
@@ -49277,6 +47912,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Jack
         portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
+        bubblePos: 1
         content: 222222
     - optionText: Nate
       applyScore: 1
@@ -49285,6 +47921,7 @@ MonoBehaviour:
       feedbackLines:
       - speaker: Nate
         portrait: {fileID: 21300000, guid: 361fedb92bef7bb4791aa9510a3021a9, type: 3}
+        bubblePos: 1
         content: 333333
     branchScoreKey: affection
     branchRanges: []
@@ -53045,156 +51682,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jack2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Jack
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: J_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
 --- !u!1 &2039486684
 GameObject:
   m_ObjectHideFlags: 0
@@ -54082,306 +52569,6 @@ MonoBehaviour:
     - target: {fileID: 632400059}
       command: 1
       duration: 0
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: ============
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse
-    uiMode: 1
-    bubblePos: 1
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Nate2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Nate
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan1
-    uiMode: 1
-    bubblePos: 2
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Etan2
-    uiMode: 1
-    bubblePos: 3
-    stepKind: 0
-    speaker: Etan
-    portrait: {fileID: 0}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Narration
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: Jesse_inner_null
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: Jesse
-    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
-    content: Test
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: 
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
     options: []
     branchScoreKey: 
     branchRanges: []
