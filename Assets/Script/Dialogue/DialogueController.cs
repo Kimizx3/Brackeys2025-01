@@ -63,6 +63,10 @@ public class DialogueController : MonoBehaviour
     public bool logScore = true;
     readonly Dictionary<string, int> _scores = new Dictionary<string, int>();
 
+    // ===== Branch Arc 播放状态（Flow 模式）=====
+    DialogueSegment[] _currentArcSegments = null;
+    int _currentArcIndex = -1;
+    
     // ====== Flatten
     DialogueStep[] _activeSteps;
     bool UseSegments => segments != null && segments.Length > 0;
@@ -299,6 +303,29 @@ public class DialogueController : MonoBehaviour
 
         if (_curStepInSeg >= _curSeg.steps.Length)
         {
+            // if (_returnStack.Count > 0)
+            // {
+            //     var rp = _returnStack.Pop();
+            //     JumpToSegmentFlow(rp.seg, rp.stepInSeg);
+            //     return;
+            // }
+            
+            if (_currentArcSegments != null)
+            {
+                int nextArc = _currentArcIndex + 1;
+                if (nextArc < _currentArcSegments.Length && _currentArcSegments[nextArc] != null)
+                {
+                    _currentArcIndex = nextArc;
+                    JumpToSegmentFlow(_currentArcSegments[_currentArcIndex], 0, clearReturnStack: false);
+                    return;
+                }
+                else
+                {
+                    _currentArcSegments = null;
+                    _currentArcIndex = -1;
+                }
+            }
+            
             if (_returnStack.Count > 0)
             {
                 var rp = _returnStack.Pop();
@@ -869,17 +896,40 @@ public class DialogueController : MonoBehaviour
                 DialogueSegment returnSeg = r.returnToMainlineSegment != null ? r.returnToMainlineSegment : _curSeg;
                 int returnStep = r.returnToMainlineSegment != null ? r.returnStepInSegment : (_curStepInSeg + 1);
 
+                // _returnStack.Push(new ReturnPoint { seg = returnSeg, stepInSeg = Mathf.Max(0, returnStep) });
+                //
+                // if (r.branchSegment == null)
+                // {
+                //     Debug.LogError("[BranchByScore] branchSegment 为空，直接回返回点继续。");
+                //     var rp = _returnStack.Pop();
+                //     JumpToSegmentFlow(rp.seg, rp.stepInSeg);
+                //     return;
+                // }
+                //
+                // JumpToSegmentFlow(r.branchSegment, r.branchStartStepInSegment, clearReturnStack: false);
+                // return;
+                
                 _returnStack.Push(new ReturnPoint { seg = returnSeg, stepInSeg = Mathf.Max(0, returnStep) });
-
+                
+                if (r.arcSegments != null && r.arcSegments.Length > 0 && r.arcSegments[0] != null)
+                {
+                    _currentArcSegments = r.arcSegments;
+                    _currentArcIndex = 0;
+                    JumpToSegmentFlow(_currentArcSegments[0], Mathf.Max(0, r.arcStartStepInFirstSegment), clearReturnStack: false);
+                    return;
+                }
+                
                 if (r.branchSegment == null)
                 {
-                    Debug.LogError("[BranchByScore] branchSegment 为空，直接回返回点继续。");
+                    Debug.LogError("[BranchByScore] branchSegment 为空且 arcSegments 为空，直接回返回点继续。");
                     var rp = _returnStack.Pop();
                     JumpToSegmentFlow(rp.seg, rp.stepInSeg);
                     return;
                 }
 
-                JumpToSegmentFlow(r.branchSegment, r.branchStartStepInSegment, clearReturnStack: false);
+                _currentArcSegments = null;
+                _currentArcIndex = -1;
+                JumpToSegmentFlow(r.branchSegment, Mathf.Max(0, r.branchStartStepInSegment), clearReturnStack: false);
                 return;
             }
         }
@@ -1001,8 +1051,13 @@ public class BranchRange
     public int maxInclusive = 999;
 
     [Header("进入分支段")]
+    [Tooltip("单段分支：只填 branchSegment\n分支串：填 arcSegments（优先使用 arcSegments）")]
     public DialogueSegment branchSegment;
     public int branchStartStepInSegment = 0;
+
+    [Tooltip("分支串（按顺序播放）")]
+    public DialogueSegment[] arcSegments;
+    public int arcStartStepInFirstSegment = 0;
 
     [Header("分支播放结束后的返回点")]
     public DialogueSegment returnToMainlineSegment;
