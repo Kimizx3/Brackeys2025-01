@@ -4491,6 +4491,12 @@ MonoBehaviour:
     - target: {fileID: 1939271269}
       command: 0
       duration: 0.3
+    - target: {fileID: 1192935332}
+      command: 0
+      duration: 0.3
+    - target: {fileID: 519897481}
+      command: 0
+      duration: 0.3
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -9287,6 +9293,105 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &452480289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 452480290}
+  - component: {fileID: 452480293}
+  - component: {fileID: 452480292}
+  - component: {fileID: 452480291}
+  m_Layer: 5
+  m_Name: BlackBg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &452480290
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452480289}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1293079731}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.0750122, y: 1.5246582}
+  m_SizeDelta: {x: 804.4136, y: 457.5753}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &452480291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452480289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146276bed596291479b99e871e593ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGameObjectActive: 1
+  controlRaycastsIfCanvasGroup: 1
+  affectChildrenGraphics: 1
+  activationRoot: {fileID: 0}
+  autoActivateAncestorsIfNeeded: 1
+  revertAutoActivatedOnHide: 0
+  sfxSource: {fileID: 0}
+  sfxOnShow: {fileID: 0}
+  sfxOnHide: {fileID: 0}
+  sfxVolume: 1
+  debugLogs: 0
+--- !u!114 &452480292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452480289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 92afe10a988a0e64bbdf6714197b7ee1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &452480293
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452480289}
+  m_CullTransparentMesh: 1
 --- !u!1 &463298064
 GameObject:
   m_ObjectHideFlags: 0
@@ -11739,7 +11844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &519897478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15022,7 +15127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &709543866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22768,7 +22873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &909934490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29836,7 +29941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1192935329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30062,6 +30167,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Main01_2
   steps:
+  - stepTitle: JesseOn
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 1939271269}
+      command: 0
+      duration: 0.3
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
   - stepTitle: Narration(Zayn1On)
     uiMode: 0
     bubblePos: 0
@@ -30088,39 +30226,18 @@ MonoBehaviour:
     - target: {fileID: 421124103}
       command: 0
       duration: 0.5
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
-  - stepTitle: JesseOn
-    uiMode: 2
-    bubblePos: 0
-    stepKind: 0
-    speaker: 
-    portrait: {fileID: 0}
-    content: 
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart:
-    - target: {fileID: 1939271269}
+    - target: {fileID: 1192935332}
+      command: 1
+      duration: 0.5
+    - target: {fileID: 519897481}
+      command: 1
+      duration: 0.5
+    - target: {fileID: 909934493}
       command: 0
-      duration: 0.3
+      duration: 0.5
+    - target: {fileID: 709543869}
+      command: 0
+      duration: 0.5
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -33060,6 +33177,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 452480290}
   - {fileID: 1192935329}
   - {fileID: 909934490}
   - {fileID: 1243856059}
