@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JL/JL_Demo1.unity
-    guid: 88118efb51cec1c4d8c2151cd53d9e17
+    path: Assets/Scenes/2025WinterVN/Winter1.unity
+    guid: 2d33171157ebf134a9f33344b614dd8b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
