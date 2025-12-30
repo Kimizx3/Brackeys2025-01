@@ -32464,36 +32464,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Coffe
-    uiMode: 0
-    bubblePos: 0
-    stepKind: 0
-    speaker: xx
-    portrait: {fileID: 0}
-    content: xx
-    gateType: 0
-    button: {fileID: 0}
-    draggable: {fileID: 0}
-    dropZone: {fileID: 0}
-    focusMinigame: {fileID: 0}
-    playTimelineOnStart: 0
-    startTimelineKey: 
-    playTimelineOnEnd: 0
-    endTimelineKey: 
-    hideDialogueUIThisStep: 0
-    hideUIWhileStartTimeline: 0
-    hideUIWhileGate: 0
-    hideUIWhileEndTimeline: 0
-    onStepStart: []
-    onStartTimelineStart: []
-    onStartTimelineEnd: []
-    onGateSuccess: []
-    onEndTimelineStart: []
-    onEndTimelineEnd: []
-    onStepEnd: []
-    options: []
-    branchScoreKey: 
-    branchRanges: []
   - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
