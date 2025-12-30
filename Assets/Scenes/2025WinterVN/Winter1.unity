@@ -2440,7 +2440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &67670702
@@ -2500,7 +2500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69490201
@@ -2525,7 +2525,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -3927,7 +3927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136777869
@@ -3952,7 +3952,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -6433,7 +6433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347363745
@@ -10838,7 +10838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494409135
@@ -10863,7 +10863,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -14201,7 +14201,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579273565
@@ -14226,7 +14226,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -14549,7 +14549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616500456
@@ -20556,7 +20556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823814041
@@ -20581,7 +20581,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -21509,7 +21509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845842790
@@ -21836,7 +21836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &870309903
@@ -21861,7 +21861,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -29808,11 +29808,13 @@ MonoBehaviour:
     onStepEnd: []
     options:
     - optionText: Don't go.
+      selectable: 1
       applyScore: 1
       scoreKey: NateScore
       scoreDelta: 5
       feedbackLines: []
     - optionText: I can't decide for you.
+      selectable: 1
       applyScore: 1
       scoreKey: NateScore
       scoreDelta: 15
@@ -30312,7 +30314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123586238
@@ -30337,7 +30339,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -30467,7 +30469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132617323
@@ -33042,12 +33044,12 @@ RectTransform:
   - {fileID: 842320639}
   - {fileID: 1744898297}
   - {fileID: 2008084603}
-  - {fileID: 1521875664}
   - {fileID: 1081423217}
   - {fileID: 1527754713}
   - {fileID: 340154295}
   - {fileID: 1243683666}
   - {fileID: 956708389}
+  - {fileID: 1521875664}
   - {fileID: 2039486685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33206,6 +33208,7 @@ MonoBehaviour:
       duration: 0.5
     options:
     - optionText: Midnight Blue
+      selectable: 1
       applyScore: 1
       scoreKey: RoleRoute
       scoreDelta: 2
@@ -33216,7 +33219,8 @@ MonoBehaviour:
         content: Thanks for the coffee today. Tomorrow is Wednesday... honestly,
           just knowing I can stop by the shop after work makes it bearable. It's
           nice to have a place to vent.
-    - optionText: Slate Grey
+    - optionText: Slate Grey (Not available)
+      selectable: 0
       applyScore: 1
       scoreKey: RoleRoute
       scoreDelta: 4
@@ -33225,7 +33229,8 @@ MonoBehaviour:
         portrait: {fileID: 21300000, guid: 64dd24b9e7cb4404e99a583b5559be5f, type: 3}
         bubblePos: 1
         content: ...Thanks for the treat.
-    - optionText: Sunlight Yellow
+    - optionText: Sunlight Yellow (Not available)
+      selectable: 0
       applyScore: 1
       scoreKey: RoleRoute
       scoreDelta: 8
@@ -33234,7 +33239,8 @@ MonoBehaviour:
         portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
         bubblePos: 1
         content: "Hey Partner! \U0001F601 I applied! Hope I can get the job! \U0001F31F"
-    - optionText: Warm Amber
+    - optionText: Warm Amber (Not available)
+      selectable: 0
       applyScore: 1
       scoreKey: RoleRoute
       scoreDelta: 6
@@ -37466,11 +37472,13 @@ MonoBehaviour:
     onStepEnd: []
     options:
     - optionText: Choose with Certainty (Open Mode)
+      selectable: 1
       applyScore: 1
       scoreKey: StartModeChoice
       scoreDelta: 1
       feedbackLines: []
     - optionText: Trust Intuition (Blind Mode)
+      selectable: 1
       applyScore: 1
       scoreKey: StartModeChoice
       scoreDelta: 2
@@ -38766,7 +38774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395254488
@@ -41190,7 +41198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.868, y: 29.351}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 139.74, y: 41.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503727033
@@ -41215,7 +41223,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -41480,6 +41488,7 @@ MonoBehaviour:
     onStepEnd: []
     options:
     - optionText: Nate
+      selectable: 1
       applyScore: 1
       scoreKey: RoleRoute_open
       scoreDelta: 2
@@ -41490,7 +41499,8 @@ MonoBehaviour:
         content: Thanks for the coffee today. Tomorrow is Wednesday... honestly,
           just knowing I can stop by the shop after work makes it bearable. It's
           nice to have a place to vent.
-    - optionText: Rayne
+    - optionText: Rayne (Not available)
+      selectable: 0
       applyScore: 1
       scoreKey: RoleRoute_open
       scoreDelta: 4
@@ -41499,7 +41509,8 @@ MonoBehaviour:
         portrait: {fileID: 21300000, guid: 64dd24b9e7cb4404e99a583b5559be5f, type: 3}
         bubblePos: 1
         content: ...Thanks for the treat.
-    - optionText: Jack
+    - optionText: Jack (Not available)
+      selectable: 0
       applyScore: 1
       scoreKey: RoleRoute_open
       scoreDelta: 8
@@ -41508,7 +41519,8 @@ MonoBehaviour:
         portrait: {fileID: 21300000, guid: d59d1a984a947f643b0d994fee1a00ad, type: 3}
         bubblePos: 1
         content: "Hey Partner! \U0001F601 I applied! Hope I can get the job! \U0001F31F"
-    - optionText: Zayn
+    - optionText: Zayn (Not available)
+      selectable: 0
       applyScore: 1
       scoreKey: RoleRoute_open
       scoreDelta: 6
@@ -41677,7 +41689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1544311208
@@ -46983,6 +46995,7 @@ MonoBehaviour:
     onStepEnd: []
     options:
     - optionText: Give him a sweet treat
+      selectable: 1
       applyScore: 1
       scoreKey: NateScore
       scoreDelta: 1
@@ -47014,6 +47027,7 @@ MonoBehaviour:
         bubblePos: 3
         content: Get in line, Etan. I earned this VIP status.
     - optionText: Stay silent and watch
+      selectable: 1
       applyScore: 1
       scoreKey: NateScore
       scoreDelta: 2
@@ -52375,7 +52389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 162}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1839107840
@@ -52815,6 +52829,7 @@ MonoBehaviour:
     onStepEnd: []
     options:
     - optionText: Lin
+      selectable: 1
       applyScore: 1
       scoreKey: 1
       scoreDelta: 1
@@ -52824,6 +52839,7 @@ MonoBehaviour:
         bubblePos: 1
         content: 11111
     - optionText: Jack
+      selectable: 1
       applyScore: 1
       scoreKey: 1
       scoreDelta: 2
@@ -52833,6 +52849,7 @@ MonoBehaviour:
         bubblePos: 1
         content: 222222
     - optionText: Nate
+      selectable: 1
       applyScore: 1
       scoreKey: 1
       scoreDelta: 3

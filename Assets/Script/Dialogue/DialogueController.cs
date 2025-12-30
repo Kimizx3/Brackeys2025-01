@@ -787,6 +787,7 @@ public class DialogueController : MonoBehaviour
                 else Debug.LogError("[Choice] ButtonPrefab 没有 Text 或 TMP_Text 子节点，无法显示选项文本。");
             }
 
+            btn.interactable = opt.selectable;
             btn.onClick.AddListener(() => OnPickChoice(step, opt));
         }
     }
@@ -1104,6 +1105,9 @@ public class ChoiceOption
 {
     [Header("按钮文本")]
     public string optionText = "选项";
+    
+    [Header("可选性")]
+    public bool selectable = true;
 
     [Header("积分变化")]
     public bool applyScore = true;
