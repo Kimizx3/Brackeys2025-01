@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 31526207}
   - component: {fileID: 31526206}
   m_Layer: 0
-  m_Name: s1_p1_movieRoom
+  m_Name: Start1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92afe10a988a0e64bbdf6714197b7ee1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22fa95f5e85256247a85dbc0d491d935, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2076,12 +2076,12 @@ GameObject:
   - component: {fileID: 53111949}
   - component: {fileID: 53111948}
   m_Layer: 0
-  m_Name: Jesse1 (7)
+  m_Name: Jesse_Smirk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &53111947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2094,11 +2094,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &53111948
@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: 1852628441, guid: 8e0b84a052742404ab16824b508790b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2435,7 +2435,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 929131641}
   - {fileID: 823814040}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2537,7 +2536,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.12
+  m_Text: 2025-12-12
 --- !u!222 &69490202
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2594,12 +2593,12 @@ GameObject:
   - component: {fileID: 80564969}
   - component: {fileID: 80564968}
   m_Layer: 0
-  m_Name: Jesse1 (8)
+  m_Name: Jesse_Worried
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &80564967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2612,11 +2611,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &80564968
@@ -2639,7 +2638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: 509047116, guid: a6b299c3b3d3f0c4183288d4ab171f85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3964,7 +3963,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.13
+  m_Text: 2025-12-13
 --- !u!222 &136777870
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4232,6 +4231,105 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &187340381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187340382}
+  - component: {fileID: 187340385}
+  - component: {fileID: 187340384}
+  - component: {fileID: 187340383}
+  m_Layer: 0
+  m_Name: Start2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &187340382
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187340381}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 34.054344, y: 34.054344, z: 34.054344}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 819852052}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -400, y: -225.16554}
+  m_SizeDelta: {x: 23.502222, y: 13.22}
+  m_Pivot: {x: -0, y: -0}
+--- !u!114 &187340383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187340381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0368cc83aa673564ab4d414a4b875ae6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &187340384
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187340381}
+  m_CullTransparentMesh: 1
+--- !u!114 &187340385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187340381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146276bed596291479b99e871e593ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGameObjectActive: 1
+  controlRaycastsIfCanvasGroup: 1
+  affectChildrenGraphics: 1
+  activationRoot: {fileID: 0}
+  autoActivateAncestorsIfNeeded: 1
+  revertAutoActivatedOnHide: 0
+  sfxSource: {fileID: 0}
+  sfxOnShow: {fileID: 0}
+  sfxOnHide: {fileID: 0}
+  sfxVolume: 1
+  debugLogs: 0
 --- !u!1 &210009834
 GameObject:
   m_ObjectHideFlags: 0
@@ -4764,6 +4862,180 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segmentTitle: Main01_1
   steps:
+  - stepTitle: Start
+    uiMode: 0
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
+    content: CLICK TO START
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Date_1201
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 861402115}
+      command: 0
+      duration: 0
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd:
+    - target: {fileID: 861402115}
+      command: 1
+      duration: 1
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: StartCG1
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 31526208}
+      command: 0
+      duration: 0.5
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: StartCG2
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 187340385}
+      command: 0
+      duration: 0.5
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: StartCG3
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 31526208}
+      command: 1
+      duration: 0.3
+    - target: {fileID: 187340385}
+      command: 1
+      duration: 0.3
+    - target: {fileID: 698215673}
+      command: 0
+      duration: 0.6
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd:
+    - target: {fileID: 698215673}
+      command: 1
+      duration: 0.5
+    options: []
+    branchScoreKey: 
+    branchRanges: []
   - stepTitle: JesseOn
     uiMode: 2
     bubblePos: 0
@@ -4856,7 +5128,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -4886,7 +5161,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -4929,7 +5207,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_inner
+  - stepTitle: Jesse_inner_NorShocked
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -4950,7 +5228,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -4966,7 +5247,7 @@ MonoBehaviour:
     stepKind: 0
     speaker: ???
     portrait: {fileID: 0}
-    content: Sorry. (Voice barely a whisper)
+    content: Sorry.
     gateType: 0
     button: {fileID: 0}
     draggable: {fileID: 0}
@@ -4990,7 +5271,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Rayne1Off
+  - stepTitle: JesseNor_Rayne1Off
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -5019,7 +5300,10 @@ MonoBehaviour:
     onGateSuccess: []
     onEndTimelineStart: []
     onEndTimelineEnd: []
-    onStepEnd: []
+    onStepEnd:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -5062,7 +5346,7 @@ MonoBehaviour:
     stepKind: 0
     speaker: Jesse
     portrait: {fileID: 0}
-    content: "\u2026 Moring, Nate. You\u2019re here early."
+    content: "\u2026 Morning, Nate. You\u2019re here early."
     gateType: 0
     button: {fileID: 0}
     draggable: {fileID: 0}
@@ -5188,7 +5472,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_smirk
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -5208,7 +5492,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 53111950}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -5218,7 +5505,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Nate1_Nor
+  - stepTitle: Nate1_Nor_JesseNor
     uiMode: 1
     bubblePos: 2
     stepKind: 0
@@ -5240,6 +5527,9 @@ MonoBehaviour:
     hideUIWhileEndTimeline: 0
     onStepStart:
     - target: {fileID: 2039146037}
+      command: 1
+      duration: 0
+    - target: {fileID: 53111950}
       command: 1
       duration: 0
     onStartTimelineStart: []
@@ -5383,6 +5673,105 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
+--- !u!1 &239509092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239509093}
+  - component: {fileID: 239509096}
+  - component: {fileID: 239509095}
+  - component: {fileID: 239509094}
+  m_Layer: 0
+  m_Name: Nate_HE_CG2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &239509093
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239509092}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.30816522, y: 0.30816522, z: 0.30816522}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 819852052}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -400, y: -275.5}
+  m_SizeDelta: {x: 2595.3105, y: 1803.2847}
+  m_Pivot: {x: -0, y: -0}
+--- !u!114 &239509094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239509092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f7a41fe535f1af1459e05600ff6858a1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &239509095
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239509092}
+  m_CullTransparentMesh: 1
+--- !u!114 &239509096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239509092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146276bed596291479b99e871e593ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGameObjectActive: 1
+  controlRaycastsIfCanvasGroup: 1
+  affectChildrenGraphics: 1
+  activationRoot: {fileID: 0}
+  autoActivateAncestorsIfNeeded: 1
+  revertAutoActivatedOnHide: 0
+  sfxSource: {fileID: 0}
+  sfxOnShow: {fileID: 0}
+  sfxOnHide: {fileID: 0}
+  sfxVolume: 1
+  debugLogs: 0
 --- !u!1 &242812909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,81 +6001,6 @@ RectTransform:
   m_AnchoredPosition: {x: -74.8, y: -212.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &288646287
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 288646288}
-  - component: {fileID: 288646290}
-  - component: {fileID: 288646289}
-  m_Layer: 5
-  m_Name: textBG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &288646288
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288646287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1544311207}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &288646289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288646287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &288646290
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288646287}
-  m_CullTransparentMesh: 1
 --- !u!1 &290484239
 GameObject:
   m_ObjectHideFlags: 0
@@ -5793,81 +6107,6 @@ MonoBehaviour:
   pivotForPos1: 4
   pivotForPos2: 0
   pivotForPos3: 0
---- !u!1 &304109327
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 304109328}
-  - component: {fileID: 304109330}
-  - component: {fileID: 304109329}
-  m_Layer: 5
-  m_Name: textBG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &304109328
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304109327}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 845842789}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &304109329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304109327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &304109330
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304109327}
-  m_CullTransparentMesh: 1
 --- !u!1 &307721697
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,7 +6428,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1939500554}
   - {fileID: 579273564}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7623,10 +7861,10 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0
-    - target: {fileID: 1544311208}
+    - target: {fileID: 1939271269}
       command: 0
       duration: 0.2
-    - target: {fileID: 1939271269}
+    - target: {fileID: 1544311208}
       command: 0
       duration: 0.2
     onStartTimelineStart: []
@@ -7637,7 +7875,10 @@ MonoBehaviour:
     onStepEnd:
     - target: {fileID: 1243683669}
       command: 1
-      duration: 0.5
+      duration: 1
+    - target: {fileID: 1544311208}
+      command: 1
+      duration: 1
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -7921,7 +8162,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -7941,7 +8182,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -8330,7 +8574,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worrired->Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -8350,7 +8594,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -8487,7 +8737,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -8507,7 +8757,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -8615,7 +8868,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_FrowningSlightly
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -8635,7 +8888,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -8645,7 +8901,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_FrowningSlightly
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -8666,7 +8922,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -9117,8 +9376,8 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0.5
-    - target: {fileID: 1544311208}
-      command: 1
+    - target: {fileID: 1132617323}
+      command: 0
       duration: 0.5
     onStartTimelineStart: []
     onStartTimelineEnd: []
@@ -9130,6 +9389,9 @@ MonoBehaviour:
       command: 1
       duration: 1
     - target: {fileID: 1939271269}
+      command: 1
+      duration: 1
+    - target: {fileID: 1132617323}
       command: 1
       duration: 1
     options: []
@@ -9488,6 +9750,85 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &431845497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431845498}
+  - component: {fileID: 431845500}
+  - component: {fileID: 431845499}
+  m_Layer: 5
+  m_Name: text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &431845498
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431845497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 861402114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 261.9698, y: 82.811}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &431845499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431845497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 2025-12-01
+--- !u!222 &431845500
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431845497}
+  m_CullTransparentMesh: 1
 --- !u!1 &449347855
 GameObject:
   m_ObjectHideFlags: 0
@@ -10533,7 +10874,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.4
+  m_Text: 2025-12-04
 --- !u!222 &494409136
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10692,9 +11033,6 @@ MonoBehaviour:
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
     onStepStart:
-    - target: {fileID: 67670702}
-      command: 0
-      duration: 0.2
     - target: {fileID: 1939271269}
       command: 0
       duration: 0.2
@@ -10923,7 +11261,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -10943,7 +11281,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -10983,7 +11324,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_smile
+  - stepTitle: Jesse_Shocked->Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -11003,7 +11344,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -11073,7 +11420,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -11093,7 +11440,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -11635,7 +11985,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -11655,7 +12005,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -11858,7 +12211,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -11879,7 +12232,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -12006,8 +12362,8 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0.5
-    - target: {fileID: 67670702}
-      command: 1
+    - target: {fileID: 1839107840}
+      command: 0
       duration: 0.5
     - target: {fileID: 1939271269}
       command: 1
@@ -12019,6 +12375,9 @@ MonoBehaviour:
     onEndTimelineEnd: []
     onStepEnd:
     - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    - target: {fileID: 1839107840}
       command: 1
       duration: 1
     options: []
@@ -13878,7 +14237,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.15
+  m_Text: 2025-12-15
 --- !u!222 &579273566
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14185,7 +14544,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 884456785}
   - {fileID: 69490200}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15160,6 +15518,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696280919}
   m_CullTransparentMesh: 1
+--- !u!1 &698215669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698215670}
+  - component: {fileID: 698215673}
+  - component: {fileID: 698215672}
+  - component: {fileID: 698215671}
+  m_Layer: 0
+  m_Name: Start3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &698215670
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698215669}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 34.054344, y: 34.054344, z: 34.054344}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 819852052}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -400, y: -225.16554}
+  m_SizeDelta: {x: 23.502222, y: 13.22}
+  m_Pivot: {x: -0, y: -0}
+--- !u!114 &698215671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698215669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 896d2205de703d0429ad9799a6189359, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &698215672
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698215669}
+  m_CullTransparentMesh: 1
+--- !u!114 &698215673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698215669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146276bed596291479b99e871e593ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGameObjectActive: 1
+  controlRaycastsIfCanvasGroup: 1
+  affectChildrenGraphics: 1
+  activationRoot: {fileID: 0}
+  autoActivateAncestorsIfNeeded: 1
+  revertAutoActivatedOnHide: 0
+  sfxSource: {fileID: 0}
+  sfxOnShow: {fileID: 0}
+  sfxOnHide: {fileID: 0}
+  sfxVolume: 1
+  debugLogs: 0
 --- !u!1 &701767330
 GameObject:
   m_ObjectHideFlags: 0
@@ -17102,12 +17559,12 @@ GameObject:
   - component: {fileID: 727621909}
   - component: {fileID: 727621908}
   m_Layer: 0
-  m_Name: Jesse1 (2)
+  m_Name: Jesse_Confused
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &727621907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17120,11 +17577,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &727621908
@@ -17147,7 +17604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: -2075724251, guid: 68eaf0717c765a648b4b263faa7a3a4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17456,9 +17913,6 @@ MonoBehaviour:
     - target: {fileID: 632400059}
       command: 0
       duration: 0
-    - target: {fileID: 347363745}
-      command: 0
-      duration: 0.2
     - target: {fileID: 1939271269}
       command: 0
       duration: 0.2
@@ -17563,7 +18017,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_Surprised
+  - stepTitle: Jesse_Shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -17583,7 +18037,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -17623,7 +18080,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -17643,7 +18100,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -17958,7 +18418,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_blushed
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -17978,7 +18438,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1631558274}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -18049,7 +18512,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Blushed->Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -18069,7 +18532,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
+    - target: {fileID: 1631558274}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -18146,7 +18615,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -18166,7 +18635,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -18243,7 +18715,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_normal
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -18360,7 +18832,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -18528,7 +19003,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -18548,7 +19023,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -18686,7 +19164,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Down
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -18706,7 +19184,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -18752,7 +19233,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Etan2
+  - stepTitle: Etan2_JesseNor
     uiMode: 1
     bubblePos: 3
     stepKind: 0
@@ -18773,7 +19254,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -18843,8 +19327,8 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0.5
-    - target: {fileID: 347363745}
-      command: 1
+    - target: {fileID: 1395254488}
+      command: 0
       duration: 0.5
     - target: {fileID: 1939271269}
       command: 1
@@ -18856,6 +19340,9 @@ MonoBehaviour:
     onEndTimelineEnd: []
     onStepEnd:
     - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    - target: {fileID: 1395254488}
       command: 1
       duration: 1
     options: []
@@ -19193,81 +19680,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751238233}
-  m_CullTransparentMesh: 1
---- !u!1 &755587093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 755587094}
-  - component: {fileID: 755587096}
-  - component: {fileID: 755587095}
-  m_Layer: 5
-  m_Name: textBG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &755587094
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755587093}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1395254487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &755587095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755587093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &755587096
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755587093}
   m_CullTransparentMesh: 1
 --- !u!1 &761072476
 GameObject:
@@ -19910,6 +20322,66 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &812732588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812732589}
+  - component: {fileID: 812732590}
+  m_Layer: 5
+  m_Name: Normal_12_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &812732589
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812732588}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1225659432}
+  m_Father: {fileID: 2039486685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &812732590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812732588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146276bed596291479b99e871e593ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGameObjectActive: 1
+  controlRaycastsIfCanvasGroup: 1
+  affectChildrenGraphics: 1
+  activationRoot: {fileID: 0}
+  autoActivateAncestorsIfNeeded: 1
+  revertAutoActivatedOnHide: 0
+  sfxSource: {fileID: 0}
+  sfxOnShow: {fileID: 0}
+  sfxOnHide: {fileID: 0}
+  sfxVolume: 1
+  debugLogs: 0
 --- !u!1 &813483924
 GameObject:
   m_ObjectHideFlags: 0
@@ -20038,7 +20510,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 31526205}
+  - {fileID: 187340382}
+  - {fileID: 698215670}
   - {fileID: 1157047136}
+  - {fileID: 239509093}
   - {fileID: 1490665729}
   m_Father: {fileID: 1206375787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20117,7 +20592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.8
+  m_Text: 2025-12-08
 --- !u!222 &823814042
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20193,9 +20668,6 @@ MonoBehaviour:
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
     onStepStart:
-    - target: {fileID: 1132617323}
-      command: 0
-      duration: 0.2
     - target: {fileID: 1939271269}
       command: 0
       duration: 0.2
@@ -20253,7 +20725,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -20273,7 +20745,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -20313,7 +20788,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -20334,7 +20809,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -20520,7 +20998,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 53111950}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -20530,7 +21011,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_smirk
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -20561,7 +21042,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_smirk
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -20621,7 +21102,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Nate2
+  - stepTitle: Nate2_JesseNor
     uiMode: 1
     bubblePos: 3
     stepKind: 0
@@ -20641,7 +21122,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 53111950}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -20898,8 +21382,8 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0.5
-    - target: {fileID: 1132617323}
-      command: 1
+    - target: {fileID: 67670702}
+      command: 0
       duration: 0.5
     - target: {fileID: 1939271269}
       command: 1
@@ -20911,6 +21395,9 @@ MonoBehaviour:
     onEndTimelineEnd: []
     onStepEnd:
     - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    - target: {fileID: 67670702}
       command: 1
       duration: 1
     options: []
@@ -21017,7 +21504,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 304109328}
   - {fileID: 136777868}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21256,6 +21742,66 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &861402113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 861402114}
+  - component: {fileID: 861402115}
+  m_Layer: 5
+  m_Name: Normal_12_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &861402114
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861402113}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 431845498}
+  m_Father: {fileID: 2039486685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &861402115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861402113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146276bed596291479b99e871e593ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGameObjectActive: 1
+  controlRaycastsIfCanvasGroup: 1
+  affectChildrenGraphics: 1
+  activationRoot: {fileID: 0}
+  autoActivateAncestorsIfNeeded: 1
+  revertAutoActivatedOnHide: 0
+  sfxSource: {fileID: 0}
+  sfxOnShow: {fileID: 0}
+  sfxOnHide: {fileID: 0}
+  sfxVolume: 1
+  debugLogs: 0
 --- !u!1 &870309901
 GameObject:
   m_ObjectHideFlags: 0
@@ -21326,7 +21872,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.3
+  m_Text: 2025-12-03
 --- !u!222 &870309904
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21654,7 +22200,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -21674,7 +22220,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -21900,7 +22449,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried->Down
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -21920,7 +22469,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 0
+      duration: 0
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -22068,7 +22623,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_Relieved
+  - stepTitle: Jesse_Down->Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -22088,7 +22643,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
+    - target: {fileID: 1823032042}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -22098,7 +22659,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -22118,7 +22679,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -22188,7 +22752,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -22208,7 +22772,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -22381,6 +22948,9 @@ MonoBehaviour:
       command: 1
       duration: 1
     - target: {fileID: 1939271269}
+      command: 1
+      duration: 1
+    - target: {fileID: 80564970}
       command: 1
       duration: 1
     options: []
@@ -22711,81 +23281,6 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
---- !u!1 &884456784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 884456785}
-  - component: {fileID: 884456787}
-  - component: {fileID: 884456786}
-  m_Layer: 5
-  m_Name: textBG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &884456785
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884456784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 616500455}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &884456786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884456784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &884456787
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884456784}
-  m_CullTransparentMesh: 1
 --- !u!1 &885295943
 GameObject:
   m_ObjectHideFlags: 0
@@ -23509,7 +24004,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912451781}
   m_CullTransparentMesh: 1
---- !u!1 &929131640
+--- !u!1 &956708388
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23517,57 +24012,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 929131641}
-  - component: {fileID: 929131643}
-  - component: {fileID: 929131642}
-  m_Layer: 5
-  m_Name: textBG
+  - component: {fileID: 956708389}
+  - component: {fileID: 956708392}
+  - component: {fileID: 956708391}
+  - component: {fileID: 956708390}
+  m_Layer: 0
+  m_Name: Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &929131641
+  m_IsActive: 0
+--- !u!224 &956708389
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929131640}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 956708388}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2631034, y: 0.2631034, z: 0.2631034}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 67670701}
+  m_Father: {fileID: 1206375787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &929131642
+  m_AnchoredPosition: {x: -586, y: -1177}
+  m_SizeDelta: {x: 8806.627, y: 6119.0576}
+  m_Pivot: {x: -0, y: -0}
+--- !u!114 &956708390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929131640}
+  m_GameObject: {fileID: 956708388}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f529c7a5b7ef84d4eba3bee4690fa406, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -23576,14 +24072,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &929131643
+--- !u!222 &956708391
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929131640}
+  m_GameObject: {fileID: 956708388}
   m_CullTransparentMesh: 1
+--- !u!114 &956708392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956708388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146276bed596291479b99e871e593ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGameObjectActive: 1
+  controlRaycastsIfCanvasGroup: 1
+  affectChildrenGraphics: 1
+  activationRoot: {fileID: 0}
+  autoActivateAncestorsIfNeeded: 1
+  revertAutoActivatedOnHide: 0
+  sfxSource: {fileID: 0}
+  sfxOnShow: {fileID: 0}
+  sfxOnHide: {fileID: 0}
+  sfxVolume: 1
+  debugLogs: 0
 --- !u!1 &958890576
 GameObject:
   m_ObjectHideFlags: 0
@@ -24816,7 +25335,37 @@ MonoBehaviour:
     speaker: Jesse
     portrait: {fileID: 0}
     content: But it's freezing out there. How about a cup of hot milk? Just to warm
-      your hands." "It's on the house.
+      your hands.
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart: []
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd: []
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Jesse
+    uiMode: 1
+    bubblePos: 1
+    stepKind: 0
+    speaker: Jesse
+    portrait: {fileID: 0}
+    content: It's on the house.
     gateType: 0
     button: {fileID: 0}
     draggable: {fileID: 0}
@@ -24870,7 +25419,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -24891,7 +25440,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -25000,7 +25552,7 @@ MonoBehaviour:
     speaker: 
     portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
     content: He slowly sits down, placing his backpack on his lap, still holding
-      onto it.) "...Okay.
+      onto it.
     gateType: 0
     button: {fileID: 0}
     draggable: {fileID: 0}
@@ -25084,7 +25636,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: J_inner
+  - stepTitle: J_inner_Nor
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -25106,7 +25658,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -25681,7 +26236,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -25993,7 +26551,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: J_inner
+  - stepTitle: J_inner_Nor
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -26014,7 +26572,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -26152,7 +26713,7 @@ MonoBehaviour:
     onStepEnd:
     - target: {fileID: 1243683669}
       command: 1
-      duration: 0.5
+      duration: 1
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -26563,12 +27124,12 @@ GameObject:
   - component: {fileID: 1010247641}
   - component: {fileID: 1010247640}
   m_Layer: 0
-  m_Name: Jesse1 (4)
+  m_Name: Jesse_Embarrased2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1010247639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26581,11 +27142,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &1010247640
@@ -26608,7 +27169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: 1992656886, guid: 46e2d648ba0bab84582eced41ed9217c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27969,7 +28530,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -27989,7 +28550,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -28062,7 +28626,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_worried->shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -28082,7 +28646,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -28262,7 +28832,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -28282,7 +28852,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -28419,7 +28992,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -28439,7 +29012,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -29270,6 +29846,9 @@ MonoBehaviour:
     - target: {fileID: 1939271269}
       command: 1
       duration: 0.5
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0.5
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -29769,7 +30348,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.11
+  m_Text: 2025-12-11
 --- !u!222 &1123586239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29883,7 +30462,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2143088459}
   - {fileID: 494409134}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30405,7 +30983,7 @@ GameObject:
   - component: {fileID: 1157047138}
   - component: {fileID: 1157047137}
   m_Layer: 0
-  m_Name: Nate_HE_CG
+  m_Name: Nate_HE_CG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30420,15 +30998,15 @@ RectTransform:
   m_GameObject: {fileID: 1157047135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 34.054344, y: 34.054344, z: 34.054344}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.30816522, y: 0.30816522, z: 0.30816522}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 819852052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -225.16554}
-  m_SizeDelta: {x: 23.502222, y: 13.22}
+  m_AnchoredPosition: {x: -400, y: -275.5}
+  m_SizeDelta: {x: 2595.3105, y: 1803.2847}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &1157047137
 MonoBehaviour:
@@ -30450,7 +31028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92afe10a988a0e64bbdf6714197b7ee1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a251dc679f0f73a42ae14b93b2f3c42b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31010,7 +31588,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_smile
     uiMode: 1
     bubblePos: 0
     stepKind: 0
@@ -31030,7 +31608,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -31070,7 +31651,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_inner
+  - stepTitle: Jesse_inner_Nor
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -31091,7 +31672,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -31161,7 +31745,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -31181,7 +31765,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -31281,7 +31868,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Shocked->Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -31301,7 +31888,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -31372,7 +31965,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Smile->Shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -31393,7 +31986,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -31403,7 +32002,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Zayn1
+  - stepTitle: Zayn1_JesseNor
     uiMode: 1
     bubblePos: 2
     stepKind: 0
@@ -31423,7 +32022,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -31737,7 +32339,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -31757,7 +32359,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -31887,7 +32492,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -31907,7 +32512,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -32097,7 +32705,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -32117,7 +32725,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -32308,7 +32919,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Zayn1(Zayn_off)
+  - stepTitle: Zayn1Off_JesseNor
     uiMode: 1
     bubblePos: 2
     stepKind: 0
@@ -32328,7 +32939,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -32368,6 +32982,9 @@ MonoBehaviour:
     - target: {fileID: 1939271269}
       command: 1
       duration: 0.3
+    - target: {fileID: 812732590}
+      command: 0
+      duration: 0.3
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -32376,7 +32993,10 @@ MonoBehaviour:
     onStepEnd:
     - target: {fileID: 1243683669}
       command: 1
-      duration: 0.5
+      duration: 1
+    - target: {fileID: 812732590}
+      command: 1
+      duration: 1
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -32424,10 +33044,11 @@ RectTransform:
   - {fileID: 2008084603}
   - {fileID: 1521875664}
   - {fileID: 1081423217}
-  - {fileID: 2039486685}
-  - {fileID: 1939271268}
+  - {fileID: 1527754713}
   - {fileID: 340154295}
   - {fileID: 1243683666}
+  - {fileID: 956708389}
+  - {fileID: 2039486685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -32564,13 +33185,25 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1243683669}
+      command: 0
+      duration: 0.2
+    - target: {fileID: 956708392}
+      command: 0
+      duration: 0.2
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
     onEndTimelineStart: []
     onEndTimelineEnd: []
-    onStepEnd: []
+    onStepEnd:
+    - target: {fileID: 1243683669}
+      command: 1
+      duration: 0.5
+    - target: {fileID: 956708392}
+      command: 1
+      duration: 0.5
     options:
     - optionText: Midnight Blue
       applyScore: 1
@@ -32791,6 +33424,85 @@ MonoBehaviour:
   sfxOnHide: {fileID: 0}
   sfxVolume: 1
   debugLogs: 0
+--- !u!1 &1225659431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225659432}
+  - component: {fileID: 1225659434}
+  - component: {fileID: 1225659433}
+  m_Layer: 5
+  m_Name: text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1225659432
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225659431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 812732589}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 261.9698, y: 82.811}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1225659433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225659431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 2025-12-02
+--- !u!222 &1225659434
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225659431}
+  m_CullTransparentMesh: 1
 --- !u!1 &1236253631
 GameObject:
   m_ObjectHideFlags: 0
@@ -34274,9 +34986,6 @@ MonoBehaviour:
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
     onStepStart:
-    - target: {fileID: 1839107840}
-      command: 0
-      duration: 0.2
     - target: {fileID: 1939271269}
       command: 0
       duration: 0.2
@@ -34365,7 +35074,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -34385,7 +35094,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -34518,7 +35230,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -34538,7 +35250,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -34578,7 +35293,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Down
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -34598,7 +35313,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -34706,7 +35424,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -34726,7 +35444,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -34802,7 +35523,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_Surprised
+  - stepTitle: Jesse_Shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -34822,7 +35543,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -34955,7 +35679,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_inner_null
+  - stepTitle: Jesse_inner_null_Nor
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -34976,7 +35700,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -34986,7 +35713,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Down
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -35006,7 +35733,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -35046,7 +35776,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -35066,7 +35796,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -35173,7 +35906,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_frown
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -35193,7 +35926,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -35203,7 +35939,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_frown
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -35229,7 +35965,10 @@ MonoBehaviour:
     onGateSuccess: []
     onEndTimelineStart: []
     onEndTimelineEnd: []
-    onStepEnd: []
+    onStepEnd:
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -36067,7 +36806,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -36300,7 +37042,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_Grinning
+  - stepTitle: Jesse_smile->smirk
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -36320,7 +37062,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 53111950}
+      command: 0
+      duration: 0
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -36330,7 +37078,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_Grinning
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -36360,7 +37108,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_Grinning
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -36387,7 +37135,10 @@ MonoBehaviour:
     onGateSuccess: []
     onEndTimelineStart: []
     onEndTimelineEnd: []
-    onStepEnd: []
+    onStepEnd:
+    - target: {fileID: 53111950}
+      command: 1
+      duration: 0
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -36517,8 +37268,8 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0.5
-    - target: {fileID: 1839107840}
-      command: 1
+    - target: {fileID: 616500456}
+      command: 0
       duration: 0.5
     - target: {fileID: 1939271269}
       command: 1
@@ -36530,6 +37281,9 @@ MonoBehaviour:
     onEndTimelineEnd: []
     onStepEnd:
     - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    - target: {fileID: 616500456}
       command: 1
       duration: 1
     options: []
@@ -36711,12 +37465,12 @@ MonoBehaviour:
     onEndTimelineEnd: []
     onStepEnd: []
     options:
-    - optionText: Trust Intuition (Blind Mode)
+    - optionText: Choose with Certainty (Open Mode)
       applyScore: 1
       scoreKey: StartModeChoice
       scoreDelta: 1
       feedbackLines: []
-    - optionText: Choose with Certainty (Open Mode)
+    - optionText: Trust Intuition (Blind Mode)
       applyScore: 1
       scoreKey: StartModeChoice
       scoreDelta: 2
@@ -37255,25 +38009,25 @@ MonoBehaviour:
     segment: {fileID: 238005584}
     startStep: 0
     endStep: -1
-    clip: {fileID: 8300000, guid: b8157b4dbafbc8c4f824bc32c8fcb1d4, type: 3}
+    clip: {fileID: 8300000, guid: f29352504cf553643b204780cdc24c9e, type: 3}
     volume: 0.506
     loop: 1
     priority: 0
-  - name: bgm2
-    scope: 0
-    segment: {fileID: 425124462}
-    startStep: 0
-    endStep: -1
-    clip: {fileID: 8300000, guid: 9c7f35596b566944e93fdf6fe5fb3948, type: 3}
-    volume: 0.506
-    loop: 1
-    priority: 1
   - name: bgm3
     scope: 0
-    segment: {fileID: 1104086710}
+    segment: {fileID: 1402065965}
     startStep: 0
     endStep: -1
-    clip: {fileID: 8300000, guid: 463a67c6851769a49bee4f0901ea2282, type: 3}
+    clip: {fileID: 8300000, guid: 6a9aab7232ad2eb41925c3add2e871e3, type: 3}
+    volume: 0.506
+    loop: 1
+    priority: 2
+  - name: bgm3
+    scope: 0
+    segment: {fileID: 880147113}
+    startStep: 0
+    endStep: -1
+    clip: {fileID: 8300000, guid: 4ed6a37cad646ca4f82a14ea72dc9814, type: 3}
     volume: 0.506
     loop: 1
     priority: 2
@@ -37716,12 +38470,12 @@ GameObject:
   - component: {fileID: 1384322309}
   - component: {fileID: 1384322308}
   m_Layer: 0
-  m_Name: Jesse1 (5)
+  m_Name: Jesse_NormalShocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1384322307
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37734,11 +38488,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &1384322308
@@ -37761,7 +38515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: 231758088, guid: c88ac079e28645f44accab24aa53b247, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38007,7 +38761,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 755587094}
   - {fileID: 1503727032}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38311,7 +39064,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -38331,7 +39084,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 80564970}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -38432,7 +39188,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Worried->Down
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -38452,7 +39208,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 0
+      duration: 0
+    - target: {fileID: 80564970}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -38583,7 +39345,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -38603,7 +39365,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1823032042}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -38613,7 +39378,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_blushed
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -38634,7 +39399,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1631558274}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -38674,7 +39442,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_blushed->embarrased
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -38694,7 +39462,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1010247642}
+      command: 0
+      duration: 0
+    - target: {fileID: 1631558274}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -38737,7 +39511,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -38757,7 +39531,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1010247642}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -38858,7 +39635,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -38878,7 +39655,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -39015,7 +39795,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -39035,7 +39815,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -39215,7 +39998,46 @@ MonoBehaviour:
     onGateSuccess: []
     onEndTimelineStart: []
     onEndTimelineEnd: []
-    onStepEnd: []
+    onStepEnd:
+    - target: {fileID: 1157047139}
+      command: 1
+      duration: 0.3
+    options: []
+    branchScoreKey: 
+    branchRanges: []
+  - stepTitle: Nate_HE_CG2
+    uiMode: 2
+    bubblePos: 0
+    stepKind: 0
+    speaker: 
+    portrait: {fileID: 0}
+    content: 
+    gateType: 0
+    button: {fileID: 0}
+    draggable: {fileID: 0}
+    dropZone: {fileID: 0}
+    focusMinigame: {fileID: 0}
+    playTimelineOnStart: 0
+    startTimelineKey: 
+    playTimelineOnEnd: 0
+    endTimelineKey: 
+    hideDialogueUIThisStep: 0
+    hideUIWhileStartTimeline: 0
+    hideUIWhileGate: 0
+    hideUIWhileEndTimeline: 0
+    onStepStart:
+    - target: {fileID: 239509096}
+      command: 0
+      duration: 0.5
+    onStartTimelineStart: []
+    onStartTimelineEnd: []
+    onGateSuccess: []
+    onEndTimelineStart: []
+    onEndTimelineEnd: []
+    onStepEnd:
+    - target: {fileID: 239509096}
+      command: 1
+      duration: 0.3
     options: []
     branchScoreKey: 
     branchRanges: []
@@ -39252,9 +40074,6 @@ MonoBehaviour:
     onEndTimelineStart: []
     onEndTimelineEnd: []
     onStepEnd:
-    - target: {fileID: 1243683669}
-      command: 1
-      duration: 1
     - target: {fileID: 1939271269}
       command: 1
       duration: 1
@@ -40407,7 +41226,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 12.19
+  m_Text: 2025-12-19
 --- !u!222 &1503727034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40780,6 +41599,50 @@ MonoBehaviour:
       arcStartStepInFirstSegment: 0
       returnToMainlineSegment: {fileID: 1860832354}
       returnStepInSegment: 0
+--- !u!1 &1527754712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527754713}
+  m_Layer: 5
+  m_Name: JesseRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1527754713
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527754712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1939271268}
+  - {fileID: 1631558271}
+  - {fileID: 727621907}
+  - {fileID: 1823032039}
+  - {fileID: 1010247639}
+  - {fileID: 1384322307}
+  - {fileID: 1845831360}
+  - {fileID: 53111947}
+  - {fileID: 80564967}
+  m_Father: {fileID: 1206375787}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1544311206
 GameObject:
   m_ObjectHideFlags: 0
@@ -40809,7 +41672,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 288646288}
   - {fileID: 870309902}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41957,12 +42819,12 @@ GameObject:
   - component: {fileID: 1631558273}
   - component: {fileID: 1631558272}
   m_Layer: 0
-  m_Name: Jesse1 (1)
+  m_Name: Jesse_Blushed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1631558271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41975,11 +42837,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &1631558272
@@ -42002,7 +42864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: 1412574692, guid: ecaad33aebdbe4248b271852e6e2f1d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -43014,81 +43876,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1682633242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1682633243}
-  - component: {fileID: 1682633245}
-  - component: {fileID: 1682633244}
-  m_Layer: 5
-  m_Name: textBG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1682633243
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682633242}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1839107839}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1682633244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682633242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1682633245
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682633242}
-  m_CullTransparentMesh: 1
 --- !u!1 &1689216081
 GameObject:
   m_ObjectHideFlags: 0
@@ -43923,9 +44710,6 @@ MonoBehaviour:
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
     onStepStart:
-    - target: {fileID: 616500456}
-      command: 0
-      duration: 0.2
     - target: {fileID: 1939271269}
       command: 0
       duration: 0.2
@@ -44089,7 +44873,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -44099,7 +44886,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_shocked
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -44129,7 +44916,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_shocked
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -44259,7 +45046,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -44279,7 +45066,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -44289,7 +45079,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_inner_confused
+  - stepTitle: Jesse_inner
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -44349,7 +45139,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Confused
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -44369,7 +45159,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 727621910}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -44887,7 +45680,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_inner
+  - stepTitle: Jesse_inner_Nor
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -44908,7 +45701,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 727621910}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -44969,7 +45765,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -44979,7 +45778,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_smile
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -45009,7 +45808,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_laughNervously
+  - stepTitle: Jesse_Smile->embarrased
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -45029,7 +45828,13 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1010247642}
+      command: 0
+      duration: 0
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -45136,7 +45941,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -45156,7 +45961,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1010247642}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -45716,7 +46524,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1010247642}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -45726,7 +46537,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_embarrased
+  - stepTitle: Jesse
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -45756,7 +46567,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_inner_null
+  - stepTitle: Jesse_inner_null_Nor
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -45776,7 +46587,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1010247642}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -46705,7 +47519,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1631558274}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -46967,7 +47784,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -46987,7 +47804,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1631558274}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -47857,8 +48677,8 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0.5
-    - target: {fileID: 616500456}
-      command: 1
+    - target: {fileID: 845842790}
+      command: 0
       duration: 0.5
     - target: {fileID: 1939271269}
       command: 1
@@ -47870,6 +48690,9 @@ MonoBehaviour:
     onEndTimelineEnd: []
     onStepEnd:
     - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    - target: {fileID: 845842790}
       command: 1
       duration: 1
     options: []
@@ -50260,12 +51083,12 @@ GameObject:
   - component: {fileID: 1823032041}
   - component: {fileID: 1823032040}
   m_Layer: 0
-  m_Name: Jesse1 (3)
+  m_Name: Jesse_Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1823032039
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50278,11 +51101,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &1823032040
@@ -50305,7 +51128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: -180464931, guid: 0c8de86ee0cf0ae43bef48bd0c377f1b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -51547,7 +52370,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1682633243}
   - {fileID: 1123586237}
   m_Father: {fileID: 387877832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51766,12 +52588,12 @@ GameObject:
   - component: {fileID: 1845831362}
   - component: {fileID: 1845831361}
   m_Layer: 0
-  m_Name: Jesse1 (6)
+  m_Name: Jesse_Smile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1845831360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51784,11 +52606,11 @@ RectTransform:
   m_LocalScale: {x: 0.15882994, y: 0.15882994, z: 0.15882994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1939271268}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207.5, y: -229.7}
+  m_AnchoredPosition: {x: 222.99998, y: -229.7}
   m_SizeDelta: {x: 1276.1309, y: 1238.8326}
   m_Pivot: {x: -0, y: -0}
 --- !u!114 &1845831361
@@ -51811,7 +52633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
+  m_Sprite: {fileID: 2080500815, guid: 355a48c2142807e4ab1c648f937073f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -52314,9 +53136,9 @@ MonoBehaviour:
     uiMode: 1
     bubblePos: 1
     stepKind: 0
-    speaker: xx
-    portrait: {fileID: 0}
-    content: end
+    speaker: 
+    portrait: {fileID: 21300000, guid: 1bfd28935066987408c9f779edbdd8f5, type: 3}
+    content: END......(to be continued)
     gateType: 0
     button: {fileID: 0}
     draggable: {fileID: 0}
@@ -53023,15 +53845,7 @@ RectTransform:
   - {fileID: 1251296009}
   - {fileID: 529826833}
   - {fileID: 2036460829}
-  - {fileID: 1631558271}
-  - {fileID: 727621907}
-  - {fileID: 1823032039}
-  - {fileID: 1010247639}
-  - {fileID: 1384322307}
-  - {fileID: 1845831360}
-  - {fileID: 53111947}
-  - {fileID: 80564967}
-  m_Father: {fileID: 1206375787}
+  m_Father: {fileID: 1527754713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -53061,81 +53875,6 @@ MonoBehaviour:
   sfxOnHide: {fileID: 0}
   sfxVolume: 1
   debugLogs: 0
---- !u!1 &1939500553
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1939500554}
-  - component: {fileID: 1939500556}
-  - component: {fileID: 1939500555}
-  m_Layer: 5
-  m_Name: textBG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1939500554
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939500553}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 347363744}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1939500555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939500553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1939500556
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939500553}
-  m_CullTransparentMesh: 1
 --- !u!1 &1945211080
 GameObject:
   m_ObjectHideFlags: 0
@@ -55480,7 +56219,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -55500,7 +56239,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -55607,7 +56349,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -55627,7 +56369,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -55940,8 +56685,7 @@ MonoBehaviour:
     stepKind: 0
     speaker: Jesse
     portrait: {fileID: 746454452, guid: 7580db8e47f9dd0438cc40c32e76fc94, type: 3}
-    content: A burst of cold air mixes with loud, infectious laughter. A group of
-      students spills in, but one voice cuts through the noise.
+    content: There's a weird hollowness to his logic
     gateType: 0
     button: {fileID: 0}
     draggable: {fileID: 0}
@@ -56321,7 +57065,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_Laugh
+  - stepTitle: Jesse_Smile
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -56342,7 +57086,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -56352,7 +57099,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Narration
+  - stepTitle: Narration_JesseNor
     uiMode: 0
     bubblePos: 0
     stepKind: 0
@@ -56372,7 +57119,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1845831363}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -56785,6 +57535,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 861402114}
+  - {fileID: 812732589}
   - {fileID: 387877832}
   m_Father: {fileID: 1206375787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -57023,9 +57775,6 @@ MonoBehaviour:
     - target: {fileID: 632400059}
       command: 0
       duration: 0
-    - target: {fileID: 845842790}
-      command: 0
-      duration: 0.2
     - target: {fileID: 1939271269}
       command: 0
       duration: 0.2
@@ -57116,7 +57865,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse_laugh
+  - stepTitle: Jesse_smirk
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -57136,7 +57885,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 53111950}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -57206,7 +57958,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -57226,7 +57978,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 53111950}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -57269,7 +58024,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_shocked
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -57289,7 +58044,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 0
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -57299,7 +58057,7 @@ MonoBehaviour:
     options: []
     branchScoreKey: 
     branchRanges: []
-  - stepTitle: Jesse
+  - stepTitle: Jesse_Nor
     uiMode: 1
     bubblePos: 1
     stepKind: 0
@@ -57319,7 +58077,10 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1384322310}
+      command: 1
+      duration: 0
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -57764,8 +58525,8 @@ MonoBehaviour:
     - target: {fileID: 1243683669}
       command: 0
       duration: 0.5
-    - target: {fileID: 845842790}
-      command: 1
+    - target: {fileID: 347363745}
+      command: 0
       duration: 0.5
     - target: {fileID: 1939271269}
       command: 1
@@ -57777,6 +58538,9 @@ MonoBehaviour:
     onEndTimelineEnd: []
     onStepEnd:
     - target: {fileID: 1243683669}
+      command: 1
+      duration: 1
+    - target: {fileID: 347363745}
       command: 1
       duration: 1
     - target: {fileID: 632400059}
@@ -59146,81 +59910,6 @@ MonoBehaviour:
   sfxOnHide: {fileID: 0}
   sfxVolume: 1
   debugLogs: 0
---- !u!1 &2143088458
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2143088459}
-  - component: {fileID: 2143088461}
-  - component: {fileID: 2143088460}
-  m_Layer: 5
-  m_Name: textBG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2143088459
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143088458}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1132617322}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.8681, y: 29.3507}
-  m_SizeDelta: {x: 139.7363, y: 41.2987}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2143088460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143088458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2143088461
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143088458}
-  m_CullTransparentMesh: 1
 --- !u!114 &405230507896668314
 MonoBehaviour:
   m_ObjectHideFlags: 0
