@@ -38009,7 +38009,7 @@ MonoBehaviour:
     segment: {fileID: 238005584}
     startStep: 0
     endStep: -1
-    clip: {fileID: 8300000, guid: f29352504cf553643b204780cdc24c9e, type: 3}
+    clip: {fileID: 8300000, guid: 1b704415aa0900448baea28f805aaf1e, type: 3}
     volume: 0.506
     loop: 1
     priority: 0
