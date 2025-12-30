@@ -37666,7 +37666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000000020489, y: 209.1}
+  m_AnchoredPosition: {x: 0.000000020489, y: 288}
   m_SizeDelta: {x: 405.43, y: 39.3464}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333168830
@@ -40037,6 +40037,12 @@ MonoBehaviour:
     - target: {fileID: 239509096}
       command: 0
       duration: 0.5
+    - target: {fileID: 1790424458}
+      command: 1
+      duration: 0.5
+    - target: {fileID: 584540425}
+      command: 1
+      duration: 0.5
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
@@ -41410,7 +41416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 405.4344, y: 186.6481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1523792243
@@ -41479,13 +41485,25 @@ MonoBehaviour:
     hideUIWhileStartTimeline: 0
     hideUIWhileGate: 0
     hideUIWhileEndTimeline: 0
-    onStepStart: []
+    onStepStart:
+    - target: {fileID: 1243683669}
+      command: 0
+      duration: 0.2
+    - target: {fileID: 956708392}
+      command: 0
+      duration: 0.2
     onStartTimelineStart: []
     onStartTimelineEnd: []
     onGateSuccess: []
     onEndTimelineStart: []
     onEndTimelineEnd: []
-    onStepEnd: []
+    onStepEnd:
+    - target: {fileID: 1243683669}
+      command: 1
+      duration: 0.5
+    - target: {fileID: 956708392}
+      command: 1
+      duration: 0.5
     options:
     - optionText: Nate
       selectable: 1
