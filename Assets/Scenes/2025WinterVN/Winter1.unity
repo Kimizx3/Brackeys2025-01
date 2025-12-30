@@ -47027,20 +47027,20 @@ MonoBehaviour:
         bubblePos: 1
         content: You look like you need some sugar. Stability isn't a bad thing,
           you know.
-      - speaker: Nate2_smile
+      - speaker: Nate
         portrait: {fileID: -459481343, guid: 188553370f14c7d4996f0d4c06e66757, type: 3}
         bubblePos: 3
         content: Thanks, Jesse.
-      - speaker: Etan1
+      - speaker: Etan
         portrait: {fileID: -383751959, guid: d4f213dddaeeb2a45b227255c2111b59, type: 3}
         bubblePos: 2
         content: See? He takes care of you.
-      - speaker: Etan1
+      - speaker: Etan
         portrait: {fileID: -383751959, guid: d4f213dddaeeb2a45b227255c2111b59, type: 3}
         bubblePos: 2
         content: I'm actually jealous. Maybe I should dye my hair back to black.
           Would I get free pastries then?
-      - speaker: Nate2_laugh
+      - speaker: Nate
         portrait: {fileID: -459481343, guid: 188553370f14c7d4996f0d4c06e66757, type: 3}
         bubblePos: 3
         content: Get in line, Etan. I earned this VIP status.
